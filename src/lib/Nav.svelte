@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { ChevronDown, X } from 'lucide-svelte';
+	import { ChevronDown, X, AlignJustify } from 'lucide-svelte';
 	import Logo from '$lib/Logo.svelte';
 
 	let isMenuOpen = $state(false);
@@ -16,7 +16,7 @@
 		isNavigating = true;
 		setTimeout(() => {
 			isNavigating = false;
-		}, 0);
+		}, 2000);
 	});
 
 	function toggleMenu() {
@@ -34,6 +34,9 @@
 		if (hasScrolled) {
 			if (currentScrollY > lastScrollY && currentScrollY > 100) {
 				isNavbarVisible = false;
+				setTimeout(() => {
+					isNavbarVisible = true;
+				}, 2000);
 			} else if (currentScrollY < lastScrollY || currentScrollY < 100) {
 				isNavbarVisible = true;
 			}
@@ -58,12 +61,17 @@
 >
 	<div class="flex w-full items-center justify-between">
 		<!-- Logo -->
-		<a href="/" aria-label="Return to homepage" class="hover:opacity-80" onclick={closeMenu}>
+		<a
+			href="/"
+			aria-label="Return to homepage"
+			class="z-30 px-2 hover:opacity-80"
+			onclick={closeMenu}
+		>
 			<div class="flex items-center">
 				<div class="h-24 w-24">
 					<Logo />
 				</div>
-				<div class="text-xl flex flex-col justify-center">
+				<div class="flex flex-col justify-center text-xl">
 					<p>Wallowa</p>
 					<p>Land</p>
 					<p>Trust</p>
@@ -73,18 +81,19 @@
 
 		<!-- Desktop Navigation Links -->
 		<div
-			class="absolute inset-x-0 mt-4 hidden justify-center lg:flex lg:space-x-4 lg:text-lg xl:space-x-8 xl:text-2xl"
+			class="absolute inset-x-0 mt-4 hidden justify-center lg:flex lg:space-x-4 lg:text-lg xl:space-x-8 xl:text-2xl z-20"
 			role="navigation"
 			aria-label="Desktop menu"
 		>
 			<a
 				href="/course"
-				class="p-4 hover:opacity-75 {$page.url.pathname === '/course'
+				class="flex items-center p-4 hover:opacity-75 {$page.url.pathname === '/course'
 					? 'border-b-2 border-slate-600'
 					: ''}"
 				aria-current={$page.url.pathname === '/course' ? 'page' : undefined}
 			>
 				About Us
+				<ChevronDown size="18" class="ml-2" />
 			</a>
 			<a
 				href="/rates"
@@ -124,6 +133,20 @@
 			</a>
 		</div>
 
+		<div
+			class="absolute inset-x-0 hidden justify-end px-8 lg:flex lg:text-lg xl:text-2xl "
+			aria-label="Donate"
+		>
+			<a
+				href="https://interland3.donorperfect.net/weblink/weblink.aspx?name=E120931&id=5"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="px-4 py-1 font-serif uppercase bg-[#1a3d65] z-20 hover:bg-gray-600 text-gray-100 transition-all hover:scale-[1.02] duration-600 ease-in-out"
+			>
+				Donate
+			</a>
+		</div>
+
 		<!-- Mobile Menu Button -->
 		<div class="flex items-center space-x-2 lg:hidden">
 			<button
@@ -133,11 +156,12 @@
 				class="flex items-center p-4 focus:outline-none"
 				onclick={toggleMenu}
 			>
-				<span class="mr-2 text-2xl">Menu</span>
+				<!-- <span class="mr-2 text-2xl">Menu</span> -->
 				{#if isMenuOpen}
 					<X class="h-6 w-6" aria-hidden="true" />
 				{:else}
-					<ChevronDown class="h-6 w-6" aria-hidden="true" />
+					<AlignJustify class="h-6 w-6" />
+					<!-- <ChevronDown class="h-6 w-6" aria-hidden="true" /> -->
 				{/if}
 			</button>
 		</div>

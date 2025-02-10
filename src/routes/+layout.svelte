@@ -9,7 +9,7 @@
 <div class="flex h-full min-h-screen w-full flex-col">
 	<Nav />
 	<div
-		class="relative inset-0 w-full flex-grow overflow-hidden overflow-x-hidden"
+		class="relative inset-0 w-full flex-grow overflow-hidden overflow-x-hidden z-0"
 	>
 		<!-- Wrapper for children to ensure they stay within viewport on mobile -->
 		<div class="h-full w-full overflow-hidden">
