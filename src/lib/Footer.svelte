@@ -137,7 +137,9 @@
 				<h3 class="text-lg font-medium text-neutral-900 dark:text-neutral-300">Our Mission</h3>
 				<div class="flex flex-col items-start">
 					<p class="text-neutral-600 dark:text-neutral-400">
-						Wallowa Land Trust works to protect the rural nature of Wallowa County.
+						Wallowa Land Trust's mission is to protect the rural nature of Wallowa County by working
+						cooperatively with private landowners, Indigenous people, local communities and
+						governmental entities to conserve land.
 					</p>
 				</div>
 			</div>

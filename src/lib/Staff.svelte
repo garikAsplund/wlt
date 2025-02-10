@@ -1,8 +1,8 @@
 <script lang="ts">
 
-import jonathanImg from '$lib/images/jonathan.jpg?enhanced';
-import kelImg from '$lib/images/kel.png?enhanced';
-import kathleenImg from '$lib/images/kathleen.png?enhanced';
+import jonathanImg from '$lib/images/staff/jonathan.jpg?enhanced';
+import kelImg from '$lib/images/staff/kel.png?enhanced';
+import kathleenImg from '$lib/images/staff/kathleen.png?enhanced';
 
     const staffMembers = [
         {
@@ -17,7 +17,7 @@ import kathleenImg from '$lib/images/kathleen.png?enhanced';
             ]
         },
         {
-            name: "Kel Hoffman, Ph.D.",
+            name: "Kel Hoffman, PhD",
             title: "Conservation Program Manager", 
             email: "kel@wallowalandtrust.org",
             image: kelImg,
