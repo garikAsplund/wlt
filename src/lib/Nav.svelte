@@ -45,12 +45,12 @@
 
 <svelte:window on:scroll={handleScroll} />
 
-<div class="fixed top-0 right-0 left-0 -z-20 h-48 bg-white dark:bg-[#121212]"></div>
+<div class="fixed top-0 right-0 left-0 -z-20 h-fit bg-white dark:bg-[#121212]"></div>
 
 <nav
 	class="sticky top-0 z-10 flex w-full flex-col {isNavbarVisible
 		? 'translate-y-0'
-		: '-translate-y-full'} bg-white py-4 font-serif font-light text-gray-800 {isNavigating
+		: '-translate-y-full'} bg-white py-0 font-serif font-light text-gray-800 {isNavigating
 		? 'transition-none'
 		: 'transition-transform duration-1000 ease-in-out'} pr-4 md:px-8 dark:bg-[#121212] dark:text-gray-200"
 	id="nav"
@@ -58,13 +58,18 @@
 >
 	<div class="flex w-full items-center justify-between">
 		<!-- Logo -->
-		<div class=" ">
-			<a href="/" aria-label="Return to homepage" class="hover:opacity-80" onclick={closeMenu}>
-				<div class="h-16 w-40">
+		<a href="/" aria-label="Return to homepage" class="hover:opacity-80" onclick={closeMenu}>
+			<div class="flex items-center">
+				<div class="h-24 w-24">
 					<Logo />
 				</div>
-			</a>
-		</div>
+				<div class="text-xl flex flex-col justify-center">
+					<p>Wallowa</p>
+					<p>Land</p>
+					<p>Trust</p>
+				</div>
+			</div>
+		</a>
 
 		<!-- Desktop Navigation Links -->
 		<div
