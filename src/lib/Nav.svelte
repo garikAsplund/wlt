@@ -32,7 +32,7 @@
 		const currentScrollY = window.scrollY;
 
 		if (hasScrolled) {
-			if (currentScrollY > lastScrollY && currentScrollY > 100) {
+			if (currentScrollY > lastScrollY && currentScrollY > 10) {
 				isNavbarVisible = false;
 				setTimeout(() => {
 					isNavbarVisible = true;
@@ -81,19 +81,19 @@
 
 		<!-- Desktop Navigation Links -->
 		<div
-			class="absolute inset-x-0 mt-4 hidden justify-center lg:flex lg:space-x-4 lg:text-lg xl:space-x-8 xl:text-2xl z-20"
+			class="absolute inset-x-0 z-20 mt-4 hidden justify-center lg:flex lg:space-x-4 lg:text-lg xl:space-x-8 xl:text-2xl"
 			role="navigation"
 			aria-label="Desktop menu"
 		>
 			<a
-				href="/course"
-				class="flex items-center p-4 hover:opacity-75 {$page.url.pathname === '/course'
-					? 'border-b-2 border-slate-600'
+				href="/about"
+				class="relative flex items-center p-4 hover:opacity-75 {$page.url.pathname === '/about'
+					? 'after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-slate-600'
 					: ''}"
-				aria-current={$page.url.pathname === '/course' ? 'page' : undefined}
+				aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
 			>
 				About Us
-				<ChevronDown size="18" class="ml-2" />
+				<!-- <ChevronDown size="18" class="ml-2" /> -->
 			</a>
 			<a
 				href="/rates"
@@ -134,14 +134,14 @@
 		</div>
 
 		<div
-			class="absolute inset-x-0 hidden justify-end px-8 lg:flex lg:text-lg xl:text-2xl "
+			class="absolute inset-x-0 hidden justify-end px-8 lg:flex lg:text-lg xl:text-2xl"
 			aria-label="Donate"
 		>
 			<a
 				href="https://interland3.donorperfect.net/weblink/weblink.aspx?name=E120931&id=5"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="px-4 py-1 font-serif uppercase bg-[#1a3d65] z-20 hover:bg-gray-600 text-gray-100 transition-all hover:scale-[1.02] duration-600 ease-in-out"
+				class="z-20 bg-[#1a3d65] px-4 py-1 font-serif text-gray-100 uppercase transition-all duration-600 ease-in-out hover:scale-[1.02] hover:bg-gray-600"
 			>
 				Donate
 			</a>

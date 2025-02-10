@@ -1,15 +1,16 @@
 <script>
 	import { Phone, Mail, MapPin, CircleArrowUp } from 'lucide-svelte';
 	import Socials from '$lib/Socials.svelte';
-	import Logo from './Logo.svelte';
 	import FooterSvg from './FooterSVG.svelte';
 	import COLTSVG from './COLTSVG.svelte';
 	import AccreditedSvg from './AccreditedSVG.svelte';
 </script>
 
-<FooterSvg />
+<div class="w-full pt-24 lg:pt-36">
+	<FooterSvg />
+</div>
 <footer
-	class="relative bottom-0 mt-auto w-full border-t bg-slate-100 dark:border-gray-700 dark:bg-[#121212]"
+	class="relative bottom-0 mt-auto w-full bg-slate-100 dark:border-gray-700 dark:bg-[#121212]"
 >
 	<div class="mx-auto max-w-7xl px-4 py-12">
 		<div
@@ -21,8 +22,12 @@
 					<Logo />
 				</a>
 			</div> -->
-			<div class="flex flex-col space-y-4">
-				<a href="https://www.landtrustaccreditation.org/about/about-the-seal" target="_blank" rel="noopener noreferrer">
+			<div class="order-1 grid grid-cols-2 gap-4 md:grid-cols-1">
+				<a
+					href="https://www.landtrustaccreditation.org/about/about-the-seal"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
 					<div class="h-32 w-32 fill-black transition-all duration-500 hover:opacity-75">
 						<AccreditedSvg />
 					</div>
@@ -34,7 +39,7 @@
 				</a>
 			</div>
 			<!-- Contact with integrated socials -->
-			<div class="order-1 space-y-4">
+			<div class="order-2 space-y-4">
 				<h3 class="text-lg font-medium text-neutral-900 dark:text-neutral-300">Contact</h3>
 				<div class="space-y-4">
 					<!-- Phone number for mobile -->
@@ -65,7 +70,7 @@
 						tabindex="0"
 						role="button"
 						aria-label="Address"
-						class="hidden cursor-default items-center gap-2 transition-colors md:flex"
+						class=" flex cursor-default items-center gap-2 transition-colors"
 					>
 						<MapPin size={18} class="mt-1 flex-shrink-0" />
 						<span>
@@ -96,7 +101,7 @@
 			</div>
 
 			<!-- Links -->
-			<div class="order-2 w-fit space-y-4">
+			<div class="order-3 w-fit space-y-4">
 				<h3 class="text-lg font-medium text-neutral-900 dark:text-neutral-300">Navigation</h3>
 				<div class="flex flex-col space-y-1">
 					<a
@@ -128,7 +133,7 @@
 			</div>
 
 			<!-- Mission -->
-			<div class="order-3 space-y-4">
+			<div class="order-4 space-y-4">
 				<h3 class="text-lg font-medium text-neutral-900 dark:text-neutral-300">Our Mission</h3>
 				<div class="flex flex-col items-start">
 					<p class="text-neutral-600 dark:text-neutral-400">
