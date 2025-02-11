@@ -2,7 +2,7 @@
 
 import jonathanImg from '$lib/images/staff/jonathan.jpg?enhanced';
 import kelImg from '$lib/images/staff/kel.png?enhanced';
-import kathleenImg from '$lib/images/staff/kathleen.png?enhanced';
+import kathleenImg from '$lib/images/staff/kathleen.jpg?enhanced';
 
     const staffMembers = [
         {
