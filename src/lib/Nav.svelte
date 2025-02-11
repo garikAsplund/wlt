@@ -175,15 +175,15 @@
 			aria-label="Mobile menu"
 		>
 			<a
-				href="/course"
+				href="/about"
 				class="w-full p-4 text-center text-lg hover:opacity-75"
 				onclick={closeMenu}
-				aria-current={$page.url.pathname === '/course' ? 'page' : undefined}
+				aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
 			>
 				<span
-					class={$page.url.pathname === '/course' ? 'inline-block border-b-2 border-slate-600' : ''}
+					class={$page.url.pathname === '/about' ? 'inline-block border-b-2 border-slate-600' : ''}
 				>
-					Course
+					About Us
 				</span>
 			</a>
 			<a
@@ -195,7 +195,7 @@
 				<span
 					class={$page.url.pathname === '/rates' ? 'inline-block border-b-2 border-slate-600' : ''}
 				>
-					Rates
+					Conservation
 				</span>
 			</a>
 			<a
@@ -207,7 +207,7 @@
 				<span
 					class={$page.url.pathname === '/events' ? 'inline-block border-b-2 border-slate-600' : ''}
 				>
-					Events
+					Ways to Give
 				</span>
 			</a>
 			<a
@@ -221,7 +221,7 @@
 						? 'inline-block border-b-2 border-slate-600'
 						: ''}
 				>
-					Tournaments
+					News and Events
 				</span>
 			</a>
 			<a
@@ -235,20 +235,17 @@
 						? 'inline-block border-b-2 border-slate-600'
 						: ''}
 				>
-					Membership
+					Store
 				</span>
 			</a>
 			<a
-				href="/team"
-				class="w-full p-4 text-center text-lg hover:opacity-75"
+				href="https://interland3.donorperfect.net/weblink/weblink.aspx?name=E120931&id=5"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="bg-[#1a3d65] px-4 py-1 font-serif text-gray-100 uppercase transition-all duration-600 ease-in-out hover:scale-[1.02] hover:bg-gray-600"
 				onclick={closeMenu}
-				aria-current={$page.url.pathname === '/team' ? 'page' : undefined}
 			>
-				<span
-					class={$page.url.pathname === '/team' ? 'inline-block border-b-2 border-slate-600' : ''}
-				>
-					Our Team
-				</span>
+				Donate
 			</a>
 		</div>
 	{/if}
