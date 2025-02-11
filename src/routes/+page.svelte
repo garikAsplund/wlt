@@ -4,7 +4,10 @@
 	import Hero from '$lib/Hero.svelte';
 	import Intro from '$lib/Intro.svelte';
 	import Moraine from '$lib/Moraine.svelte';
+	import NewsletterForm from '$lib/NewsletterForm.svelte';
 	import Stats from '$lib/Stats.svelte';
+
+	let { data } = $props();
 </script>
 
 <div class="w-full">
@@ -12,6 +15,7 @@
 	<Stats />
 	<Intro />
 	<Moraine />
+    <NewsletterForm {data}/>
 	<Head2Heart />
 	<Donate />
 </div>
