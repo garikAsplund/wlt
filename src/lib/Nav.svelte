@@ -68,7 +68,7 @@
 			onclick={closeMenu}
 		>
 			<div class="flex items-center">
-				<div class="h-24 w-24">
+				<div class="h-24 w-24 text-[#1a3d65] dark:text-gray-200">
 					<Logo />
 				</div>
 				<div class="flex flex-col justify-center text-xl">
