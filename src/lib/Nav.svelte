@@ -55,7 +55,7 @@
 		? 'translate-y-0'
 		: '-translate-y-full'} bg-white py-0 font-serif font-light text-gray-800 {isNavigating
 		? 'transition-none'
-		: 'transition-transform duration-1000 ease-in-out'} pr-4 md:px-8 dark:bg-[#121212] dark:text-gray-200"
+		: 'transition-transform duration-3000 ease-in-out'} pr-4 md:px-8 dark:bg-[#121212] dark:text-gray-200"
 	id="nav"
 	aria-label="Main navigation"
 >

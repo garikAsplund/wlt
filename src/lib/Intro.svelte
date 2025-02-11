@@ -1,11 +1,11 @@
 <script>
 	const benefits = [
-		'Scenic beauty',
-		'Water quality protection',
-		'Historic preservation',
-		'Wildlife habitat',
-		'Working landscapes',
-		'Economic returns'
+		'Maintain scenic beauty',
+		'Improve water quality',
+		'Preserve cultural landmarks',
+		'Protect wildlife habitat',
+		'Sustain working landscapes',
+		'Provide economic returns'
 	];
 
 	// Split array into two columns
@@ -14,9 +14,9 @@
 	const rightColumn = benefits.slice(midpoint);
 </script>
 
-<div class="absolute z-10 h-full w-full bg-white/30">
+<div class="absolute z-10 h-[40vh] w-full bg-white/40">
 	<h1
-		class="w-full py-16 text-center font-['Georgia'] text-2xl font-medium tracking-wide text-gray-900 drop-shadow-sm lg:text-5xl"
+		class="w-full py-16 text-center font-['Georgia'] text-2xl font-medium tracking-wide text-gray-900 lg:text-5xl"
 	>
 		Why conserve your land?
 	</h1>

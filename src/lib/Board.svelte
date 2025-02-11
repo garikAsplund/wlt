@@ -56,7 +56,8 @@
             title: 'Board Member',
             image: paulImg,
             bio: [
-                "The oldest of six children Paul spent a large portion of his childhood in Irvine, California. He left for Modesto Junior College on an agriculture scholarship, and spent six years in the San Joaquin valley of California. Paul arrived in Oregon in 1987 where he met his wife Sharon. They moved to Wallowa County in 1993 when Paul accepted a position with the Wallowa County Mental Health Clinic.",
+                "The oldest of six children Paul spent a large portion of his childhood in Irvine, California. He left for Modesto Junior College on an agriculture scholarship, and spent six years in the San Joaquin valley of California.",
+                "Paul arrived in Oregon in 1987 where he met his wife Sharon. They moved to Wallowa County in 1993 when Paul accepted a position with the Wallowa County Mental Health Clinic.",
                 "Paul is concerned about the threat of development and the decline of the working family farm and is dedicated to making a difference.",
         ]
         },
