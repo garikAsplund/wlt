@@ -1,6 +1,7 @@
 <a
 	href="https://www.instagram.com/wallowalandtrust"
 	target="_blank"
+	rel="noopener noreferrer"
 	class="p-4 opacity-85 hover:opacity-65 md:p-1"
 >
 	<svg

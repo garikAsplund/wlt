@@ -41,32 +41,32 @@ import kathleenImg from '$lib/images/staff/kathleen.jpg?enhanced';
     ];
  </script>
  
- <div class="mx-auto max-w-4xl px-4 py-12">
-    <h1 class="mb-12 font-serif text-4xl text-slate-800">Staff</h1>
-    <div class="space-y-16">
+ <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
+    <h1 class="mb-8 sm:mb-12 font-serif text-3xl sm:text-4xl text-slate-800">Staff</h1>
+    <div class="space-y-12 sm:space-y-16">
         {#each staffMembers as member, i}
-            <div class="grid gap-8 md:grid-cols-[280px_1fr]">
-                <div>
+            <div class="grid gap-6 sm:gap-8 md:grid-cols-[280px_1fr]">
+                <div class="max-w-sm mx-auto md:max-w-none">
                     <enhanced:img
                         src={member.image}
                         alt={member.name}
-                        class="aspect-[4/5] w-full rounded-lg bg-slate-100 object-cover"
+                        class="aspect-[4/5] w-full rounded-lg bg-slate-100 object-cover dark:invert"
                     />
-                    <div class="mt-4 pl-2">
-                        <h2 class="text-lg font-medium">{member.name}</h2>
+                    <div class="mt-4 text-center md:text-left">
+                        <h2 class="text-lg font-medium text-slate-900">{member.name}</h2>
                         <p class="text-slate-600">{member.title}</p>
                         <p class="mt-1 block text-sm text-slate-600">{member.email}</p>
                     </div>
                 </div>
-                <div class="space-y-4">
+                <div class="space-y-4 text-slate-700">
                     {#each member.bio as paragraph}
-                        <p>{paragraph}</p>
+                        <p class="leading-relaxed">{paragraph}</p>
                     {/each}
                 </div>
-                {#if i !== staffMembers.length - 1}
-                    <hr class="opacity-25 col-span-2"/>
-                {/if}
             </div>
+            {#if i !== staffMembers.length - 1}
+                <hr class="opacity-25 my-12 sm:my-16"/>
+            {/if}
         {/each}
     </div>
- </div>
+</div>

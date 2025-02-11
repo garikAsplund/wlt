@@ -88,7 +88,7 @@
 			<a
 				href="/about"
 				class="relative flex items-center p-4 hover:opacity-75 {$page.url.pathname === '/about'
-					? 'after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-slate-600'
+					? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 					: ''}"
 				aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
 			>

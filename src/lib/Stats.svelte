@@ -18,7 +18,7 @@
     ];
   </script>
   
-  <div class="w-full bg-white lg:py-16 py-12 px-4">
+  <div class="w-full bg-white dark:bg-[#121212] lg:py-16 py-12 px-4">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {#each stats as stat}

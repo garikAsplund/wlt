@@ -6,7 +6,7 @@
 	import AccreditedSvg from './AccreditedSVG.svelte';
 </script>
 
-<div class="w-full pt-24 lg:pt-36">
+<div class="w-full pt-24 lg:pt-36  dark:text-gray-500">
 	<FooterSvg />
 </div>
 <footer
@@ -22,18 +22,18 @@
 					<Logo />
 				</a>
 			</div> -->
-			<div class="order-1 grid grid-cols-2 gap-4 md:grid-cols-1">
+			<div class="order-1 grid grid-cols-2 gap-4 md:grid-cols-1 text-black dark:text-gray-300">
 				<a
 					href="https://www.landtrustaccreditation.org/about/about-the-seal"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<div class="h-32 w-32 fill-black transition-all duration-500 hover:opacity-75">
+					<div class="h-32 w-32 transition-all duration-500 hover:opacity-75">
 						<AccreditedSvg />
 					</div>
 				</a>
 				<a href="https://oregonlandtrusts.org/" target="_blank" rel="noopener noreferrer">
-					<div class="h-32 w-32 text-black transition-all duration-500 hover:opacity-75">
+					<div class="h-32 w-32 transition-all duration-500 hover:opacity-75">
 						<COLTSVG />
 					</div>
 				</a>
