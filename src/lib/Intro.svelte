@@ -18,7 +18,7 @@
             Why conserve your land?
         </h1>
         
-        <div class="flex w-full justify-center px-4 sm:px-6">
+        <div class="flex w-full justify-center px-4 sm:px-6 text-gray-900">
             <ul class="grid gap-8 sm:gap-12 md:gap-24 lg:gap-36 text-lg sm:text-xl md:text-2xl md:grid-cols-2">
                 <div class="space-y-3 sm:space-y-4">
                     {#each leftColumn as benefit}
