@@ -1,4 +1,7 @@
-<!-- VideoSection.svelte -->
+<script lang="ts">
+    import { ExternalLink } from "lucide-svelte";
+</script>
+
 <div class="min-h-[400px] w-full bg-[#1a3d65] py-8 sm:py-12 md:h-[60vh]">
     <div class="mx-auto flex h-full max-w-7xl px-4">
         <div class="flex flex-col items-center gap-6 sm:gap-8 md:flex-row md:items-center">
@@ -29,16 +32,15 @@
                     permanently protected in January 2020 when almost 1,800 acres were transferred into
                     Wallowa County ownership.
                 </p>
-                <p class="mt-4 sm:mt-6 text-gray-400 underline underline-offset-2">
-                    <a 
-                        href="https://morainecampaign.org/index.php" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        class="hover:opacity-75 transition-opacity"
-                    >
-                        Read more about the moraine
-                    </a>
-                </p>
+                <a 
+                    href="https://morainecampaign.org/index.php" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="inline-flex items-center gap-2 mt-6 text-gray-100 hover:text-gray-300 border-b border-current"
+                >
+                    Read more about the moraine
+                    <ExternalLink class="w-4 h-4" />
+                </a>
             </div>
         </div>
     </div>

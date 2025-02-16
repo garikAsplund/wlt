@@ -1,5 +1,5 @@
 <div class="pt-12 sm:pt-24">
-    <div class="flex min-h-[350px] w-full flex-col md:flex-row">
+    <div class="flex min-h-[350px] w-full flex-col md:flex-row justify-center">
         <!-- Image/Title Section -->
         <div class="relative min-h-[200px] flex-1 md:min-h-full">
             <enhanced:img 
@@ -13,17 +13,16 @@
                 Join our mission
             </h2>
         </div>
-
         <!-- CTA Section -->
-        <div class="flex flex-1 flex-col items-center justify-center  p-6 sm:p-8 text-center">
+        <div class="flex flex-1 flex-col items-center justify-center p-6 sm:p-8 text-center">
             <p class="mb-4 sm:mb-8 text-lg sm:text-xl text-slate-800 dark:invert">
                 Your support creates lasting change.
             </p>
-           <a 
+            <a 
                 href="https://interland3.donorperfect.net/weblink/weblink.aspx?name=E120931&id=5"
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="inline-block rounded-md dark:bg-slate-200  border-1 px-6 sm:px-8 py-3 font-semibold text-slate-700 transition-all duration-200 hover:bg-blue-50 active:transform active:scale-95"
+                class="inline-block rounded-md dark:bg-slate-200 border-1 px-6 sm:px-8 py-3 font-semibold text-slate-700 transition-all duration-200 hover:bg-blue-50 active:transform active:scale-95"
             >
                 Donate
             </a>

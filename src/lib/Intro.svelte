@@ -1,48 +1,74 @@
 <script>
+    import { Droplets, Landmark, Bird, Tractor, DollarSign, MountainSnow } from 'lucide-svelte';
+    
     const benefits = [
-        'Maintain scenic beauty',
-        'Improve water quality',
-        'Preserve cultural landmarks',
-        'Protect wildlife habitat',
-        'Sustain working landscapes',
-        'Provide economic returns'
+        {
+            text: 'Maintain scenic beauty',
+            icon: MountainSnow,
+            description: 'Preserve Wallowa County\'s stunning vistas for future generations'
+        },
+        {
+            text: 'Improve water quality',
+            icon: Droplets,
+            description: 'Protect our rivers, streams, and watersheds'
+        },
+        {
+            text: 'Preserve cultural landmarks',
+            icon: Landmark,
+            description: 'Honor and protect sites of cultural significance'
+        },
+        {
+            text: 'Protect wildlife habitat',
+            icon: Bird,
+            description: 'Ensure diverse species continue to thrive'
+        },
+        {
+            text: 'Sustain working landscapes',
+            icon: Tractor,
+            description: 'Support local agriculture and ranching heritage'
+        },
+        {
+            text: 'Provide economic returns',
+            icon: DollarSign,
+            description: 'Benefit from tax incentives and estate planning options'
+        }
     ];
-    const midpoint = Math.ceil(benefits.length / 2);
-    const leftColumn = benefits.slice(0, midpoint);
-    const rightColumn = benefits.slice(midpoint);
 </script>
 
 <div class="relative w-full">
-    <div class="absolute z-10 w-full bg-white/40 dark:bg-black/15 min-h-[400px]">
-        <h1 class="w-full py-8 sm:py-12 md:py-16 text-center font-['Georgia'] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-wide text-gray-900">
-            Why conserve your land?
-        </h1>
-        
-        <div class="flex w-full justify-center px-4 sm:px-6 text-gray-900">
-            <ul class="grid gap-8 sm:gap-12 md:gap-24 lg:gap-36 text-lg sm:text-xl md:text-2xl md:grid-cols-2">
-                <div class="space-y-3 sm:space-y-4">
-                    {#each leftColumn as benefit}
-                        <li class="flex items-start">
-                            <span>{benefit}</span>
-                        </li>
-                    {/each}
-                </div>
-                <div class="space-y-3 sm:space-y-4">
-                    {#each rightColumn as benefit}
-                        <li class="flex items-start">
-                            <span>{benefit}</span>
-                        </li>
-                    {/each}
-                </div>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="relative h-[400px] w-full overflow-hidden">
+    <div class="relative">
         <enhanced:img
             src="/static/images/backgrounds/map.png"
-            alt="View above the protected moraines of Wallowa Lake"
-            class="h-full w-full object-cover object-left brightness-110 saturate-[1.2]"
+            alt="Topographical map of Wallowa County"
+            class="absolute inset-0 h-full w-full object-cover object-center brightness-105 saturate-[1.1]"
         />
+        
+        <div class="relative bg-white/80 dark:bg-black/80">
+            <h1 class="w-full py-6 md:py-12 text-center font-['Georgia'] text-3xl md:text-4xl lg:text-5xl font-medium tracking-wide text-gray-900 dark:text-gray-100">
+                Why conserve your land?
+            </h1>
+            
+            <div class="mx-auto max-w-6xl px-4 sm:px-6 pb-6 md:pb-12">
+                <div class="grid gap-5 md:grid-cols-2 lg:gap-8">
+                    {#each benefits as benefit}
+                        <div class="bg-white/50 dark:bg-gray-900/50 p-4 lg:p-6 rounded-lg backdrop-blur-sm">
+                            <div class="flex items-start gap-3">
+                                <div class="text-[#678c3c] dark:text-[#90b654] mt-1">
+                                    <svelte:component this={benefit.icon} class="w-5 h-5 lg:w-6 lg:h-6" />
+                                </div>
+                                <div>
+                                    <h3 class="text-lg lg:text-xl font-medium text-gray-900 dark:text-gray-100">
+                                        {benefit.text}
+                                    </h3>
+                                    <p class="text-base lg:text-lg text-gray-600 dark:text-gray-300">
+                                        {benefit.description}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    {/each}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
