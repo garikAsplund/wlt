@@ -20,7 +20,7 @@
 	];
 </script>
 
-<div class="w-full bg-white py-12 lg:py-16 dark:bg-[#121212]">
+<div class="w-full bg-white pt-12 lg:pt-16 dark:bg-[#121212]">
 	<div class="mx-auto max-w-7xl px-4">
 		<h2
 			class="mb-4 text-center font-['Georgia'] text-2xl text-slate-900 sm:text-3xl dark:text-slate-100"
@@ -51,7 +51,7 @@
 				</div>
 			{/each}
 		</div>
-		<div class="inset-0 flex items-center justify-center pt-12 opacity-15">
+		<div class="inset-0 flex items-center justify-center opacity-25 scale-75">
 			<Oregon />
 		</div>
 	</div>

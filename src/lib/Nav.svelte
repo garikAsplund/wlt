@@ -10,11 +10,23 @@
 		{ href: '/conservation/properties', label: 'Protected Properties' }
 	];
 
+	const newsLinks = [
+		{ href: '/news/newsletters', label: 'Newsletters' },
+		{ href: '/news/press', label: 'Press' },
+		{ href: '/news/events', label: 'Events' }
+	];
+
 	let isDesktopConservationDropdownOpen = $state(false);
 	let isMobileConservationDropdownOpen = $state(false);
+	let isDesktopNewsDropdownOpen = $state(false);
+	let isMobileNewsDropdownOpen = $state(false);
 
 	function toggleConservationMobileDropdown() {
 		isMobileConservationDropdownOpen = !isMobileConservationDropdownOpen;
+	}
+
+	function toggleNewsMobileDropdown() {
+		isMobileNewsDropdownOpen = !isMobileNewsDropdownOpen;
 	}
 
 	let isMenuOpen = $state(false);
@@ -33,8 +45,12 @@
 		}, 1000);
 	});
 
-	function handleLinkClick() {
+	function handleConservationLinkClick() {
 		isDesktopConservationDropdownOpen = false;
+	}
+
+	function handleNewsLinkClick() {
+		isDesktopNewsDropdownOpen = false;
 	}
 
 	function toggleMenu() {
@@ -83,7 +99,7 @@
 		<div class="flex-shrink-0">
 			<a href="/" aria-label="Return to homepage" class="hover:opacity-80" onclick={closeMenu}>
 				<div class="flex items-center">
-					<div class="h-24 w-24 text-[#1a3d65] dark:text-gray-200">
+					<div class="h-24 w-24 text-[#1a3d65] dark:text-gray-200 p-1">
 						<Logo />
 					</div>
 					<div class="flex flex-col justify-center text-xl">
@@ -121,13 +137,15 @@
 						aria-haspopup="true"
 						aria-expanded={isDesktopConservationDropdownOpen}
 						class="relative flex items-center p-4 text-center hover:opacity-75
-			{$page.url.pathname.startsWith('/conservation') || $page.url.pathname.startsWith('/rates')
+			{$page.url.pathname.startsWith('/conservation')
 							? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 							: ''}"
 					>
 						Conservation
 						<ChevronDown
-							class="ml-2 transition-transform {isDesktopConservationDropdownOpen ? 'rotate-180' : ''}"
+							class="ml-2 transition-transform {isDesktopConservationDropdownOpen
+								? 'rotate-180'
+								: ''}"
 							size={20}
 						/>
 					</button>
@@ -143,7 +161,7 @@
 									href={link.href}
 									role="menuitem"
 									tabindex="0"
-									onclick={handleLinkClick}
+									onclick={handleConservationLinkClick}
 									class="block px-3 py-2.5 text-center text-base transition-colors
 					hover:bg-gray-50 dark:hover:bg-gray-800/60
 					{$page.url.pathname === link.href
@@ -165,15 +183,55 @@
 				>
 					Ways to Give
 				</a>
-				<a
-					href="/news"
-					class="relative p-4 text-center hover:opacity-75 {$page.url.pathname === '/news'
-						? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
-						: ''}"
-					aria-current={$page.url.pathname === '/news' ? 'page' : undefined}
+				<!-- News Dropdown -->
+				<div
+					role="menu"
+					tabindex="0"
+					class="relative hidden lg:block"
+					onmouseenter={() => (isDesktopNewsDropdownOpen = true)}
+					onmouseleave={() => (isDesktopNewsDropdownOpen = false)}
 				>
-					News and Events
-				</a>
+					<button
+						role="menuitem"
+						tabindex="0"
+						aria-haspopup="true"
+						aria-expanded={isDesktopNewsDropdownOpen}
+						class="relative flex items-center p-4 text-center hover:opacity-75
+					{$page.url.pathname.startsWith('/news')
+							? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
+							: ''}"
+					>
+						News and Events
+						<ChevronDown
+							class="ml-2 transition-transform {isDesktopNewsDropdownOpen ? 'rotate-180' : ''}"
+							size={20}
+						/>
+					</button>
+
+					{#if isDesktopNewsDropdownOpen}
+						<div
+							role="menu"
+							tabindex="0"
+							class="absolute top-full left-0 w-64 overflow-hidden rounded-b-md border-t border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-[#121212]"
+						>
+							{#each newsLinks as link}
+								<a
+									href={link.href}
+									role="menuitem"
+									tabindex="0"
+									onclick={handleNewsLinkClick}
+									class="block px-3 py-2.5 text-center text-base transition-colors
+		hover:bg-gray-50 dark:hover:bg-gray-800/60
+		{$page.url.pathname === link.href
+										? 'bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100'
+										: 'text-gray-700 dark:text-gray-300'}"
+								>
+									{link.label}
+								</a>
+							{/each}
+						</div>
+					{/if}
+				</div>
 				<a
 					href="/store"
 					class="relative p-4 text-center hover:opacity-75 {$page.url.pathname === '/store'

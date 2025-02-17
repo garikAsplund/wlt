@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Phone, Mail, MapPin } from 'lucide-svelte';
+	import { Phone, Mail, MapPin, FileCheck } from 'lucide-svelte';
 	import { page } from '$app/stores';
 	import Socials from '$lib/Socials.svelte';
 	import FooterSvg from './FooterSVG.svelte';
@@ -17,7 +17,13 @@
 
 <div class="relative w-full pt-24 lg:pt-36 dark:text-gray-500">
 	<div class="absolute top-12 left-1/2 w-full -translate-x-1/2 transform text-center lg:top-24">
-		<h2 class="text-3xl font-bold tracking-wider text-neutral-900 dark:text-neutral-300">
+		<h2
+			class="translate-y-4 text-2xl font-bold tracking-wider text-neutral-900 sm:translate-y-4 md:translate-y-8
+    lg:translate-y-12
+    lg:text-3xl
+    xl:translate-y-16
+    dark:text-neutral-300"
+		>
 			Keep It Rural!
 		</h2>
 	</div>
@@ -25,20 +31,19 @@
 </div>
 
 {#if currentPath !== '/'}
-<div class="w-full bg-neutral-50 dark:bg-neutral-900 py-6">
-	<div class="mx-auto max-w-7xl px-4">
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
-			<div class="flex flex-col justify-center items-center">
-				<h2 class="text-center text-lg font-semibold mb-4">Support our mission</h2>
-				<DonateButton />
+	<div class="w-full bg-neutral-50 py-6 dark:bg-neutral-900">
+		<div class="mx-auto max-w-7xl px-4">
+			<div class="grid grid-cols-1 gap-8 text-center md:grid-cols-2">
+				<div class="flex flex-col items-center justify-center">
+					<h2 class="mb-4 text-center text-lg font-semibold">Support our mission</h2>
+					<DonateButton />
+				</div>
+				<div>
+					<NewsletterForm {data} />
+				</div>
 			</div>
-			<div>
-				<NewsletterForm {data}/>
-			</div>
-			
 		</div>
 	</div>
-</div>
 {/if}
 
 <footer
@@ -123,6 +128,15 @@
 					>
 						<Mail size={18} class="mt-1 flex-shrink-0" />
 						<span>info@wallowalandtrust.org</span>
+					</div>
+					<div
+						tabindex="0"
+						role="button"
+						aria-label="Federal Tax ID: 20-1037078"
+						class="flex flex-shrink-0 cursor-default items-center gap-2 transition-colors"
+					>
+						<FileCheck size={18} class="mt-1 flex-shrink-0" />
+						<span>Federal Tax ID: 20-1037078</span>
 					</div>
 				</div>
 			</div>
