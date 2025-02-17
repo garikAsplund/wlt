@@ -11,8 +11,6 @@
 	let { data } = $props();
 
 	let currentPath = $derived($page.url.pathname);
-
-	$inspect(currentPath); // For debugging
 </script>
 
 <div class="relative w-full pt-24 lg:pt-36 dark:text-gray-500">
@@ -35,7 +33,7 @@
 		<div class="mx-auto max-w-7xl px-4">
 			<div class="grid grid-cols-1 gap-8 text-center md:grid-cols-2">
 				<div class="flex flex-col items-center justify-center">
-					<h2 class="mb-4 text-center text-lg font-semibold">Support our mission</h2>
+					<h2 class="mb-4 text-center text-lg font-semibold text-neutral-900 dark:text-neutral-300">Support our mission</h2>
 					<DonateButton />
 				</div>
 				<div>

@@ -99,7 +99,7 @@
 		<div class="flex-shrink-0">
 			<a href="/" aria-label="Return to homepage" class="hover:opacity-80" onclick={closeMenu}>
 				<div class="flex items-center">
-					<div class="h-24 w-24 text-[#1a3d65] dark:text-gray-200 p-1">
+					<div class="h-24 w-24 p-1 text-[#1a3d65] dark:text-gray-200">
 						<Logo />
 					</div>
 					<div class="flex flex-col justify-center text-xl">
@@ -337,18 +337,41 @@
 					Ways to Give
 				</span>
 			</a>
-			<a
-				href="/news"
-				class="w-full p-4 text-center text-lg hover:opacity-75"
-				onclick={closeMenu}
-				aria-current={$page.url.pathname === '/news' ? 'page' : undefined}
-			>
-				<span
-					class={$page.url.pathname === '/news' ? 'inline-block border-b-2 border-slate-600' : ''}
+			<div class="w-full lg:hidden">
+				<button
+					class="flex w-full items-center justify-center p-4 text-lg hover:opacity-75"
+					onclick={toggleNewsMobileDropdown}
 				>
-					News and Events
-				</span>
-			</a>
+					<span
+						class={$page.url.pathname.startsWith('/news')
+							? 'inline-block border-b-2 border-slate-600'
+							: ''}
+					>
+						News and Events
+					</span>
+					<ChevronDown
+						class="ml-2 transition-transform {isMobileNewsDropdownOpen ? 'rotate-180' : ''}"
+						size={20}
+					/>
+				</button>
+
+				{#if isMobileNewsDropdownOpen}
+					<div class="bg-gray-50 dark:bg-gray-800">
+						{#each newsLinks as link}
+							<a
+								href={link.href}
+								onclick={closeMenu}
+								class="block w-full p-4 text-center text-base hover:opacity-75
+					{$page.url.pathname === link.href
+									? 'bg-gray-100 text-gray-900 dark:bg-gray-700 dark:text-slate-100'
+									: 'text-gray-700 dark:text-slate-300'}"
+							>
+								{link.label}
+							</a>
+						{/each}
+					</div>
+				{/if}
+			</div>
 			<a
 				href="/store"
 				class="w-full p-4 text-center text-lg hover:opacity-75"

@@ -25,7 +25,7 @@
 	});
 </script>
 
-<section class="flex flex-col items-center justify-center rounded-md dark:invert h-auto">
+<section class="flex flex-col items-center justify-center rounded-md dark:invert h-auto dark:opacity-80">
 	<div class="my-8 w-full max-w-xl px-4">
 		<h2 class="text-center text-lg font-semibold mb-4">
 			Sign up for our newsletter!
@@ -52,7 +52,7 @@
 							Email address
 						</label>
 						{#if $errors.email}
-							<p class="text-red-600 dark:invert text-sm" id="email-error" role="alert">
+							<p class="text-red-500 dark:invert text-sm" id="email-error" role="alert">
 								{$errors.email}
 							</p>
 						{/if}
