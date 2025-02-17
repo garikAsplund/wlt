@@ -9,7 +9,7 @@
     <div class="flex-1">
 
     </div>
-    <div class="flex items-center justify-center space-x-4 flex-1 text-black ">
+    <div class="flex items-center justify-center space-x-4 flex-1 text-black dark:text-white ">
         <FacebookSvg />
         <InstagramSvg />
         <div class="scale-120 px-2">

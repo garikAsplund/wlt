@@ -43,7 +43,7 @@
             class="absolute inset-0 h-full w-full object-cover object-center brightness-105 saturate-[1.1]"
         />
         
-        <div class="relative bg-white/80 dark:bg-black/80">
+        <div class="relative bg-white/80 dark:bg-black/70">
             <h1 class="w-full py-6 md:py-12 text-center font-['Georgia'] text-3xl md:text-4xl lg:text-5xl font-medium tracking-wide text-gray-900 dark:text-gray-100">
                 Why conserve your land?
             </h1>
