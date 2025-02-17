@@ -25,7 +25,7 @@
 	});
 </script>
 
-<section class="flex flex-col items-center justify-center rounded-md dark:invert h-[33vh]">
+<section class="flex flex-col items-center justify-center rounded-md dark:invert h-auto">
 	<div class="my-8 w-full max-w-xl px-4">
 		<h2 class="text-center text-lg font-semibold mb-4">
 			Sign up for our newsletter!
@@ -39,6 +39,7 @@
 			<div class="flex justify-center">
 				<form
 					method="POST"
+					action="/api/send-email"
 					use:enhance
 					class="flex flex-col w-full max-w-md"
 					novalidate

@@ -15,7 +15,9 @@
 	<Stats />
 	<Intro />
 	<Moraine />
-    <NewsletterForm {data}/>
+	<div class="h-[35vh] flex flex-col justify-center">
+		<NewsletterForm {data} />
+	</div>
 	<Head2Heart />
 	<Donate />
 </div>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import DonateButton from '$lib/DonateButton.svelte';
 	import { Users, Calendar, Heart, Gift, Scroll, Home, HandHeart } from 'lucide-svelte';
 	const givingOptions = [
 		{
@@ -49,7 +50,9 @@
 		/>
 	</div>
 
-	<h1 class="mb-8 font-serif text-3xl text-slate-800 sm:text-4xl dark:text-slate-100">Ways to Give</h1>
+	<h1 class="mb-8 font-serif text-3xl text-slate-800 sm:text-4xl dark:text-slate-100">
+		Ways to Give
+	</h1>
 
 	<div class="mb-8 space-y-6 rounded-lg bg-slate-50 p-6 sm:p-8 dark:bg-slate-800">
 		<p class="text-lg text-slate-800 dark:text-slate-200">
@@ -59,17 +62,7 @@
 		<p class="text-slate-600 dark:text-slate-400">
 			As a charitable nonprofit, <b>all donations are tax-deductible</b> to the full extent of the law.
 		</p>
-		<div class="mt-8 flex justify-center sm:mt-12">
-			<a
-				href="https://interland3.donorperfect.net/weblink/weblink.aspx?name=E120931&id=5"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="hover:bg-opacity-90 inline-flex items-center gap-2 rounded-lg bg-[#1a3d65] px-6 py-3 text-white transition-all duration-150 active:scale-95 active:transform hover:opacity-95"
-			>
-				<HandHeart class="h-6 w-6 stroke-1" />
-				Donate Now
-			</a>
-		</div>
+		<DonateButton />
 	</div>
 
 	<div class="mb-12 grid gap-6 sm:grid-cols-2">
@@ -94,12 +87,8 @@
 				Want to learn more about giving?
 			</h2>
 			<div class="space-y-3">
-				<p class="text-xl text-slate-700 dark:text-slate-300">
-					info@wallowalandtrust.org
-				</p>
-				<p class="text-xl text-slate-700 dark:text-slate-300">
-					(541) 426-2042
-				</p>
+				<p class="text-xl text-slate-700 dark:text-slate-300">info@wallowalandtrust.org</p>
+				<p class="text-xl text-slate-700 dark:text-slate-300">(541) 426-2042</p>
 			</div>
 		</div>
 	</div>

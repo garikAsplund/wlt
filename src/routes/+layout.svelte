@@ -3,7 +3,7 @@
 	import Nav from '$lib/Nav.svelte';
 	import '../app.css';
 
-	let { children } = $props();
+	let { children, data } = $props();
 </script>
 
 <div class="flex h-full min-h-screen w-full flex-col">
@@ -16,5 +16,5 @@
 			{@render children()}
 		</div>
 	</div>
-	<Footer />
+	<Footer {data}/>
 </div>

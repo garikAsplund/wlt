@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import { ChevronDown, X, AlignJustify } from 'lucide-svelte';
 	import Logo from '$lib/Logo.svelte';
+	import DonateButton from './DonateButton.svelte';
 
 	const conservationLinks = [
 		{ href: '/conservation/plan', label: 'Conservation Plan' },
@@ -189,14 +190,7 @@
 		<div class="flex items-center">
 			<!-- Donate Button -->
 			<div class="hidden lg:block">
-				<a
-					href="https://interland3.donorperfect.net/weblink/weblink.aspx?name=E120931&id=5"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="bg-[#1a3d65] px-4 py-2 font-serif text-2xl text-gray-100 uppercase transition-all duration-600 ease-in-out hover:scale-[1.02] hover:bg-gray-600"
-				>
-					Donate
-				</a>
+				<DonateButton />
 			</div>
 
 			<!-- Mobile Menu Button -->
@@ -313,15 +307,7 @@
 					Store
 				</span>
 			</a>
-			<a
-				href="https://interland3.donorperfect.net/weblink/weblink.aspx?name=E120931&id=5"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="bg-[#1a3d65] px-4 py-1 font-serif text-gray-100 uppercase transition-all duration-600 ease-in-out hover:scale-[1.02] hover:bg-gray-600"
-				onclick={closeMenu}
-			>
-				Donate
-			</a>
+			<DonateButton />
 		</div>
 	{/if}
 </nav>

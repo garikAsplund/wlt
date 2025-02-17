@@ -1,18 +1,61 @@
-<script>
-	import { Phone, Mail, MapPin, CircleArrowUp } from 'lucide-svelte';
-	import Socials from '$lib/Socials.svelte';
-	import FooterSvg from './FooterSVG.svelte';
-	import COLTSVG from './COLTSVG.svelte';
-	import AccreditedSvg from './AccreditedSVG.svelte';
+<script lang="ts">
+    import { Phone, Mail, MapPin } from 'lucide-svelte';
+    import { page } from '$app/stores';
+    import Socials from '$lib/Socials.svelte';
+    import FooterSvg from './FooterSVG.svelte';
+    import COLTSVG from './COLTSVG.svelte';
+    import AccreditedSvg from './AccreditedSVG.svelte';
+    import DonateButton from './DonateButton.svelte';
+    import NewsletterForm from './NewsletterForm.svelte';
+
+	let {data} = $props();
+
+	let currentPath = $derived($page.url.pathname);
+    
+    $inspect(currentPath); // For debugging
 </script>
 
 <div class="relative w-full pt-24 lg:pt-36 dark:text-gray-500">
-	<!-- Tagline positioned above the SVG -->
-	<div class="absolute left-1/2 top-12 -translate-x-1/2 transform lg:top-24 text-center w-full">
-		<h2 class="text-3xl font-bold tracking-wider text-neutral-900 dark:text-neutral-300">Keep It Rural!</h2>
-	</div>
-	<FooterSvg />
+    <div class="absolute left-1/2 top-12 -translate-x-1/2 transform lg:top-24 text-center w-full">
+        <h2 class="text-3xl font-bold tracking-wider text-neutral-900 dark:text-neutral-300">Keep It Rural!</h2>
+    </div>
+    <FooterSvg />
 </div>
+
+{#if currentPath !== '/'}
+    <div class="w-full bg-neutral-50 dark:bg-neutral-900 py-12">
+        <div class="mx-auto max-w-7xl px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Newsletter Section -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-neutral-900 dark:text-neutral-300">
+                        Stay Connected
+                    </h3>
+                    <p class="text-neutral-600 dark:text-neutral-400">
+                        Join our newsletter to stay updated with our latest conservation efforts and community events.
+                    </p>
+                    <div class="max-w-md">
+                        <NewsletterForm {data}/>
+                    </div>
+                </div>
+                
+                <!-- Donate Section -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-neutral-900 dark:text-neutral-300">
+                        Support Our Mission
+                    </h3>
+                    <p class="text-neutral-600 dark:text-neutral-400">
+                        Your contribution helps us protect the rural nature of Wallowa County and preserve its natural heritage.
+                    </p>
+                    <div class="pt-2">
+                        <DonateButton />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{/if}
+
 <footer
 	class="relative bottom-0 mt-auto w-full bg-slate-100 dark:border-gray-700 dark:bg-[#121212]"
 >
@@ -109,27 +152,27 @@
 						>Home</a
 					>
 					<a
-						href="/course"
+						href="/about"
 						class="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300"
 						>About Us</a
 					>
 					<a
-						href="/rates"
+						href="/conservation"
 						class="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300"
 						>Conservation</a
 					>
 					<a
-						href="/events"
+						href="/give"
 						class="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300"
 						>Ways to Give</a
 					>
 					<a
-						href="/tournaments"
+						href="/news"
 						class="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300"
 						>News and Events</a
 					>
 					<a
-						href="/membership"
+						href="/store"
 						class="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300"
 						>Store</a
 					>
