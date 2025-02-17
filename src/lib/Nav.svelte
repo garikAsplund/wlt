@@ -6,7 +6,7 @@
 	const conservationLinks = [
 		{ href: '/conservation/plan', label: 'Conservation Plan' },
 		{ href: '/conservation/easements', label: 'Conservation Easements' },
-		{ href: '/conservation/properties', label: 'Protected Properties' },
+		{ href: '/conservation/properties', label: 'Protected Properties' }
 	];
 
 	let isDesktopDropdownOpen = $state(false);
@@ -143,9 +143,10 @@
 									role="menuitem"
 									tabindex="0"
 									onclick={handleLinkClick}
-									class="block px-3 py-2.5 text-center text-base transition-colors hover:bg-gray-50
-						{$page.url.pathname === link.href
-										? 'bg-gray-100 text-gray-900'
+									class="block px-3 py-2.5 text-center text-base transition-colors
+					hover:bg-gray-50 dark:hover:bg-gray-800/60
+					{$page.url.pathname === link.href
+										? 'bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100'
 										: 'text-gray-700 dark:text-gray-300'}"
 								>
 									{link.label}
@@ -155,29 +156,29 @@
 					{/if}
 				</div>
 				<a
-					href="/events"
-					class="p-4 hover:opacity-75 {$page.url.pathname === '/events'
-						? 'border-b-2 border-slate-600'
+					href="/give"
+					class="relative p-4 hover:opacity-75 {$page.url.pathname === '/give'
+						? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 						: ''}"
-					aria-current={$page.url.pathname === '/events' ? 'page' : undefined}
+					aria-current={$page.url.pathname === '/give' ? 'page' : undefined}
 				>
 					Ways to Give
 				</a>
 				<a
-					href="/tournaments"
-					class="p-4 hover:opacity-75 {$page.url.pathname === '/tournaments'
-						? 'border-b-2 border-slate-600'
+					href="/news"
+					class="relative p-4 hover:opacity-75 {$page.url.pathname === '/news'
+						? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 						: ''}"
-					aria-current={$page.url.pathname === '/tournaments' ? 'page' : undefined}
+					aria-current={$page.url.pathname === '/news' ? 'page' : undefined}
 				>
 					News and Events
 				</a>
 				<a
-					href="/membership"
-					class="p-4 hover:opacity-75 {$page.url.pathname === '/membership'
-						? 'border-b-2 border-slate-600'
+					href="/store"
+					class="relative p-4 hover:opacity-75 {$page.url.pathname === '/store'
+						? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 						: ''}"
-					aria-current={$page.url.pathname === '/membership' ? 'page' : undefined}
+					aria-current={$page.url.pathname === '/store' ? 'page' : undefined}
 				>
 					Store
 				</a>
@@ -256,15 +257,15 @@
 				</button>
 
 				{#if isMobileDropdownOpen}
-					<div class="bg-gray-50 dark:bg-[#1a1a1a]">
+					<div class="bg-gray-50 dark:bg-gray-800">
 						{#each conservationLinks as link}
 							<a
 								href={link.href}
 								onclick={closeMenu}
 								class="block w-full p-4 text-center text-base hover:opacity-75
-									{$page.url.pathname === link.href
-									? 'bg-gray-100 text-gray-900'
-									: 'text-gray-700 dark:text-gray-300'}"
+					{$page.url.pathname === link.href
+									? 'bg-gray-100 text-gray-900 dark:bg-gray-700 dark:text-slate-100'
+									: 'text-gray-700 dark:text-slate-300'}"
 							>
 								{link.label}
 							</a>
@@ -273,25 +274,25 @@
 				{/if}
 			</div>
 			<a
-				href="/events"
+				href="/give"
 				class="w-full p-4 text-center text-lg hover:opacity-75"
 				onclick={closeMenu}
-				aria-current={$page.url.pathname === '/events' ? 'page' : undefined}
+				aria-current={$page.url.pathname === '/give' ? 'page' : undefined}
 			>
 				<span
-					class={$page.url.pathname === '/events' ? 'inline-block border-b-2 border-slate-600' : ''}
+					class={$page.url.pathname === '/give' ? 'inline-block border-b-2 border-slate-600' : ''}
 				>
 					Ways to Give
 				</span>
 			</a>
 			<a
-				href="/tournaments"
+				href="/news"
 				class="w-full p-4 text-center text-lg hover:opacity-75"
 				onclick={closeMenu}
-				aria-current={$page.url.pathname === '/tournaments' ? 'page' : undefined}
+				aria-current={$page.url.pathname === '/news' ? 'page' : undefined}
 			>
 				<span
-					class={$page.url.pathname === '/tournaments'
+					class={$page.url.pathname === '/news'
 						? 'inline-block border-b-2 border-slate-600'
 						: ''}
 				>
@@ -299,13 +300,13 @@
 				</span>
 			</a>
 			<a
-				href="/membership"
+				href="/store"
 				class="w-full p-4 text-center text-lg hover:opacity-75"
 				onclick={closeMenu}
-				aria-current={$page.url.pathname === '/membership' ? 'page' : undefined}
+				aria-current={$page.url.pathname === '/store' ? 'page' : undefined}
 			>
 				<span
-					class={$page.url.pathname === '/membership'
+					class={$page.url.pathname === '/store'
 						? 'inline-block border-b-2 border-slate-600'
 						: ''}
 				>

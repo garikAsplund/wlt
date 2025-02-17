@@ -20,7 +20,7 @@
 
 <div class="w-full bg-white dark:bg-[#121212] lg:py-16 py-12">
   <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-center font-['Georgia'] text-2xl sm:text-3xl text-gray-900 dark:text-gray-100 mb-4">
+      <h2 class="text-center font-['Georgia'] text-2xl sm:text-3xl text-slate-900 dark:text-slate-100 mb-4">
           By the Numbers
       </h2>
       

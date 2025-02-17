@@ -6,7 +6,11 @@
 	import AccreditedSvg from './AccreditedSVG.svelte';
 </script>
 
-<div class="w-full pt-24 lg:pt-36  dark:text-gray-500">
+<div class="relative w-full pt-24 lg:pt-36 dark:text-gray-500">
+	<!-- Tagline positioned above the SVG -->
+	<div class="absolute left-1/2 top-12 -translate-x-1/2 transform lg:top-24 text-center w-full">
+		<h2 class="text-3xl font-bold tracking-wider text-neutral-900 dark:text-neutral-300">Keep It Rural!</h2>
+	</div>
 	<FooterSvg />
 </div>
 <footer
@@ -17,11 +21,6 @@
 			class="grid grid-cols-1 justify-evenly gap-12 pl-8 text-neutral-600 md:grid-cols-3 lg:grid-cols-4 dark:text-neutral-400"
 		>
 			<!-- Logo -->
-			<!-- <div class="hidden w-fit scale-150 items-center lg:flex">
-				<a href="/" aria-label="Return to homepage" class="hover:opacity-80">
-					<Logo />
-				</a>
-			</div> -->
 			<div class="order-1 grid grid-cols-2 gap-4 md:grid-cols-1 text-black dark:text-gray-300">
 				<a
 					href="https://www.landtrustaccreditation.org/about/about-the-seal"
@@ -70,7 +69,7 @@
 						tabindex="0"
 						role="button"
 						aria-label="Address"
-						class=" flex cursor-default items-center gap-2 transition-colors"
+						class="flex cursor-default items-center gap-2 transition-colors"
 					>
 						<MapPin size={18} class="mt-1 flex-shrink-0" />
 						<span>
@@ -104,6 +103,11 @@
 			<div class="order-3 w-fit space-y-4">
 				<h3 class="text-lg font-medium text-neutral-900 dark:text-neutral-300">Navigation</h3>
 				<div class="flex flex-col space-y-1">
+					<a
+						href="/"
+						class="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300"
+						>Home</a
+					>
 					<a
 						href="/course"
 						class="text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300"

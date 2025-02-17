@@ -1,5 +1,5 @@
 <script lang="ts">
-    import angelaImg from '$lib/images/board/angela.png?enhanced';
+    import angelaImg from '$lib/images/board/angela.jpg?enhanced';
     import benjaminImg from '$lib/images/board/benjamin.jpg?enhanced';
     import davidImg from '$lib/images/board/david.jpg?enhanced';
     import dougImg from '$lib/images/board/doug.jpg?enhanced';
@@ -105,7 +105,7 @@
 </script>
 
 <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
-    <h1 class="mb-8 sm:mb-12 font-serif text-3xl sm:text-4xl text-slate-800">Board of Directors</h1>
+    <h1 class="mb-8 sm:mb-12 font-serif text-3xl sm:text-4xl text-slate-800 dark:text-slate-100">Board of Directors</h1>
     <div class="space-y-12 sm:space-y-16">
         {#each boardMembers as member, i}
             <div class="grid gap-6 sm:gap-8 md:grid-cols-[280px_1fr]">
@@ -113,21 +113,21 @@
                     <enhanced:img
                         src={member.image}
                         alt={member.name}
-                        class="aspect-[4/5] w-full rounded-lg bg-slate-100 object-cover dark:invert"
+                        class="aspect-[4/5] w-full rounded-lg bg-slate-100 object-cover object-top dark:bg-slate-800"
                     />
                     <div class="mt-4 text-center md:text-left">
-                        <h2 class="text-lg font-medium text-slate-900">{member.name}</h2>
-                        <p class="text-slate-600">{member.title}</p>
+                        <h2 class="text-lg font-medium text-slate-900 dark:text-slate-100">{member.name}</h2>
+                        <p class="text-slate-600 dark:text-slate-400">{member.title}</p>
                     </div>
                 </div>
-                <div class="space-y-4 text-slate-700">
+                <div class="space-y-4 text-slate-700 dark:text-slate-300">
                     {#each member.bio as paragraph}
                         <p class="leading-relaxed">{paragraph}</p>
                     {/each}
                 </div>
             </div>
             {#if i !== boardMembers.length - 1}
-                <hr class="opacity-25 my-12 sm:my-16"/>
+                <hr class="opacity-25 my-12 sm:my-16 dark:border-slate-700"/>
             {/if}
         {/each}
     </div>

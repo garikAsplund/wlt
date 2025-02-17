@@ -14,17 +14,17 @@
 	</div>
 	<div class="w-full py-8 text-center sm:py-12 md:py-16">
 		<h2
-			class="mb-4 font-['Georgia'] text-xl font-medium tracking-wide text-gray-900 sm:text-2xl md:text-3xl lg:text-4xl dark:invert"
+			class="mb-4 font-['Georgia'] text-xl font-medium tracking-wide text-slate-900 sm:text-2xl md:text-3xl lg:text-4xl dark:text-slate-200"
 		>
 			Head to Heart Conservation
 		</h2>
-		<p class="mx-auto max-w-2xl px-4 text-lg text-gray-700 dark:text-gray-300">
+		<p class="mx-auto max-w-2xl px-4 text-lg text-slate-700 dark:text-slate-300">
 			Discover how we're reimagining conservation through meaningful collaboration with Indigenous
 			peoples, bridging traditional ecological knowledge with modern land stewardship.
 		</p>
 		<a
 			href="/executive-director-letter"
-			class="mt-6 inline-flex items-center gap-2 border-b border-current text-gray-900 hover:text-gray-600 dark:text-gray-100"
+			class="mt-6 inline-flex items-center gap-2 border-b border-current text-slate-900 hover:text-slate-600 hover:dark:text-slate-400 dark:text-slate-100"
 		>
 			Read our Executive Director's letter
 			<ArrowUpRight class="h-4 w-4" />
