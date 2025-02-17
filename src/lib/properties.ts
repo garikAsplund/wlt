@@ -84,7 +84,7 @@ export const properties: Property[] = [
 		slug: 'lola-hasslacher-conservation-easement',
 		name: 'Lola-Hasslacher Conservation Easement',
 		description: '40 acres of woodland on East Moraine',
-		image: '/images/properties/lola-hasslacher.jpg',
+		image: '/images/properties/lola-hasslacher.png',
 		acres: 40,
 		conservationYear: 2014,
 		fullDescription: [
@@ -100,7 +100,7 @@ export const properties: Property[] = [
 		slug: 'perry-farm-conservation-easement',
 		name: 'Perry Farm Conservation Easement',
 		description: '482-acre working farm conservation',
-		image: '/images/properties/perry-farm.jpg',
+		image: '/images/properties/perry-farm.png',
 		acres: 482,
 		fullDescription: [
 			'Working with Wallowa Land Trust, landowners Lou and Deyette Perry voluntarily established a 482-acre conservation easement on their working farm that extinguishes development of one homesite, maintains working lands, and conserves habitat forever. This project is in addition to a growing list of properties under permenant protection on the iconic East Moraine.',

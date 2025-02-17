@@ -37,7 +37,7 @@
 <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
 	<div class="mb-8 sm:mb-12">
 		<enhanced:img
-			src="/static/images/backgrounds/canyons.jpg"
+			src="/static/images/backgrounds/moraine-folds.jpg"
 			alt="Wallowa County Landscape"
 			class="h-24 w-full rounded-lg object-cover sm:h-64"
 		/>

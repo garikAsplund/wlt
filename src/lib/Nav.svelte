@@ -10,11 +10,11 @@
 		{ href: '/conservation/properties', label: 'Protected Properties' }
 	];
 
-	let isDesktopDropdownOpen = $state(false);
-	let isMobileDropdownOpen = $state(false);
+	let isDesktopConservationDropdownOpen = $state(false);
+	let isMobileConservationDropdownOpen = $state(false);
 
-	function toggleMobileDropdown() {
-		isMobileDropdownOpen = !isMobileDropdownOpen;
+	function toggleConservationMobileDropdown() {
+		isMobileConservationDropdownOpen = !isMobileConservationDropdownOpen;
 	}
 
 	let isMenuOpen = $state(false);
@@ -34,7 +34,7 @@
 	});
 
 	function handleLinkClick() {
-		isDesktopDropdownOpen = false;
+		isDesktopConservationDropdownOpen = false;
 	}
 
 	function toggleMenu() {
@@ -97,12 +97,11 @@
 
 		<!-- Navigation Links - Center -->
 		<div class="hidden flex-grow justify-center lg:flex">
-<div class="flex justify-center items-center space-x-4 lg:text-lg xl:space-x-8 xl:text-2xl">
-
+			<div class="flex items-center justify-center space-x-4 lg:text-lg xl:space-x-8 xl:text-2xl">
 				<a
 					href="/about"
-					class="relative text-center flex items-center p-4 whitespace-break-spaces hover:opacity-75 {$page.url
-						.pathname === '/about'
+					class="relative flex items-center p-4 text-center whitespace-break-spaces hover:opacity-75 {$page
+						.url.pathname === '/about'
 						? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 						: ''}"
 					aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
@@ -113,27 +112,27 @@
 					role="menu"
 					tabindex="0"
 					class="relative hidden lg:block"
-					onmouseenter={() => (isDesktopDropdownOpen = true)}
-					onmouseleave={() => (isDesktopDropdownOpen = false)}
+					onmouseenter={() => (isDesktopConservationDropdownOpen = true)}
+					onmouseleave={() => (isDesktopConservationDropdownOpen = false)}
 				>
 					<button
 						role="menuitem"
 						tabindex="0"
 						aria-haspopup="true"
-						aria-expanded={isDesktopDropdownOpen}
-						class="relative text-center flex items-center p-4 hover:opacity-75
+						aria-expanded={isDesktopConservationDropdownOpen}
+						class="relative flex items-center p-4 text-center hover:opacity-75
 			{$page.url.pathname.startsWith('/conservation') || $page.url.pathname.startsWith('/rates')
 							? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 							: ''}"
 					>
 						Conservation
 						<ChevronDown
-							class="ml-2 transition-transform {isDesktopDropdownOpen ? 'rotate-180' : ''}"
+							class="ml-2 transition-transform {isDesktopConservationDropdownOpen ? 'rotate-180' : ''}"
 							size={20}
 						/>
 					</button>
 
-					{#if isDesktopDropdownOpen}
+					{#if isDesktopConservationDropdownOpen}
 						<div
 							role="menu"
 							tabindex="0"
@@ -159,7 +158,7 @@
 				</div>
 				<a
 					href="/give"
-					class="relative text-center p-4 hover:opacity-75 {$page.url.pathname === '/give'
+					class="relative p-4 text-center hover:opacity-75 {$page.url.pathname === '/give'
 						? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 						: ''}"
 					aria-current={$page.url.pathname === '/give' ? 'page' : undefined}
@@ -168,7 +167,7 @@
 				</a>
 				<a
 					href="/news"
-					class="relative text-center p-4 hover:opacity-75 {$page.url.pathname === '/news'
+					class="relative p-4 text-center hover:opacity-75 {$page.url.pathname === '/news'
 						? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 						: ''}"
 					aria-current={$page.url.pathname === '/news' ? 'page' : undefined}
@@ -177,7 +176,7 @@
 				</a>
 				<a
 					href="/store"
-					class="relative text-center p-4 hover:opacity-75 {$page.url.pathname === '/store'
+					class="relative p-4 text-center hover:opacity-75 {$page.url.pathname === '/store'
 						? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 						: ''}"
 					aria-current={$page.url.pathname === '/store' ? 'page' : undefined}
@@ -190,7 +189,7 @@
 		<!-- Right Section - Donate & Mobile Menu -->
 		<div class="flex items-center">
 			<!-- Donate Button -->
-			<div class="hidden lg:block scale-80 lg:scale-90 xl:scale-100">
+			<div class="hidden scale-80 lg:block lg:scale-90 xl:scale-100">
 				<DonateButton />
 			</div>
 
@@ -236,7 +235,7 @@
 			<div class="w-full lg:hidden">
 				<button
 					class="flex w-full items-center justify-center p-4 text-lg hover:opacity-75"
-					onclick={toggleMobileDropdown}
+					onclick={toggleConservationMobileDropdown}
 				>
 					<span
 						class={$page.url.pathname.startsWith('/conservation')
@@ -246,12 +245,12 @@
 						Conservation
 					</span>
 					<ChevronDown
-						class="ml-2 transition-transform {isMobileDropdownOpen ? 'rotate-180' : ''}"
+						class="ml-2 transition-transform {isMobileConservationDropdownOpen ? 'rotate-180' : ''}"
 						size={20}
 					/>
 				</button>
 
-				{#if isMobileDropdownOpen}
+				{#if isMobileConservationDropdownOpen}
 					<div class="bg-gray-50 dark:bg-gray-800">
 						{#each conservationLinks as link}
 							<a
@@ -287,9 +286,7 @@
 				aria-current={$page.url.pathname === '/news' ? 'page' : undefined}
 			>
 				<span
-					class={$page.url.pathname === '/news'
-						? 'inline-block border-b-2 border-slate-600'
-						: ''}
+					class={$page.url.pathname === '/news' ? 'inline-block border-b-2 border-slate-600' : ''}
 				>
 					News and Events
 				</span>
@@ -301,9 +298,7 @@
 				aria-current={$page.url.pathname === '/store' ? 'page' : undefined}
 			>
 				<span
-					class={$page.url.pathname === '/store'
-						? 'inline-block border-b-2 border-slate-600'
-						: ''}
+					class={$page.url.pathname === '/store' ? 'inline-block border-b-2 border-slate-600' : ''}
 				>
 					Store
 				</span>
