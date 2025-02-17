@@ -47,7 +47,7 @@
 					<div class="space-y-2">
 						<label 
 							for="email" 
-							class="block text-sm font-medium"
+							class="block text-sm font-medium text-left"
 						>
 							Email address
 						</label>

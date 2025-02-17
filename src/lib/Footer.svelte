@@ -1,59 +1,44 @@
 <script lang="ts">
-    import { Phone, Mail, MapPin } from 'lucide-svelte';
-    import { page } from '$app/stores';
-    import Socials from '$lib/Socials.svelte';
-    import FooterSvg from './FooterSVG.svelte';
-    import COLTSVG from './COLTSVG.svelte';
-    import AccreditedSvg from './AccreditedSVG.svelte';
-    import DonateButton from './DonateButton.svelte';
-    import NewsletterForm from './NewsletterForm.svelte';
+	import { Phone, Mail, MapPin } from 'lucide-svelte';
+	import { page } from '$app/stores';
+	import Socials from '$lib/Socials.svelte';
+	import FooterSvg from './FooterSVG.svelte';
+	import COLTSVG from './COLTSVG.svelte';
+	import AccreditedSvg from './AccreditedSVG.svelte';
+	import DonateButton from './DonateButton.svelte';
+	import NewsletterForm from './NewsletterForm.svelte';
 
-	let {data} = $props();
+	let { data } = $props();
 
 	let currentPath = $derived($page.url.pathname);
-    
-    $inspect(currentPath); // For debugging
+
+	$inspect(currentPath); // For debugging
 </script>
 
 <div class="relative w-full pt-24 lg:pt-36 dark:text-gray-500">
-    <div class="absolute left-1/2 top-12 -translate-x-1/2 transform lg:top-24 text-center w-full">
-        <h2 class="text-3xl font-bold tracking-wider text-neutral-900 dark:text-neutral-300">Keep It Rural!</h2>
-    </div>
-    <FooterSvg />
+	<div class="absolute top-12 left-1/2 w-full -translate-x-1/2 transform text-center lg:top-24">
+		<h2 class="text-3xl font-bold tracking-wider text-neutral-900 dark:text-neutral-300">
+			Keep It Rural!
+		</h2>
+	</div>
+	<FooterSvg />
 </div>
 
 {#if currentPath !== '/'}
-    <div class="w-full bg-neutral-50 dark:bg-neutral-900 py-12">
-        <div class="mx-auto max-w-7xl px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Newsletter Section -->
-                <div class="space-y-4">
-                    <h3 class="text-2xl font-bold text-neutral-900 dark:text-neutral-300">
-                        Stay Connected
-                    </h3>
-                    <p class="text-neutral-600 dark:text-neutral-400">
-                        Join our newsletter to stay updated with our latest conservation efforts and community events.
-                    </p>
-                    <div class="max-w-md">
-                        <NewsletterForm {data}/>
-                    </div>
-                </div>
-                
-                <!-- Donate Section -->
-                <div class="space-y-4">
-                    <h3 class="text-2xl font-bold text-neutral-900 dark:text-neutral-300">
-                        Support Our Mission
-                    </h3>
-                    <p class="text-neutral-600 dark:text-neutral-400">
-                        Your contribution helps us protect the rural nature of Wallowa County and preserve its natural heritage.
-                    </p>
-                    <div class="pt-2">
-                        <DonateButton />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="w-full bg-neutral-50 dark:bg-neutral-900 py-6">
+	<div class="mx-auto max-w-7xl px-4">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+			<div class="flex flex-col justify-center items-center">
+				<h2 class="text-center text-lg font-semibold mb-4">Support our mission</h2>
+				<DonateButton />
+			</div>
+			<div>
+				<NewsletterForm {data}/>
+			</div>
+			
+		</div>
+	</div>
+</div>
 {/if}
 
 <footer
@@ -64,7 +49,7 @@
 			class="grid grid-cols-1 justify-evenly gap-12 pl-8 text-neutral-600 md:grid-cols-3 lg:grid-cols-4 dark:text-neutral-400"
 		>
 			<!-- Logo -->
-			<div class="order-1 grid grid-cols-2 gap-4 md:grid-cols-1 text-black dark:text-gray-300">
+			<div class="order-1 grid grid-cols-2 gap-4 text-black md:grid-cols-1 dark:text-gray-300">
 				<a
 					href="https://www.landtrustaccreditation.org/about/about-the-seal"
 					target="_blank"

@@ -138,5 +138,22 @@
 				{@render children()}
 			</div>
 		</div>
+        <div
+			class="sticky top-0 z-40 border-b border-slate-200 p-4 lg:hidden dark:border-slate-700"
+		>
+			<button
+				type="button"
+				class="flex items-center space-x-2 rounded-lg bg-slate-100 px-4 py-2 text-slate-700 
+					hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700
+					transition-colors duration-200"
+				onclick={() => (isSidebarOpen = true)}
+				onkeydown={(e) => e.key === 'Enter' && (isSidebarOpen = true)}
+				aria-label="Open properties menu"
+				aria-expanded={isSidebarOpen}
+			>
+				<Menu class="h-5 w-5" />
+				<span>Properties Menu</span>
+			</button>
+		</div>
 	</main>
 </div>

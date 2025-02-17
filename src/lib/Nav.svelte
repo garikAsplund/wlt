@@ -97,10 +97,11 @@
 
 		<!-- Navigation Links - Center -->
 		<div class="hidden flex-grow justify-center lg:flex">
-			<div class="flex space-x-4 lg:text-lg xl:space-x-8 xl:text-2xl">
+<div class="flex justify-center items-center space-x-4 lg:text-lg xl:space-x-8 xl:text-2xl">
+
 				<a
 					href="/about"
-					class="relative flex items-center p-4 whitespace-break-spaces hover:opacity-75 {$page.url
+					class="relative text-center flex items-center p-4 whitespace-break-spaces hover:opacity-75 {$page.url
 						.pathname === '/about'
 						? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 						: ''}"
@@ -120,7 +121,7 @@
 						tabindex="0"
 						aria-haspopup="true"
 						aria-expanded={isDesktopDropdownOpen}
-						class="relative flex items-center p-4 hover:opacity-75
+						class="relative text-center flex items-center p-4 hover:opacity-75
 			{$page.url.pathname.startsWith('/conservation') || $page.url.pathname.startsWith('/rates')
 							? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 							: ''}"
@@ -158,7 +159,7 @@
 				</div>
 				<a
 					href="/give"
-					class="relative p-4 hover:opacity-75 {$page.url.pathname === '/give'
+					class="relative text-center p-4 hover:opacity-75 {$page.url.pathname === '/give'
 						? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 						: ''}"
 					aria-current={$page.url.pathname === '/give' ? 'page' : undefined}
@@ -167,7 +168,7 @@
 				</a>
 				<a
 					href="/news"
-					class="relative p-4 hover:opacity-75 {$page.url.pathname === '/news'
+					class="relative text-center p-4 hover:opacity-75 {$page.url.pathname === '/news'
 						? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 						: ''}"
 					aria-current={$page.url.pathname === '/news' ? 'page' : undefined}
@@ -176,7 +177,7 @@
 				</a>
 				<a
 					href="/store"
-					class="relative p-4 hover:opacity-75 {$page.url.pathname === '/store'
+					class="relative text-center p-4 hover:opacity-75 {$page.url.pathname === '/store'
 						? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 						: ''}"
 					aria-current={$page.url.pathname === '/store' ? 'page' : undefined}
@@ -189,7 +190,7 @@
 		<!-- Right Section - Donate & Mobile Menu -->
 		<div class="flex items-center">
 			<!-- Donate Button -->
-			<div class="hidden lg:block">
+			<div class="hidden lg:block scale-80 lg:scale-90 xl:scale-100">
 				<DonateButton />
 			</div>
 
