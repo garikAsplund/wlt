@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import { Menu, X, ChevronRight } from 'lucide-svelte';
 	import { properties } from '$lib/properties';
+
 	let { children } = $props();
 	let isSidebarOpen = $state(false);
 	let lastScrollY = $state(0);
@@ -42,12 +43,11 @@
 			border-slate-200 bg-slate-50 p-6
 			transition-transform duration-200 ease-in-out
 			dark:border-slate-700
-			dark:bg-[#121212]/90
+			dark:bg-[#121212]
 			{isSidebarVisible ? 'top-24' : 'top-0'}
 		"
 		role="navigation"
 		aria-label="Properties navigation"
-		onkeydown={handleKeydown}
 	>
 		<div class="mb-6 flex items-center justify-between">
 			<a
