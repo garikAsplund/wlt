@@ -23,7 +23,7 @@
         <enhanced:img 
             src="/static/images/backgrounds/canyons.jpg" 
             alt="Wallowa Land Trust Impact" 
-            class="h-24 w-full rounded-lg object-cover sm:h-64"
+            class="h-24 w-full object-cover sm:h-64"
         />
     </div>
     

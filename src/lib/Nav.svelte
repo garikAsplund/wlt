@@ -5,12 +5,12 @@
 	import DonateButton from './DonateButton.svelte';
 
 	const aboutLinks = [
-    { href: '/about/plan', label: 'Strategic Plan' },
-    { href: '/about/staff', label: 'Staff' },
-    { href: '/about/board', label: 'Board' },
-    { href: '/about/reports', label: 'Annual Reports' },
-    { href: '/about/contact', label: 'Contact Us' }
-];
+		{ href: '/about/plan', label: 'Strategic Plan' },
+		{ href: '/about/staff', label: 'Staff' },
+		{ href: '/about/board', label: 'Board' },
+		{ href: '/about/reports', label: 'Annual Reports' },
+		{ href: '/about/contact', label: 'Contact Us' }
+	];
 
 	const conservationLinks = [
 		{ href: '/conservation/plan', label: 'Conservation Plan' },
@@ -26,29 +26,42 @@
 
 	let isDesktopAboutDropdownOpen = $state(false);
 	let isMobileAboutDropdownOpen = $state(false);
-	function toggleAboutMobileDropdown() {
-		isMobileAboutDropdownOpen = !isMobileAboutDropdownOpen;
-	}
+	// function toggleAboutMobileDropdown() {
+	// 	isMobileAboutDropdownOpen = !isMobileAboutDropdownOpen;
+	// }
 	function handleAboutLinkClick() {
 		isDesktopAboutDropdownOpen = false;
 	}
 
 	let isDesktopConservationDropdownOpen = $state(false);
 	let isMobileConservationDropdownOpen = $state(false);
-	function toggleConservationMobileDropdown() {
-		isMobileConservationDropdownOpen = !isMobileConservationDropdownOpen;
-	}
+	// function toggleConservationMobileDropdown() {
+	// 	isMobileConservationDropdownOpen = !isMobileConservationDropdownOpen;
+	// }
 	function handleConservationLinkClick() {
 		isDesktopConservationDropdownOpen = false;
 	}
 
 	let isDesktopNewsDropdownOpen = $state(false);
 	let isMobileNewsDropdownOpen = $state(false);
-	function toggleNewsMobileDropdown() {
-		isMobileNewsDropdownOpen = !isMobileNewsDropdownOpen;
-	}
+	// function toggleNewsMobileDropdown() {
+	// 	isMobileNewsDropdownOpen = !isMobileNewsDropdownOpen;
+	// }
 	function handleNewsLinkClick() {
 		isDesktopNewsDropdownOpen = false;
+	}
+
+	let activeMobileDropdown = $state<string | null>(null);
+
+	// Replace the individual toggle functions with a single function
+	function toggleMobileDropdown(dropdown: string) {
+		if (activeMobileDropdown === dropdown) {
+			// If clicking the currently open dropdown, close it
+			activeMobileDropdown = null;
+		} else {
+			// If clicking a different dropdown, switch to it
+			activeMobileDropdown = dropdown;
+		}
 	}
 
 	let isMenuOpen = $state(false);
@@ -324,142 +337,113 @@
 
 	<!-- Mobile Menu (same as before) -->
 	{#if isMenuOpen}
-		<div
-			class="absolute top-24 left-0 z-10 flex w-full flex-col items-center space-y-4 bg-white py-6 text-gray-800 shadow-lg lg:hidden dark:bg-[#121212] dark:text-gray-200"
-			id="mobile-menu"
-			role="navigation"
-			aria-label="Mobile menu"
-		>
-			<div class="w-full lg:hidden">
-				<button
-					class="flex w-full items-center justify-center p-4 text-lg hover:opacity-75"
-					onclick={toggleAboutMobileDropdown}
-				>
-					<span
-						class={$page.url.pathname.startsWith('/about')
-							? 'inline-block border-b-2 border-slate-600'
-							: ''}
-					>
-						About Us
-					</span>
-					<ChevronDown
-						class="ml-2 transition-transform {isMobileAboutDropdownOpen ? 'rotate-180' : ''}"
-						size={20}
-					/>
-				</button>
+    <div class="absolute top-24 left-0 z-10 flex w-full flex-col items-center space-y-4 bg-white py-6 text-gray-800 shadow-lg lg:hidden dark:bg-[#121212] dark:text-gray-200"
+         id="mobile-menu"
+         role="navigation"
+         aria-label="Mobile menu">
+        
+        <!-- About Us Section -->
+        <div class="w-full lg:hidden">
+            <button class="flex w-full items-center justify-center p-4 text-lg hover:opacity-75"
+                    onclick={() => toggleMobileDropdown('about')}>
+                <span class={$page.url.pathname.startsWith('/about') ? 'inline-block border-b-2 border-slate-600' : ''}>
+                    About Us
+                </span>
+                <ChevronDown class="ml-2 transition-transform {activeMobileDropdown === 'about' ? 'rotate-180' : ''}"
+                            size={20} />
+            </button>
 
-				{#if isMobileAboutDropdownOpen}
-					<div class="bg-gray-50 dark:bg-gray-800">
-						{#each aboutLinks as link}
-							<a
-								href={link.href}
-								onclick={closeMenu}
-								class="block w-full p-4 text-center text-base hover:opacity-75
-				{$page.url.pathname === link.href
-									? 'bg-gray-100 text-gray-900 dark:bg-gray-700 dark:text-slate-100'
-									: 'text-gray-700 dark:text-slate-300'}"
-							>
-								{link.label}
-							</a>
-						{/each}
-					</div>
-				{/if}
-			</div>
-			<div class="w-full lg:hidden">
-				<button
-					class="flex w-full items-center justify-center p-4 text-lg hover:opacity-75"
-					onclick={toggleConservationMobileDropdown}
-				>
-					<span
-						class={$page.url.pathname.startsWith('/conservation')
-							? 'inline-block border-b-2 border-slate-600'
-							: ''}
-					>
-						Conservation
-					</span>
-					<ChevronDown
-						class="ml-2 transition-transform {isMobileConservationDropdownOpen ? 'rotate-180' : ''}"
-						size={20}
-					/>
-				</button>
+            {#if activeMobileDropdown === 'about'}
+                <div class="bg-gray-50 dark:bg-gray-800">
+                    {#each aboutLinks as link}
+                        <a href={link.href}
+                           onclick={closeMenu}
+                           class="block w-full p-4 text-center text-base hover:opacity-75
+                                  {$page.url.pathname === link.href
+                                      ? 'bg-gray-100 text-gray-900 dark:bg-gray-700 dark:text-slate-100'
+                                      : 'text-gray-700 dark:text-slate-300'}">
+                            {link.label}
+                        </a>
+                    {/each}
+                </div>
+            {/if}
+        </div>
 
-				{#if isMobileConservationDropdownOpen}
-					<div class="bg-gray-50 dark:bg-gray-800">
-						{#each conservationLinks as link}
-							<a
-								href={link.href}
-								onclick={closeMenu}
-								class="block w-full p-4 text-center text-base hover:opacity-75
-					{$page.url.pathname === link.href
-									? 'bg-gray-100 text-gray-900 dark:bg-gray-700 dark:text-slate-100'
-									: 'text-gray-700 dark:text-slate-300'}"
-							>
-								{link.label}
-							</a>
-						{/each}
-					</div>
-				{/if}
-			</div>
-			<a
-				href="/give"
-				class="w-full p-4 text-center text-lg hover:opacity-75"
-				onclick={closeMenu}
-				aria-current={$page.url.pathname === '/give' ? 'page' : undefined}
-			>
-				<span
-					class={$page.url.pathname === '/give' ? 'inline-block border-b-2 border-slate-600' : ''}
-				>
-					Ways to Give
-				</span>
-			</a>
-			<div class="w-full lg:hidden">
-				<button
-					class="flex w-full items-center justify-center p-4 text-lg hover:opacity-75"
-					onclick={toggleNewsMobileDropdown}
-				>
-					<span
-						class={$page.url.pathname.startsWith('/news')
-							? 'inline-block border-b-2 border-slate-600'
-							: ''}
-					>
-						News and Events
-					</span>
-					<ChevronDown
-						class="ml-2 transition-transform {isMobileNewsDropdownOpen ? 'rotate-180' : ''}"
-						size={20}
-					/>
-				</button>
+        <!-- Conservation Section -->
+        <div class="w-full lg:hidden">
+            <button class="flex w-full items-center justify-center p-4 text-lg hover:opacity-75"
+                    onclick={() => toggleMobileDropdown('conservation')}>
+                <span class={$page.url.pathname.startsWith('/conservation') ? 'inline-block border-b-2 border-slate-600' : ''}>
+                    Conservation
+                </span>
+                <ChevronDown class="ml-2 transition-transform {activeMobileDropdown === 'conservation' ? 'rotate-180' : ''}"
+                            size={20} />
+            </button>
 
-				{#if isMobileNewsDropdownOpen}
-					<div class="bg-gray-50 dark:bg-gray-800">
-						{#each newsLinks as link}
-							<a
-								href={link.href}
-								onclick={closeMenu}
-								class="block w-full p-4 text-center text-base hover:opacity-75
-					{$page.url.pathname === link.href
-									? 'bg-gray-100 text-gray-900 dark:bg-gray-700 dark:text-slate-100'
-									: 'text-gray-700 dark:text-slate-300'}"
-							>
-								{link.label}
-							</a>
-						{/each}
-					</div>
-				{/if}
-			</div>
-			<a
-				href="/store"
-				class="w-full p-4 text-center text-lg hover:opacity-75"
-				onclick={closeMenu}
-				aria-current={$page.url.pathname === '/store' ? 'page' : undefined}
-			>
-				<span
-					class={$page.url.pathname === '/store' ? 'inline-block border-b-2 border-slate-600' : ''}
-				>
-					Store
-				</span>
-			</a>
-			<DonateButton />
-		</div>
-	{/if}
+            {#if activeMobileDropdown === 'conservation'}
+                <div class="bg-gray-50 dark:bg-gray-800">
+                    {#each conservationLinks as link}
+                        <a href={link.href}
+                           onclick={closeMenu}
+                           class="block w-full p-4 text-center text-base hover:opacity-75
+                                  {$page.url.pathname === link.href
+                                      ? 'bg-gray-100 text-gray-900 dark:bg-gray-700 dark:text-slate-100'
+                                      : 'text-gray-700 dark:text-slate-300'}">
+                            {link.label}
+                        </a>
+                    {/each}
+                </div>
+            {/if}
+        </div>
+
+        <!-- Ways to Give Section -->
+        <a href="/give"
+           class="w-full p-4 text-center text-lg hover:opacity-75"
+           onclick={closeMenu}
+           aria-current={$page.url.pathname === '/give' ? 'page' : undefined}>
+            <span class={$page.url.pathname === '/give' ? 'inline-block border-b-2 border-slate-600' : ''}>
+                Ways to Give
+            </span>
+        </a>
+
+        <!-- News and Events Section -->
+        <div class="w-full lg:hidden">
+            <button class="flex w-full items-center justify-center p-4 text-lg hover:opacity-75"
+                    onclick={() => toggleMobileDropdown('news')}>
+                <span class={$page.url.pathname.startsWith('/news') ? 'inline-block border-b-2 border-slate-600' : ''}>
+                    News and Events
+                </span>
+                <ChevronDown class="ml-2 transition-transform {activeMobileDropdown === 'news' ? 'rotate-180' : ''}"
+                            size={20} />
+            </button>
+
+            {#if activeMobileDropdown === 'news'}
+                <div class="bg-gray-50 dark:bg-gray-800">
+                    {#each newsLinks as link}
+                        <a href={link.href}
+                           onclick={closeMenu}
+                           class="block w-full p-4 text-center text-base hover:opacity-75
+                                  {$page.url.pathname === link.href
+                                      ? 'bg-gray-100 text-gray-900 dark:bg-gray-700 dark:text-slate-100'
+                                      : 'text-gray-700 dark:text-slate-300'}">
+                            {link.label}
+                        </a>
+                    {/each}
+                </div>
+            {/if}
+        </div>
+
+        <!-- Store Section -->
+        <a href="/store"
+           class="w-full p-4 text-center text-lg hover:opacity-75"
+           onclick={closeMenu}
+           aria-current={$page.url.pathname === '/store' ? 'page' : undefined}>
+            <span class={$page.url.pathname === '/store' ? 'inline-block border-b-2 border-slate-600' : ''}>
+                Store
+            </span>
+        </a>
+        
+        <DonateButton />
+    </div>
+{/if}
 </nav>

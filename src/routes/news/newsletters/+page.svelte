@@ -37,12 +37,12 @@
 		<enhanced:img 
 			src="/static/images/backgrounds/wallowa-lands2.png" 
 			alt="Wallowa Land Trust Newsletter Header" 
-			class="w-full h-24 sm:h-64 object-cover object-top rounded-lg hidden md:block"
+			class="w-full h-24 sm:h-64 object-cover object-top hidden md:block"
 		/>
         <enhanced:img 
 			src="/static/images/backgrounds/wallowa-lands-mobile.png" 
 			alt="Wallowa Land Trust Newsletter Header" 
-			class="w-full h-24 sm:h-64 object-cover object-bottom md:hidden rounded-lg"
+			class="w-full h-24 sm:h-64 object-cover object-bottom md:hidden"
 		/>
 	</div>
 	

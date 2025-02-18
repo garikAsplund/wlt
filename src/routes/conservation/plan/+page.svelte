@@ -7,7 +7,7 @@
 		<enhanced:img 
 			src="/static/images/backgrounds/farm.jpg" 
 			alt="Wallowa County Landscape" 
-			class="w-full h-24 sm:h-64 object-cover rounded-lg"
+			class="w-full h-24 sm:h-64 object-cover"
 		/>
 	</div>
 	<h1 class="mb-8 sm:mb-12 font-serif text-3xl sm:text-4xl text-slate-800 dark:text-slate-100">

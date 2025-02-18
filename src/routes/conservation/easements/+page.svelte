@@ -39,7 +39,7 @@
 		<enhanced:img
 			src="/static/images/backgrounds/moraine-folds.jpg"
 			alt="Wallowa County Landscape"
-			class="h-24 w-full rounded-lg object-cover sm:h-64"
+			class="h-24 w-full object-cover sm:h-64"
 		/>
 	</div>
 	<h1 class="mb-8 font-serif text-3xl text-slate-800 sm:text-4xl dark:text-slate-100">

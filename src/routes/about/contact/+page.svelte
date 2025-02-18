@@ -8,7 +8,7 @@
 		<enhanced:img
 			src="/static/images/backgrounds/contact.jpg"
 			alt="Wallowa Land Trust Office"
-			class="h-24 w-full rounded-lg object-cover sm:h-64"
+			class="h-24 w-full object-cover sm:h-64"
 		/>
 	</div>
 
