@@ -78,17 +78,26 @@ export const heroContent = {
 },
 '/news/events': {
     title: 'Events',
-    image: imageModules['/static/images/backgrounds/events.jpg']?.default,
-    alt: 'Wallowa Land Trust events'
+    image: imageModules['/static/images/backgrounds/events.png']?.default,
+    alt: 'Wallowa Land Trust events',
+    position: 'center 70%',
 },
 '/news/newsletters': {
     title: 'Newsletters',
     image: imageModules['/static/images/backgrounds/newsletters.jpg']?.default,
-    alt: 'Wallowa Land Trust newsletters'
+    alt: 'Wallowa Land Trust newsletters',
+    position: 'center 30%',
 },
 '/news/press': {
     title: 'Press & Media',
     image: imageModules['/static/images/backgrounds/press.jpg']?.default,
-    alt: 'Wallowa Land Trust in the news'
+    alt: 'Wallowa Land Trust in the news',
+    position: 'center 35%',
+    },
+'/store': {
+    title: 'Store',
+    image: imageModules['/static/images/backgrounds/store.jpg']?.default,
+    alt: 'Wallowa Land Trust store',
+    position: 'center 85%',
 }
 };
