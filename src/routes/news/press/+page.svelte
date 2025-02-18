@@ -1,0 +1,192 @@
+<!-- Press.svelte -->
+<script lang="ts">
+	import { Newspaper, Calendar, ExternalLink } from 'lucide-svelte';
+
+	// Example press items - replace with your actual data
+	const pressItems = [
+		{
+			date: '2019-12-27',
+			title: 'Saving a Treasured Heritage',
+			outlet: 'The Other Oregon',
+			url: 'https://www.theotheroregon.com/the_land/saving-a-treasured-heritage/article_633f07fe-28c5-11ea-afa6-93a555a0648d.html',
+			blurb:
+				'Wallowa Lake curves gently from the imposing cragginess of Mt. Bonneville to the rolling grasslands of the Wallowa Valley. Cushioning the transition from mountains to prairies are the high, steep, and undeveloped slopes of the Wallowa Lake moraines. Thanks to the dedicated efforts of Wallowa County residents and non-profits, a big part of this iconic landscape of the past will be preserved forever into the future.'
+		},
+		{
+			date: '2020-01-22',
+			title: 'Land Purchase Protects Wallowa Lake’s East Moraine From Development',
+			outlet: 'Oregon Public Broadcasting',
+			url: 'https://www.opb.org/news/article/oregon-wallowa-lake-east-moraine-land-purchase-protection/',
+			blurb:
+				'A large portion of the moraine that frames Eastern Oregon’s iconic Wallowa Lake has been purchased and protected from development. A public-private partnership that includes Wallowa County, two nonprofit organizations and the Oregon Parks and Recreation Department spent more than a decade arranging the purchase.'
+		},
+		{
+			date: '2020-01-22',
+			title: 'Public access to views above Wallowa Lake are one step closer to reality',
+			outlet: 'The Oregonian',
+			url: 'https://www.oregonlive.com/travel/2020/01/public-access-to-views-above-wallowa-lake-are-one-step-closer-to-reality.html',
+			blurb:
+				'Beautiful views above Wallowa Lake will soon be accessible to the public, after a yearlong fundraising effort has come to a close. The Wallowa Lake Moraines Partnership announced Tuesday that it has officially purchased nearly 1,800 acres of land on the eastern rim above the iconic northeast Oregon lake, with plans to manage the land for public recreation in the near future.'
+		},
+		{
+			date: '2019-06-19',
+			title: 'Wallowa Moraine Campaign',
+			outlet: 'OPB Think Out Loud',
+			url: 'https://www.spreaker.com/episode/wallowa-moraine-campaign--18321575',
+			blurb:
+				'The East Moraine of the Wallowa Lake Moraines is a textbook example of a glacial moraine. The glacially formed mass of rocks and sediment is largely untouched and attracts visitors from around the world. Now, it is under threat of being made residential and closed to visitors. The goal of the Campaign for the East Moraine is to raise enough funding so that Wallowa County can buy the property and secure it as a community forest in order to keep the land undeveloped and allow access to the public.'
+		},
+		{
+			date: '2021-09-22',
+			title: 'A Blessing on Both Sides',
+			outlet: 'Saving Land Magazine, Land Trust Alliance',
+			url: '/static/PDFs/BlessingOnBothSides.pdf',
+			blurb: 'The transformative power of partnerships between land trusts and tribal members.'
+		},
+		{
+			date: '2019-10-23',
+			title: 'Perry family saves nearly 500 acres of East Moraine for posterity',
+			outlet: 'Wallowa County Chieftain',
+			url: 'https://www.wallowa.com/news/perry-family-saves-nearly-acres-of-east-moraine-for-posterity/article_39446704-f423-11e9-a7a7-d307f923caf8.html',
+			blurb:
+				'Wallowa Lake’s iconic East Moraine is well on its way to being conserved in its entirety. Another 482 acres was recently added to the growing list of properties under permanent protection. Working with Wallowa Land Trust, landowners Lou and Deyette Perry voluntarily established a conservation easement on their working farm that extinguishes development of one homesite, ensures that the 482 acres will never be subdivided, maintains working grazing and agricultural lands and conserves habitat forever.'
+		},
+		{
+			date: '2019-10-23',
+			title: 'Oregon Parks and Rec pledges $1M to East Moraine Conservation',
+			outlet: 'Wallowa County Chieftain',
+			url: 'https://www.wallowa.com/news/oregon-parks-and-rec-pledges-m-to-east-moraine-conservation/article_c985b90e-f42c-11e9-8f9a-7f07329d9b18.html',
+			blurb:
+				'For the past 19,000 years or so, Wallowa Lake’s stately East Moraine has towered above Wallowa Lake, a monumental and unspoiled legacy to the power of glacial ice and the persistence of nature. Revered by local residents and visitors alike, this privately owned landscape has remained miraculously undeveloped. Now, thanks to a $1 million dollar commitment by Oregon State Parks and Recreation Department (ORPD), the effort to place the 1800-acre Yanke property, largest tract of land on the East Moraine, into ownership of Wallowa County has taken a giant step toward completion.'
+		},
+		{
+			date: '2019-09-18',
+			title: 'Nez Perce guide Wallowa Land Trust moraine hike',
+			outlet: 'Wallowa County Chieftain',
+			url: 'https://www.wallowa.com/news/nez-perce-guide-wallowa-land-trust-moraine-hike/article_0d7ad4b4-d808-11e9-b4a0-6bbbae40c8a3.html',
+			blurb:
+				'About 25 stalwart hikers accompanied three Nez Perce tribal elders for a hike on Wallowa Lake’s east moraine on Saturday morning, September 15. The purpose was to explore the moraine’s natural features, and better understand concepts and ethics of resource management from the perspective of Joseph’s Wallowa Band, the Nez Perce people who lived here. The elders were from Nespelem, Washington, and are descendants of Chief Joseph’s band, the Wallowa NiMiiPuu. An evening presentation at Fishtrap’s Coffin House focused on the history of Joseph’s band after the War of 1877.'
+		},
+		{
+			date: '2017-08-29',
+			title: 'Farm, trust close easement',
+			outlet: 'La Grande Observer',
+			url: 'https://www.lagrandeobserver.com/archive/farm-trust-close-easement/article_999e49e3-390a-5be8-b14f-ca969d14d037.html',
+			blurb:
+				'Woody Wolfe, of Wallowa, is well known for saying, “I’m more of a businessman than a farmer,” but keeping working lands working takes business sense and agricultural know-how. For Wolfe, that means constantly thinking outside the box.'
+		},
+		{
+			date: '2017-06-18',
+			title: 'Family donates conservation easement to Wallowa trust',
+			outlet: 'La Grande Observer',
+			url: 'https://www.lagrandeobserver.com/archive/family-donates-conservation-easement-to-wallowa-trust/article_4e402b52-a618-5fa9-8e6a-38e0da930d30.html',
+			blurb: 'More than 50 acres of Wallowa Lake’s East Moraine was protected from development this spring, leaving more open space for wildlife and threatened plants. Kathleen Ackley, Wallowa Land Trust executive director, said the Ham Family LLC donated a conservation easement to the Trust, extinguishing development and subdivision rights on the majority of the 70-acre property.'
+		},
+		// {
+		// 	date: '2020-01-22',
+		// 	title: 'Land Purchase Protects Wallowa Lake’s East Moraine From Development',
+		// 	outlet: 'Oregon Public Broadcasting',
+		// 	url: 'https://www.opb.org/news/article/oregon-wallowa-lake-east-moraine-land-purchase-protection/',
+		// 	blurb:
+		// 		'A large portion of the moraine that frames Eastern Oregon’s iconic Wallowa Lake has been purchased and protected from development. A public-private partnership that includes Wallowa County, two nonprofit organizations and the Oregon Parks and Recreation Department spent more than a decade arranging the purchase.'
+		// },
+		// {
+		// 	date: '2020-01-22',
+		// 	title: 'Land Purchase Protects Wallowa Lake’s East Moraine From Development',
+		// 	outlet: 'Oregon Public Broadcasting',
+		// 	url: 'https://www.opb.org/news/article/oregon-wallowa-lake-east-moraine-land-purchase-protection/',
+		// 	blurb:
+		// 		'A large portion of the moraine that frames Eastern Oregon’s iconic Wallowa Lake has been purchased and protected from development. A public-private partnership that includes Wallowa County, two nonprofit organizations and the Oregon Parks and Recreation Department spent more than a decade arranging the purchase.'
+		// },
+		// {
+		// 	date: '2020-01-22',
+		// 	title: 'Land Purchase Protects Wallowa Lake’s East Moraine From Development',
+		// 	outlet: 'Oregon Public Broadcasting',
+		// 	url: 'https://www.opb.org/news/article/oregon-wallowa-lake-east-moraine-land-purchase-protection/',
+		// 	blurb:
+		// 		'A large portion of the moraine that frames Eastern Oregon’s iconic Wallowa Lake has been purchased and protected from development. A public-private partnership that includes Wallowa County, two nonprofit organizations and the Oregon Parks and Recreation Department spent more than a decade arranging the purchase.'
+		// },
+		// {
+		// 	date: '2020-01-22',
+		// 	title: 'Land Purchase Protects Wallowa Lake’s East Moraine From Development',
+		// 	outlet: 'Oregon Public Broadcasting',
+		// 	url: 'https://www.opb.org/news/article/oregon-wallowa-lake-east-moraine-land-purchase-protection/',
+		// 	blurb:
+		// 		'A large portion of the moraine that frames Eastern Oregon’s iconic Wallowa Lake has been purchased and protected from development. A public-private partnership that includes Wallowa County, two nonprofit organizations and the Oregon Parks and Recreation Department spent more than a decade arranging the purchase.'
+		// },
+		// {
+		// 	date: '2020-01-22',
+		// 	title: 'Land Purchase Protects Wallowa Lake’s East Moraine From Development',
+		// 	outlet: 'Oregon Public Broadcasting',
+		// 	url: 'https://www.opb.org/news/article/oregon-wallowa-lake-east-moraine-land-purchase-protection/',
+		// 	blurb:
+		// 		'A large portion of the moraine that frames Eastern Oregon’s iconic Wallowa Lake has been purchased and protected from development. A public-private partnership that includes Wallowa County, two nonprofit organizations and the Oregon Parks and Recreation Department spent more than a decade arranging the purchase.'
+		// }
+	];
+
+	// Group press items by year
+	const itemsByYear = pressItems.reduce(
+		(acc, item) => {
+			const year = new Date(item.date).getFullYear();
+			if (!acc[year]) acc[year] = [];
+			acc[year].push(item);
+			return acc;
+		},
+		{} as Record<number, typeof pressItems>
+	);
+
+	// Sort years in descending order
+	const years = Object.keys(itemsByYear).sort((a, b) => Number(b) - Number(a));
+</script>
+
+<div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
+	<div class="space-y-6 rounded-lg bg-slate-50 p-6 sm:p-8 dark:bg-slate-800/50">
+		<p class="leading-relaxed text-slate-700 dark:text-slate-300">
+			Stay updated with the latest news and press coverage about our conservation efforts and
+			community initiatives in Wallowa County.
+		</p>
+
+		{#each years as year}
+			<div class="border-t border-slate-200 pt-6 dark:border-slate-700">
+				<h2 class="mb-4 font-serif text-2xl text-slate-800 dark:text-slate-100">
+					{year} Press Coverage
+				</h2>
+
+				<div class="space-y-4">
+					{#each itemsByYear[year] as item}
+						<div class="rounded-lg border border-slate-200 p-4 dark:border-slate-700">
+							<div
+								class="mb-2 flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-400"
+							>
+								<Calendar class="h-4 w-4" />
+								<span>{new Date(item.date).toLocaleDateString()}</span>
+								<span>•</span>
+								<Newspaper class="h-4 w-4" />
+								<span>{item.outlet}</span>
+							</div>
+
+							<h3 class="mb-2 text-lg font-medium text-slate-800 dark:text-slate-100">
+								{item.title}
+							</h3>
+
+							<p class="mb-3 text-slate-700 dark:text-slate-300">
+								{item.blurb}
+							</p>
+
+							<a
+								href={item.url}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="inline-flex items-center space-x-2 text-slate-600 transition
+                                       duration-300 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200"
+							>
+								<span>Read Full Article</span>
+								<ExternalLink class="h-4 w-4" />
+							</a>
+						</div>
+					{/each}
+				</div>
+			</div>
+		{/each}
+	</div>
+</div>

@@ -14,7 +14,7 @@
 		</div>
 	</div>
 </div>
-<div class="flex flex-1 justify-end">
+<div class="flex flex-1 justify-end -translate-y-4">
 	<a href="#top" class="scale-125 hover:opacity-65">
 		<CircleArrowUp />
 	</a>

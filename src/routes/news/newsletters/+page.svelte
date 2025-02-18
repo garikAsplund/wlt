@@ -14,8 +14,8 @@
 		{ id: 5, title: 'WallowaLands_2020_Spring', season: 'Spring', year: '2020' },
 
 		// 2019 - Missing: Spring, Summer
-		{ id: 6, title: 'WallowaLands_2019_Winter', season: 'Winter', year: '2019' },
-		{ id: 7, title: 'WallowaLands_2019_Fall', season: 'Fall', year: '2019' },
+		{ id: 6, title: 'WallowaLands_2019_Fall', season: 'Fall', year: '2019' },
+		{ id: 7, title: 'WallowaLands_2019_Winter', season: 'Winter', year: '2019' },
 
 		// 2018 - Missing: Winter, Summer, Fall
 		{ id: 8, title: 'WallowaLands_2018_Spring', season: 'Spring', year: '2018' },

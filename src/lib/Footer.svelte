@@ -47,7 +47,7 @@
 <footer
 	class="relative bottom-0 mt-auto w-full bg-slate-100 dark:border-gray-700 dark:bg-[#121212]"
 >
-	<div class="mx-auto max-w-7xl px-4 pt-12 pb-8">
+	<div class="mx-auto max-w-7xl px-4 pt-12 pb-4">
 		<div
 		class="grid grid-cols-1 justify-evenly gap-12 pl-8 text-neutral-600 md:grid-cols-3 lg:grid-cols-4 dark:text-neutral-400"
 		>
@@ -189,7 +189,7 @@
 			</div>
 		</div>
 
-		<div class="pt-4 md:pt-0 dark:text-neutral-300">
+		<div class="pt-4 lg:pt-0 dark:text-neutral-300">
 			<Socials />
 		</div>
 	</div>
