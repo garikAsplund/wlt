@@ -28,7 +28,7 @@
 					tabindex="0"
 					role="button"
 					aria-label="Phone number: (541) 426-2042"
-					class="flex items-center gap-2 transition-colors hover:text-neutral-900 md:hidden dark:hover:text-neutral-300"
+					class="flex items-center gap-2 transition-colors hover:text-neutral-900 md:hidden dark:hover:text-neutral-300 text-slate-700 dark:text-slate-300"
 				>
 					<Phone size={18} />
 					<span class="select-all">(541) 426-2042</span>
@@ -39,7 +39,7 @@
 					tabindex="0"
 					role="button"
 					aria-label="Phone number: (541) 426-2042"
-					class="hidden cursor-default items-center gap-2 transition-colors md:flex"
+					class="hidden cursor-default items-center gap-2 transition-colors md:flex text-slate-700 dark:text-slate-300"
 				>
 					<Phone size={18} />
 					<span>(541) 426-2042</span>

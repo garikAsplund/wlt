@@ -51,7 +51,7 @@
 				</div>
 			{/each}
 		</div>
-		<div class="inset-0 flex items-center justify-center opacity-25 scale-75">
+		<div class="inset-0 flex items-center justify-center opacity-25 scale-75 text-gray-700 dark:text-gray-300">
 			<Oregon />
 		</div>
 	</div>
