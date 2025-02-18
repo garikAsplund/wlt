@@ -14,7 +14,7 @@
     
     <div class="mb-6 lg:mb-12">
         <enhanced:img 
-            src="/static/images/properties/protected_properties.png" 
+            src="$lib/images/properties/protected_properties.png" 
             alt="Wallowa County Landscape" 
             class="w-full h-auto scale-90"
         />
