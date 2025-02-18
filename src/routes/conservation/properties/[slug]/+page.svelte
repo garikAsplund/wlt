@@ -1,7 +1,4 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	import eastMoraine from '$lib/images/properties/east-moraine.jpg?enhanced';
-
 	let { data } = $props();
 </script>
 

@@ -68,16 +68,6 @@
 </script>
 
 <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
-	<div class="mb-8 sm:mb-12">
-		<enhanced:img
-			src="/static/images/backgrounds/plan.jpg"
-			alt="Wallowa County Landscape"
-			class="h-24 w-full object-cover sm:h-64"
-		/>
-	</div>
-	<h1 class="mb-8 font-serif text-3xl text-slate-800 sm:mb-12 sm:text-4xl dark:text-slate-100">
-		Wallowa Land Trust Strategic Plan
-	</h1>
 	<div class="space-y-12 rounded-lg bg-slate-50 p-6 sm:p-8 dark:bg-slate-800/50">
 		<!-- Mission & Vision Section -->
 		<section class="space-y-6 border-b border-slate-200 pb-12 dark:border-slate-700">

@@ -4,7 +4,7 @@
 
 <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
 	<!-- Hero Section -->
-	<div class="mb-8 sm:mb-12">
+	<!-- <div class="mb-8 sm:mb-12">
 		<enhanced:img
 			src="/static/images/backgrounds/contact.jpg"
 			alt="Wallowa Land Trust Office"
@@ -14,7 +14,7 @@
 
 	<h1 class="mb-8 font-serif text-3xl text-slate-800 sm:mb-12 sm:text-4xl dark:text-slate-100">
 		Contact Us
-	</h1>
+	</h1> -->
 
 	<div class="grid gap-8 lg:grid-cols-2">
 		<!-- Contact Information -->

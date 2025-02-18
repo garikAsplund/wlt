@@ -42,18 +42,6 @@
 </script>
 
 <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
-	<div class="mb-8 sm:mb-12">
-		<enhanced:img
-			src="/static/images/backgrounds/giving.jpg"
-			alt="Wallowa County Landscape"
-			class="h-24 w-full object-cover sm:h-64"
-		/>
-	</div>
-
-	<h1 class="mb-8 font-serif text-3xl text-slate-800 sm:text-4xl dark:text-slate-100">
-		Ways to Give
-	</h1>
-
 	<div class="mb-8 space-y-6 rounded-lg bg-slate-50 p-6 sm:p-8 dark:bg-slate-800">
 		<p class="text-lg text-slate-800 dark:text-slate-200">
 			Your support helps protect the places we love in Wallowa County: working farms, natural areas,
@@ -87,8 +75,17 @@
 				Want to learn more about giving?
 			</h2>
 			<div class="space-y-3">
-				<p class="text-xl text-slate-700 dark:text-slate-300">info@wallowalandtrust.org</p>
-				<p class="text-xl text-slate-700 dark:text-slate-300">(541) 426-2042</p>
+				<p class="text-xl text-slate-700 dark:text-slate-300 select-all">info@wallowalandtrust.org</p>
+				<p class="text-xl text-slate-700 dark:text-slate-300 select-all hidden sm:block">(541) 426-2042</p>
+				<a
+						href="tel:5414262042"
+						tabindex="0"
+						role="button"
+						aria-label="Phone number: (541) 426-2042"
+						class="text-xl text-slate-700 dark:text-slate-300 select-all sm:hidden block"
+					>
+						<span class="select-all">(541) 426-2042</span>
+					</a>
 			</div>
 		</div>
 	</div>

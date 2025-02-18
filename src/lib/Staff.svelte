@@ -42,7 +42,6 @@ import kathleenImg from '$lib/images/staff/kathleen.jpg?enhanced';
  </script>
  
  <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
-    <h1 class="mb-8 sm:mb-12 font-serif text-3xl sm:text-4xl text-slate-800 dark:text-slate-100">Staff</h1>
     <div class="space-y-12 sm:space-y-16">
         {#each staffMembers as member, i}
             <div class="grid gap-6 sm:gap-8 md:grid-cols-[280px_1fr]">

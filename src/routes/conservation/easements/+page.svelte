@@ -35,16 +35,6 @@
 <svelte:window on:resize={checkMobile} />
 
 <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
-	<div class="mb-8 sm:mb-12">
-		<enhanced:img
-			src="/static/images/backgrounds/moraine-folds.jpg"
-			alt="Wallowa County Landscape"
-			class="h-24 w-full object-cover sm:h-64"
-		/>
-	</div>
-	<h1 class="mb-8 font-serif text-3xl text-slate-800 sm:text-4xl dark:text-slate-100">
-		Conservation Easements
-	</h1>
 	<div class="mb-8 space-y-6 rounded-lg bg-slate-50 p-6 sm:p-8 dark:bg-slate-800/50">
 		<p class="leading-relaxed text-slate-700 dark:text-slate-300">
 			Conservation easements are powerful tools that protect the ecological and cultural heritage of

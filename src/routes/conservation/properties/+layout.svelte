@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { Menu, X, ChevronRight } from 'lucide-svelte';
 	import { properties } from '$lib/properties';
 
@@ -89,7 +89,7 @@
 					}}
 					class="
 						block rounded px-3 py-2 transition-colors
-						{$page.url.pathname === `/conservation/properties/${property.slug}`
+						{page.url.pathname === `/conservation/properties/${property.slug}`
 							? 'bg-slate-200 text-slate-900 dark:bg-slate-800 dark:text-slate-100'
 							: 'text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800/50'}
 					"

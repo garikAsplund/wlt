@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { ChevronDown, X, AlignJustify } from 'lucide-svelte';
 	import Logo from '$lib/Logo.svelte';
 	import DonateButton from './DonateButton.svelte';
@@ -71,7 +71,7 @@
 	let isNavigating = $state(false);
 
 	$effect(() => {
-		$page.url.pathname;
+		page.url.pathname;
 		isNavbarVisible = true;
 		hasScrolled = false;
 		isNavigating = true;
@@ -126,7 +126,7 @@
 		<div class="flex-shrink-0">
 			<a href="/" aria-label="Return to homepage" class="hover:opacity-80" onclick={closeMenu}>
 				<div class="flex items-center">
-					<div class="h-24 w-24 p-1 text-[#1a3d65] dark:text-gray-200">
+					<div class="h-24 w-24 p-2 text-[#1a3d65] dark:text-gray-200">
 						<Logo />
 					</div>
 					<div class="flex flex-col justify-center text-xl">
@@ -154,7 +154,7 @@
 						aria-haspopup="true"
 						aria-expanded={isDesktopAboutDropdownOpen}
 						class="relative flex items-center p-4 text-center hover:opacity-75
-			{$page.url.pathname.startsWith('/about')
+			{page.url.pathname.startsWith('/about')
 							? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 							: ''}"
 					>
@@ -179,7 +179,7 @@
 									onclick={handleAboutLinkClick}
 									class="block px-3 py-2.5 text-center text-base transition-colors
 					hover:bg-gray-50 dark:hover:bg-gray-800/60
-					{$page.url.pathname === link.href
+					{page.url.pathname === link.href
 										? 'bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100'
 										: 'text-gray-700 dark:text-gray-300'}"
 								>
@@ -202,7 +202,7 @@
 						aria-haspopup="true"
 						aria-expanded={isDesktopConservationDropdownOpen}
 						class="relative flex items-center p-4 text-center hover:opacity-75
-			{$page.url.pathname.startsWith('/conservation')
+			{page.url.pathname.startsWith('/conservation')
 							? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 							: ''}"
 					>
@@ -229,7 +229,7 @@
 									onclick={handleConservationLinkClick}
 									class="block px-3 py-2.5 text-center text-base transition-colors
 					hover:bg-gray-50 dark:hover:bg-gray-800/60
-					{$page.url.pathname === link.href
+					{page.url.pathname === link.href
 										? 'bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100'
 										: 'text-gray-700 dark:text-gray-300'}"
 								>
@@ -241,10 +241,10 @@
 				</div>
 				<a
 					href="/give"
-					class="relative p-4 text-center hover:opacity-75 {$page.url.pathname === '/give'
+					class="relative p-4 text-center hover:opacity-75 {page.url.pathname === '/give'
 						? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 						: ''}"
-					aria-current={$page.url.pathname === '/give' ? 'page' : undefined}
+					aria-current={page.url.pathname === '/give' ? 'page' : undefined}
 				>
 					Ways to Give
 				</a>
@@ -262,7 +262,7 @@
 						aria-haspopup="true"
 						aria-expanded={isDesktopNewsDropdownOpen}
 						class="relative flex items-center p-4 text-center hover:opacity-75
-					{$page.url.pathname.startsWith('/news')
+					{page.url.pathname.startsWith('/news')
 							? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 							: ''}"
 					>
@@ -287,7 +287,7 @@
 									onclick={handleNewsLinkClick}
 									class="block px-3 py-2.5 text-center text-base transition-colors
 		hover:bg-gray-50 dark:hover:bg-gray-800/60
-		{$page.url.pathname === link.href
+		{page.url.pathname === link.href
 										? 'bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100'
 										: 'text-gray-700 dark:text-gray-300'}"
 								>
@@ -299,10 +299,10 @@
 				</div>
 				<a
 					href="/store"
-					class="relative p-4 text-center hover:opacity-75 {$page.url.pathname === '/store'
+					class="relative p-4 text-center hover:opacity-75 {page.url.pathname === '/store'
 						? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
 						: ''}"
-					aria-current={$page.url.pathname === '/store' ? 'page' : undefined}
+					aria-current={page.url.pathname === '/store' ? 'page' : undefined}
 				>
 					Store
 				</a>
@@ -346,7 +346,7 @@
         <div class="w-full lg:hidden">
             <button class="flex w-full items-center justify-center p-4 text-lg hover:opacity-75"
                     onclick={() => toggleMobileDropdown('about')}>
-                <span class={$page.url.pathname.startsWith('/about') ? 'inline-block border-b-2 border-slate-600' : ''}>
+                <span class={page.url.pathname.startsWith('/about') ? 'inline-block border-b-2 border-slate-600' : ''}>
                     About Us
                 </span>
                 <ChevronDown class="ml-2 transition-transform {activeMobileDropdown === 'about' ? 'rotate-180' : ''}"
@@ -359,7 +359,7 @@
                         <a href={link.href}
                            onclick={closeMenu}
                            class="block w-full p-4 text-center text-base hover:opacity-75
-                                  {$page.url.pathname === link.href
+                                  {page.url.pathname === link.href
                                       ? 'bg-gray-100 text-gray-900 dark:bg-gray-700 dark:text-slate-100'
                                       : 'text-gray-700 dark:text-slate-300'}">
                             {link.label}
@@ -373,7 +373,7 @@
         <div class="w-full lg:hidden">
             <button class="flex w-full items-center justify-center p-4 text-lg hover:opacity-75"
                     onclick={() => toggleMobileDropdown('conservation')}>
-                <span class={$page.url.pathname.startsWith('/conservation') ? 'inline-block border-b-2 border-slate-600' : ''}>
+                <span class={page.url.pathname.startsWith('/conservation') ? 'inline-block border-b-2 border-slate-600' : ''}>
                     Conservation
                 </span>
                 <ChevronDown class="ml-2 transition-transform {activeMobileDropdown === 'conservation' ? 'rotate-180' : ''}"
@@ -386,7 +386,7 @@
                         <a href={link.href}
                            onclick={closeMenu}
                            class="block w-full p-4 text-center text-base hover:opacity-75
-                                  {$page.url.pathname === link.href
+                                  {page.url.pathname === link.href
                                       ? 'bg-gray-100 text-gray-900 dark:bg-gray-700 dark:text-slate-100'
                                       : 'text-gray-700 dark:text-slate-300'}">
                             {link.label}
@@ -400,8 +400,8 @@
         <a href="/give"
            class="w-full p-4 text-center text-lg hover:opacity-75"
            onclick={closeMenu}
-           aria-current={$page.url.pathname === '/give' ? 'page' : undefined}>
-            <span class={$page.url.pathname === '/give' ? 'inline-block border-b-2 border-slate-600' : ''}>
+           aria-current={page.url.pathname === '/give' ? 'page' : undefined}>
+            <span class={page.url.pathname === '/give' ? 'inline-block border-b-2 border-slate-600' : ''}>
                 Ways to Give
             </span>
         </a>
@@ -410,7 +410,7 @@
         <div class="w-full lg:hidden">
             <button class="flex w-full items-center justify-center p-4 text-lg hover:opacity-75"
                     onclick={() => toggleMobileDropdown('news')}>
-                <span class={$page.url.pathname.startsWith('/news') ? 'inline-block border-b-2 border-slate-600' : ''}>
+                <span class={page.url.pathname.startsWith('/news') ? 'inline-block border-b-2 border-slate-600' : ''}>
                     News and Events
                 </span>
                 <ChevronDown class="ml-2 transition-transform {activeMobileDropdown === 'news' ? 'rotate-180' : ''}"
@@ -423,7 +423,7 @@
                         <a href={link.href}
                            onclick={closeMenu}
                            class="block w-full p-4 text-center text-base hover:opacity-75
-                                  {$page.url.pathname === link.href
+                                  {page.url.pathname === link.href
                                       ? 'bg-gray-100 text-gray-900 dark:bg-gray-700 dark:text-slate-100'
                                       : 'text-gray-700 dark:text-slate-300'}">
                             {link.label}
@@ -437,8 +437,8 @@
         <a href="/store"
            class="w-full p-4 text-center text-lg hover:opacity-75"
            onclick={closeMenu}
-           aria-current={$page.url.pathname === '/store' ? 'page' : undefined}>
-            <span class={$page.url.pathname === '/store' ? 'inline-block border-b-2 border-slate-600' : ''}>
+           aria-current={page.url.pathname === '/store' ? 'page' : undefined}>
+            <span class={page.url.pathname === '/store' ? 'inline-block border-b-2 border-slate-600' : ''}>
                 Store
             </span>
         </a>

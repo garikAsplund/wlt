@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Phone, Mail, MapPin, FileCheck } from 'lucide-svelte';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import Socials from '$lib/Socials.svelte';
 	import FooterSvg from './FooterSVG.svelte';
 	import COLTSVG from './COLTSVG.svelte';
@@ -10,7 +10,7 @@
 
 	let { data } = $props();
 
-	let currentPath = $derived($page.url.pathname);
+	let currentPath = $derived(page.url.pathname);
 </script>
 
 <div class="relative w-full pt-24 lg:pt-36 dark:text-gray-500">

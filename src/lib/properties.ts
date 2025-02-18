@@ -8,8 +8,6 @@ const imageModules = import.meta.glob(
     }
 );
 
-console.log({ imageModules });
-
 export interface Property {
 	slug: string;
 	name: string;
