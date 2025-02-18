@@ -42,7 +42,7 @@
 			border-slate-200 bg-slate-50 p-6
 			transition-transform duration-200 ease-in-out
 			dark:border-slate-700
-			dark:bg-[#121212]/20
+			dark:bg-[#121212]/90
 			{isSidebarVisible ? 'top-24' : 'top-0'}
 		"
 		role="navigation"
