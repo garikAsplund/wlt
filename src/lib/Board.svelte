@@ -5,7 +5,7 @@
     import dougImg from '$lib/images/board/doug.jpg?enhanced';
     import jeanImg from '$lib/images/board/jean.jpg?enhanced';
     import jewieImg from '$lib/images/board/jewie.jpg?enhanced';
-    import nickImg from '$lib/images/board/nick.jpg?enhanced';
+    import nickImg from '$lib/images/board/nick.png?enhanced';
     import paulImg from '$lib/images/board/paul.png?enhanced';
     import yunImg from '$lib/images/board/yun.jpg?enhanced';
 
