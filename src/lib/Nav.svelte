@@ -160,7 +160,7 @@
 					>
 						About Us
 						<ChevronDown
-							class="ml-2 transition-transform {isDesktopAboutDropdownOpen ? 'rotate-180' : ''}"
+							class="ml-2"
 							size={20}
 						/>
 					</button>
@@ -208,9 +208,7 @@
 					>
 						Conservation
 						<ChevronDown
-							class="ml-2 transition-transform {isDesktopConservationDropdownOpen
-								? 'rotate-180'
-								: ''}"
+							class="ml-2"
 							size={20}
 						/>
 					</button>
@@ -268,7 +266,7 @@
 					>
 						News and Events
 						<ChevronDown
-							class="ml-2 transition-transform {isDesktopNewsDropdownOpen ? 'rotate-180' : ''}"
+							class="ml-2"
 							size={20}
 						/>
 					</button>
