@@ -44,30 +44,33 @@
             <h2 class="mb-4 font-serif text-2xl text-slate-800 dark:text-slate-100">
                 Current Annual Report
             </h2>
-            <div class="flex space-x-4">
+            <!-- Changed to stack on mobile -->
+            <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
                 <a 
                     href={`${currentReport.url}#view=fit`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="flex-1 flex items-center justify-center space-x-3 
+                    class="flex items-center justify-center space-x-3 
                            bg-slate-800 dark:bg-slate-700 text-white 
-                           px-6 py-3 rounded-lg 
+                           px-6 py-4 rounded-lg 
                            hover:bg-slate-700 dark:hover:bg-slate-600 
                            transition duration-300"
                 >
-                    <File class="h-6 w-6" />
+                    <!-- Increased icon size for mobile -->
+                    <File class="h-7 w-7 sm:h-6 sm:w-6" />
                     <span>View {currentReport.title}</span>
                 </a>
                 <a 
                     href={currentReport.url}
                     download
-                    class="flex-1 flex items-center justify-center space-x-3 
+                    class="flex items-center justify-center space-x-3 
                            bg-slate-800 dark:bg-slate-700 text-white 
-                           px-6 py-3 rounded-lg 
+                           px-6 py-4 rounded-lg 
                            hover:bg-slate-700 dark:hover:bg-slate-600 
                            transition duration-300"
                 >
-                    <Download class="h-6 w-6" />
+                    <!-- Increased icon size for mobile -->
+                    <Download class="h-7 w-7 sm:h-6 sm:w-6" />
                     <span>Download PDF</span>
                 </a>
             </div>
@@ -86,21 +89,18 @@
                         rel="noopener noreferrer"
                         class="flex items-center justify-between rounded-lg 
                                border border-slate-200 dark:border-slate-700 
-                               px-4 py-3 
+                               px-4 py-4 
                                hover:bg-slate-100 dark:hover:bg-slate-800 
                                transition duration-300"
                     >
                         <span class="text-slate-700 dark:text-slate-300">
                             {report.year} Annual Report
                         </span>
-                        <ExternalLink class="h-5 w-5 text-slate-500" />
+                        <!-- Increased icon size -->
+                        <ExternalLink class="h-6 w-6 text-slate-500" />
                     </a>
                 {/each}
             </div>
         </div>
-
-        <!-- <p class="mt-6 text-sm text-slate-600 dark:text-slate-400">
-            Looking for an older report? Please <a href="/contact" class="text-blue-600 hover:underline dark:text-blue-400">contact us</a> and we'll be happy to help.
-        </p> -->
     </div>
 </div>

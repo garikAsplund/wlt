@@ -19,7 +19,7 @@
 		</div>
 		<!-- CTA Section -->
 		<div class="flex flex-1 flex-col items-center justify-center p-6 text-center sm:p-8">
-			<p class="mb-4 text-lg text-slate-800 sm:mb-8 sm:text-xl dark:text-slate-300">
+			<p class=" text-lg text-slate-800 mb-8 sm:text-xl dark:text-slate-300">
 				Your support creates lasting change.
 			</p>
 			<a

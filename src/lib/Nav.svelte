@@ -5,12 +5,12 @@
 	import DonateButton from './DonateButton.svelte';
 
 	const aboutLinks = [
-		{ href: '/about/staff', label: 'Staff' },
-		{ href: '/about/board', label: 'Board' },
-		{ href: '/about/contact', label: 'Contact Us' },
-		{ href: '/about/plan', label: 'Strategic Plan' },
-		{ href: '/about/reports', label: 'Annual Reports' }
-	];
+    { href: '/about/plan', label: 'Strategic Plan' },
+    { href: '/about/staff', label: 'Staff' },
+    { href: '/about/board', label: 'Board' },
+    { href: '/about/reports', label: 'Annual Reports' },
+    { href: '/about/contact', label: 'Contact Us' }
+];
 
 	const conservationLinks = [
 		{ href: '/conservation/plan', label: 'Conservation Plan' },

@@ -55,7 +55,7 @@ import kathleenImg from '$lib/images/staff/kathleen.jpg?enhanced';
                     <div class="mt-4 text-center md:text-left">
                         <h2 class="text-lg font-medium text-slate-900 dark:text-slate-100">{member.name}</h2>
                         <p class="text-slate-600 dark:text-slate-400">{member.title}</p>
-                        <p class="mt-1 block text-sm text-slate-600 dark:text-slate-400">{member.email}</p>
+                        <p class="mt-1 block text-sm text-slate-600 dark:text-slate-400 select-all">{member.email}</p>
                     </div>
                 </div>
                 <div class="space-y-4 text-slate-700 dark:text-slate-300">
