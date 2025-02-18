@@ -4,6 +4,14 @@
 	import Logo from '$lib/Logo.svelte';
 	import DonateButton from './DonateButton.svelte';
 
+	const aboutLinks = [
+		{ href: '/about/staff', label: 'Staff' },
+		{ href: '/about/board', label: 'Board' },
+		{ href: '/about/contact', label: 'Contact Us' },
+		{ href: '/about/plan', label: 'Strategic Plan' },
+		{ href: '/about/reports', label: 'Annual Reports' }
+	];
+
 	const conservationLinks = [
 		{ href: '/conservation/plan', label: 'Conservation Plan' },
 		{ href: '/conservation/easements', label: 'Conservation Easements' },
@@ -16,17 +24,31 @@
 		{ href: '/news/events', label: 'Events' }
 	];
 
+	let isDesktopAboutDropdownOpen = $state(false);
+	let isMobileAboutDropdownOpen = $state(false);
+	function toggleAboutMobileDropdown() {
+		isMobileAboutDropdownOpen = !isMobileAboutDropdownOpen;
+	}
+	function handleAboutLinkClick() {
+		isDesktopAboutDropdownOpen = false;
+	}
+
 	let isDesktopConservationDropdownOpen = $state(false);
 	let isMobileConservationDropdownOpen = $state(false);
-	let isDesktopNewsDropdownOpen = $state(false);
-	let isMobileNewsDropdownOpen = $state(false);
-
 	function toggleConservationMobileDropdown() {
 		isMobileConservationDropdownOpen = !isMobileConservationDropdownOpen;
 	}
+	function handleConservationLinkClick() {
+		isDesktopConservationDropdownOpen = false;
+	}
 
+	let isDesktopNewsDropdownOpen = $state(false);
+	let isMobileNewsDropdownOpen = $state(false);
 	function toggleNewsMobileDropdown() {
 		isMobileNewsDropdownOpen = !isMobileNewsDropdownOpen;
+	}
+	function handleNewsLinkClick() {
+		isDesktopNewsDropdownOpen = false;
 	}
 
 	let isMenuOpen = $state(false);
@@ -44,14 +66,6 @@
 			isNavigating = false;
 		}, 1000);
 	});
-
-	function handleConservationLinkClick() {
-		isDesktopConservationDropdownOpen = false;
-	}
-
-	function handleNewsLinkClick() {
-		isDesktopNewsDropdownOpen = false;
-	}
 
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
@@ -114,16 +128,54 @@
 		<!-- Navigation Links - Center -->
 		<div class="hidden flex-grow justify-center lg:flex">
 			<div class="flex items-center justify-center space-x-4 lg:text-lg xl:space-x-8 xl:text-2xl">
-				<a
-					href="/about"
-					class="relative flex items-center p-4 text-center whitespace-break-spaces hover:opacity-75 {$page
-						.url.pathname === '/about'
-						? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
-						: ''}"
-					aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
+				<div
+					role="menu"
+					tabindex="0"
+					class="relative hidden lg:block"
+					onmouseenter={() => (isDesktopAboutDropdownOpen = true)}
+					onmouseleave={() => (isDesktopAboutDropdownOpen = false)}
 				>
-					About Us
-				</a>
+					<button
+						role="menuitem"
+						tabindex="0"
+						aria-haspopup="true"
+						aria-expanded={isDesktopAboutDropdownOpen}
+						class="relative flex items-center p-4 text-center hover:opacity-75
+			{$page.url.pathname.startsWith('/about')
+							? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
+							: ''}"
+					>
+						About Us
+						<ChevronDown
+							class="ml-2 transition-transform {isDesktopAboutDropdownOpen ? 'rotate-180' : ''}"
+							size={20}
+						/>
+					</button>
+
+					{#if isDesktopAboutDropdownOpen}
+						<div
+							role="menu"
+							tabindex="0"
+							class="absolute top-full left-0 w-48 overflow-hidden rounded-b-md border-t border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-[#121212]"
+						>
+							{#each aboutLinks as link}
+								<a
+									href={link.href}
+									role="menuitem"
+									tabindex="0"
+									onclick={handleAboutLinkClick}
+									class="block px-3 py-2.5 text-center text-base transition-colors
+					hover:bg-gray-50 dark:hover:bg-gray-800/60
+					{$page.url.pathname === link.href
+										? 'bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-gray-100'
+										: 'text-gray-700 dark:text-gray-300'}"
+								>
+									{link.label}
+								</a>
+							{/each}
+						</div>
+					{/if}
+				</div>
 				<div
 					role="menu"
 					tabindex="0"
@@ -278,18 +330,41 @@
 			role="navigation"
 			aria-label="Mobile menu"
 		>
-			<a
-				href="/about"
-				class="w-full p-4 text-center text-lg hover:opacity-75"
-				onclick={closeMenu}
-				aria-current={$page.url.pathname === '/about' ? 'page' : undefined}
-			>
-				<span
-					class={$page.url.pathname === '/about' ? 'inline-block border-b-2 border-slate-600' : ''}
+			<div class="w-full lg:hidden">
+				<button
+					class="flex w-full items-center justify-center p-4 text-lg hover:opacity-75"
+					onclick={toggleAboutMobileDropdown}
 				>
-					About Us
-				</span>
-			</a>
+					<span
+						class={$page.url.pathname.startsWith('/about')
+							? 'inline-block border-b-2 border-slate-600'
+							: ''}
+					>
+						About Us
+					</span>
+					<ChevronDown
+						class="ml-2 transition-transform {isMobileAboutDropdownOpen ? 'rotate-180' : ''}"
+						size={20}
+					/>
+				</button>
+
+				{#if isMobileAboutDropdownOpen}
+					<div class="bg-gray-50 dark:bg-gray-800">
+						{#each aboutLinks as link}
+							<a
+								href={link.href}
+								onclick={closeMenu}
+								class="block w-full p-4 text-center text-base hover:opacity-75
+				{$page.url.pathname === link.href
+									? 'bg-gray-100 text-gray-900 dark:bg-gray-700 dark:text-slate-100'
+									: 'text-gray-700 dark:text-slate-300'}"
+							>
+								{link.label}
+							</a>
+						{/each}
+					</div>
+				{/if}
+			</div>
 			<div class="w-full lg:hidden">
 				<button
 					class="flex w-full items-center justify-center p-4 text-lg hover:opacity-75"

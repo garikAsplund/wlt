@@ -81,7 +81,7 @@
 						class="flex items-center gap-2 transition-colors hover:text-neutral-900 md:hidden dark:hover:text-neutral-300"
 					>
 						<Phone size={18} />
-						<span>(541) 426-2042</span>
+						<span class="select-all">(541) 426-2042</span>
 					</a>
 
 					<!-- Phone number for larger screens -->
@@ -125,7 +125,7 @@
 						class="flex flex-shrink-0 cursor-default items-center gap-2 transition-colors"
 					>
 						<Mail size={18} class="mt-1 flex-shrink-0" />
-						<span>info@wallowalandtrust.org</span>
+						<span class="select-all">info@wallowalandtrust.org</span>
 					</div>
 					<div
 						tabindex="0"
@@ -134,7 +134,7 @@
 						class="flex flex-shrink-0 cursor-default items-center gap-2 transition-colors"
 					>
 						<FileCheck size={18} class="mt-1 flex-shrink-0" />
-						<span>Federal Tax ID: 20-1037078</span>
+						<span>Federal Tax ID: <span class="select-all">20-1037078</span></span>
 					</div>
 				</div>
 			</div>
