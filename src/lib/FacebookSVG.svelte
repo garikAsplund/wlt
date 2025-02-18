@@ -2,7 +2,7 @@
 	href="https://www.facebook.com/WallowaLandTrust/"
 	target="_blank"
 	rel="noopener noreferrer"
-	class="p-4 opacity-85 hover:opacity-65 md:p-1"
+	class="p-2 opacity-85 hover:opacity-65 md:p-1"
 >
 	<svg
 		aria-label="Wallowa Land Trust on Facebook"

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Phone, Mail, MapPin, Clock, Building, FileText } from 'lucide-svelte';
+	import { Phone, Mail, MapPin, Clock, FileCheck } from 'lucide-svelte';
 </script>
 
 <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
@@ -68,7 +68,7 @@
 				</div>
 
 				<div class="flex items-center space-x-3 text-slate-700 dark:text-slate-300">
-					<Building class="h-5 w-5" />
+					<FileCheck class="h-5 w-5" />
 					<div>
 						<p>Federal Tax ID:</p>
 						<p class="select-all">20-1037078</p>

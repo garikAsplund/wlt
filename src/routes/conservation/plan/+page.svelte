@@ -24,7 +24,7 @@
             these challenges will determine the character of our home for decades to come.
         </p>
     </div>
-    <div class="mt-8 flex flex-col gap-4 sm:mt-12 sm:flex-row sm:space-x-4">
+    <div class="mt-8 flex flex-col gap-4 sm:mt-12 sm:flex-row sm:space-x-4 w-full justify-center">
         <a
             href={`${pdfUrl}#view=fit`}
             target="_blank"

@@ -6,19 +6,19 @@
 	{#if data.property}
 		<div class="mb-8">
 			<enhanced:img
-                src={data.property.image}
-                alt={`${data.property.name} landscape`}
-                class="h-auto w-full rounded-lg object-cover"
-            />
+				src={data.property.image}
+				alt={`${data.property.name} landscape`}
+				class="h-auto w-full rounded-lg object-cover"
+			/>
 		</div>
 		<div class="mb-8 flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
 			<h1 class="font-serif text-4xl text-slate-800 dark:text-slate-100">
 				{data.property.name}
 			</h1>
 			{#if data.property.acres}
-				<span class="pl-4 text-base text-slate-500 sm:pl-0 dark:text-slate-400"
-					>{data.property.acres.toLocaleString()} acres</span
-				>
+				<span class="pl-4 text-base text-slate-500 sm:pl-0 dark:text-slate-400">
+					{data.property.acres.toLocaleString()} acres
+				</span>
 			{/if}
 		</div>
 		<div class="mb-8 rounded-lg bg-slate-50 p-6 dark:bg-slate-800/50">

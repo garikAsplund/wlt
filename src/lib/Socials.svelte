@@ -5,20 +5,17 @@
 	import YouTubeSvg from './YouTubeSVG.svelte';
 </script>
 
-<div class="flex items-center justify-between w-full">
-    <div class="flex-1">
-
-    </div>
-    <div class="flex items-center justify-center space-x-4 flex-1 text-black dark:text-white ">
-        <FacebookSvg />
-        <InstagramSvg />
-        <div class="scale-120 px-2">
-            <YouTubeSvg />
-        </div>
-    </div>
-    <div class="flex justify-end flex-1">
-        <a href="#top" class="hover:opacity-65 scale-125">
-            <CircleArrowUp />
-        </a>
-    </div>
+<div class="flex w-full items-center justify-between">
+	<div class="flex flex-1 items-center justify-center space-x-4 text-black dark:text-white">
+		<FacebookSvg />
+		<InstagramSvg />
+		<div class="scale-120 px-2">
+			<YouTubeSvg />
+		</div>
+	</div>
+</div>
+<div class="flex flex-1 justify-end">
+	<a href="#top" class="scale-125 hover:opacity-65">
+		<CircleArrowUp />
+	</a>
 </div>

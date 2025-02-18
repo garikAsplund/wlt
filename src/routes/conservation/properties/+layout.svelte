@@ -36,7 +36,7 @@
 	<!-- Sidebar -->
 	<aside
 		class="
-			fixed inset-y-0 left-0 z-60 transform
+			fixed inset-y-0 left-0 z-[100] transform
 			lg:static lg:z-auto lg:transform-none
 			{isSidebarOpen ? 'translate-x-0 overflow-y-auto' : '-translate-x-full lg:translate-x-0'}
 			w-64 border-r
@@ -105,7 +105,7 @@
 	</aside>
 
 	<!-- Main Content Area -->
-	<main class="flex-1 ">
+	<main class="flex-1 z-40 ">
 		<!-- Properties Menu Button in Content Area -->
 		<div
 			class="sticky top-0 z-40 border-b border-slate-200 p-4 lg:hidden dark:border-slate-700 "
@@ -134,7 +134,7 @@
 					onkeydown={(e) => e.key === 'Escape' && (isSidebarOpen = false)}
 				></div>
 			{/if}
-			<div class="relative">
+			<div class="relative z-40">
 				{@render children()}
 			</div>
 		</div>

@@ -297,7 +297,7 @@
 						</div>
 					{/if}
 				</div>
-				<a
+				<!-- <a
 					href="/store"
 					class="relative p-4 text-center hover:opacity-75 {page.url.pathname === '/store'
 						? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
@@ -305,7 +305,7 @@
 					aria-current={page.url.pathname === '/store' ? 'page' : undefined}
 				>
 					Store
-				</a>
+				</a> -->
 			</div>
 		</div>
 
@@ -434,7 +434,7 @@
         </div>
 
         <!-- Store Section -->
-        <a href="/store"
+        <!-- <a href="/store"
            class="w-full p-4 text-center text-lg hover:opacity-75"
            onclick={closeMenu}
            aria-current={page.url.pathname === '/store' ? 'page' : undefined}>
@@ -442,7 +442,7 @@
                 Store
             </span>
         </a>
-        
+         -->
         <DonateButton />
     </div>
 {/if}

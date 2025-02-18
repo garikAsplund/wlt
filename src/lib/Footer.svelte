@@ -47,12 +47,12 @@
 <footer
 	class="relative bottom-0 mt-auto w-full bg-slate-100 dark:border-gray-700 dark:bg-[#121212]"
 >
-	<div class="mx-auto max-w-7xl px-4 py-12">
+	<div class="mx-auto max-w-7xl px-4 pt-12 pb-8">
 		<div
-			class="grid grid-cols-1 justify-evenly gap-12 pl-8 text-neutral-600 md:grid-cols-3 lg:grid-cols-4 dark:text-neutral-400"
+		class="grid grid-cols-1 justify-evenly gap-12 pl-8 text-neutral-600 md:grid-cols-3 lg:grid-cols-4 dark:text-neutral-400"
 		>
 			<!-- Logo -->
-			<div class="order-1 grid grid-cols-2 gap-4 text-black md:grid-cols-1 dark:text-gray-300">
+			<div class="order-1 flex justify-center w-full col-span-full gap-8 lg:gap-4 text-black lg:grid lg:grid-cols-1 lg:col-span-1 dark:text-gray-300">
 				<a
 					href="https://www.landtrustaccreditation.org/about/about-the-seal"
 					target="_blank"
@@ -189,7 +189,7 @@
 			</div>
 		</div>
 
-		<div class="pt-8 dark:text-neutral-300">
+		<div class="pt-4 md:pt-0 dark:text-neutral-300">
 			<Socials />
 		</div>
 	</div>
