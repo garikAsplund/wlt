@@ -1,8 +1,20 @@
+const imageModules = import.meta.glob(
+    '$lib/images/properties/*.{png,jpg}',
+    {
+        eager: true,
+        query: {
+            enhanced: true
+        }
+    }
+);
+
+console.log({ imageModules });
+
 export interface Property {
 	slug: string;
 	name: string;
 	description: string;
-	image: string;
+	image: string | unknown;
 	acres?: number;
 	conservationYear?: number;
 	fullDescription?: string[];
@@ -15,7 +27,7 @@ export const properties: Property[] = [
 		slug: 'east-moraine-community-forest',
 		name: 'East Moraine Community Forest',
 		description: 'Community-owned forest on Wallowa Lake shore',
-		image: '/images/properties/east-moraine.jpg',
+        image: imageModules['/src/lib/images/properties/east-moraine.jpg'].default,
 		acres: 1791,
 		conservationYear: 2020,
 		fullDescription: [
@@ -36,7 +48,7 @@ export const properties: Property[] = [
 		slug: 'ham-conservation-easement',
 		name: 'Ham Conservation Easement',
 		description: 'Preserving 52 acres of Wallowa Lake East Moraine',
-		image: '/images/properties/ham-easement.jpg',
+		image: imageModules['/src/lib/images/properties/ham-easement.jpg'].default,
 		acres: 52,
 		conservationYear: undefined,
 		fullDescription: [
@@ -59,7 +71,7 @@ export const properties: Property[] = [
 		slug: 'kimball-preserve',
 		name: 'Kimball Preserve',
 		description: 'Shoreline property donated by the Kimball family',
-		image: '/images/properties/kimball-preserve.jpg',
+		image: imageModules['/src/lib/images/properties/kimball-preserve.jpg'].default,
 		acres: 9,
 		conservationYear: 2015,
 		fullDescription: [
@@ -84,7 +96,7 @@ export const properties: Property[] = [
 		slug: 'lola-hasslacher-conservation-easement',
 		name: 'Lola-Hasslacher Conservation Easement',
 		description: '40 acres of woodland on East Moraine',
-		image: '/images/properties/lola-hasslacher.png',
+		image: imageModules['/src/lib/images/properties/lola-hasslacher.png'].default,
 		acres: 40,
 		conservationYear: 2014,
 		fullDescription: [
@@ -100,7 +112,7 @@ export const properties: Property[] = [
 		slug: 'perry-farm-conservation-easement',
 		name: 'Perry Farm Conservation Easement',
 		description: '482-acre working farm conservation',
-		image: '/images/properties/perry-farm.png',
+		image: imageModules['/src/lib/images/properties/perry-farm.png'].default,
 		acres: 482,
 		fullDescription: [
 			'Working with Wallowa Land Trust, landowners Lou and Deyette Perry voluntarily established a 482-acre conservation easement on their working farm that extinguishes development of one homesite, maintains working lands, and conserves habitat forever. This project is in addition to a growing list of properties under permenant protection on the iconic East Moraine.',
@@ -117,7 +129,7 @@ export const properties: Property[] = [
 		slug: 'quint-conservation-easement',
 		name: 'Quint Conservation Easement',
 		description: '175-acre East Moraine property',
-		image: '/images/properties/quint.png',
+		image: imageModules['/src/lib/images/properties/quint.png'].default,
 		acres: 175,
 		fullDescription: [
 			"Another step to conserve Wallowa Lake's East Moraine has been taken. Working with Wallowa Land Trust, landowner Anna Mae Quint has voluntarily extinguished all future development and sub-division rights on her 175-acre East Moraine property.",
@@ -134,7 +146,7 @@ export const properties: Property[] = [
 		slug: 'slinker-conservation-easement',
 		name: 'Slinker Conservation Easement',
 		description: '128 acres near Joseph, Oregon',
-		image: '/images/properties/slinker-easement.jpg',
+		image: imageModules['/src/lib/images/properties/slinker-easement.jpg'].default,
 		acres: 128,
 		fullDescription: [
 			'A favorite resting and foraging spot for native wildlife is now forever protected from development, thanks to the foresight and generosity of local landowners Pam and Randy Slinker.  The Slinkers worked with Wallowa Land Trust over the past year to craft an agreement that results in the permanent protection of 128 acres adjacent to Ferguson Ski Ridge, near Joseph, Oregon.',
@@ -146,7 +158,7 @@ export const properties: Property[] = [
 		slug: 'west-moraine-preserve',
 		name: 'West Moraine Preserve',
 		description: '30 acres returned to Nez Perce Tribe',
-		image: '/images/properties/west-moraine.jpg',
+		image: imageModules['/src/lib/images/properties/west-moraine.jpg'].default,
 		acres: 30,
 		fullDescription: [
 			'Wallowa Land Trust has returned 30 acres to the Nez Perce Tribe.  Located on the west side of Wallowa Lake, the property has native grasslands and forest, making it a magnet for wildlife increasingly impacted by development.',
@@ -164,7 +176,7 @@ export const properties: Property[] = [
 		slug: 'wiggins-graybeal-preserve',
 		name: 'Wiggins-Graybeal Preserve',
 		description: '34 acres at the south end of Wallowa Lake',
-		image: '/images/properties/wiggins.jpg',
+		image: imageModules['/src/lib/images/properties/wiggins.jpg'].default,
 		acres: 34,
 		fullDescription: [
 			'As part of our continuing efforts to conserve the unique natural setting surrounding Wallowa Lake, we are pleased to announce that we are now official members of Wallowa Lake Village! Thanks to the generosity of the Wiggins family, Wallowa Land Trust now owns 34 acres at the south end of Wallowa Lake.',
@@ -177,7 +189,7 @@ export const properties: Property[] = [
 		slug: 'wolfe-farm-conservation-easement',
 		name: 'Wolfe Farm Conservation Easement',
 		description: '463 acres of farmground and wetlands',
-		image: '/images/properties/wolfe-farm.jpg',
+		image: imageModules['/src/lib/images/properties/wolfe-farm.jpg'].default,
 		acres: 463,
         fullDescription: 
         [

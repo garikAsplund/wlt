@@ -6,7 +6,7 @@
 	let { children, data } = $props();
 </script>
 
-<div class="flex h-full min-h-screen w-full flex-col">
+<div class="flex h-full min-h-screen w-full flex-col selection:bg-black selection:text-slate-200 dark:selection:bg-yellow-400 dark:selection:text-black">
 	<Nav />
 	<div
 		class="relative inset-0 w-full flex-grow overflow-hidden overflow-x-hidden z-50"
