@@ -1,9 +1,16 @@
 <!-- Press.svelte -->
 <script lang="ts">
 	import { Newspaper, Calendar, ExternalLink } from 'lucide-svelte';
-
+	// Type definition for a press item
+	interface PressItem {
+		date: string;
+		title: string;
+		outlet: string;
+		url: string;
+		blurb: string;
+	}
 	// Example press items - replace with your actual data
-	const pressItems = [
+	const pressItems: PressItem[] = [
 		{
 			date: '2019-12-27',
 			title: 'Saving a Treasured Heritage',
@@ -138,22 +145,69 @@
 			url: '/news/press/releases/thinning',
 			blurb:
 				'To protect forest health on the East Moraine Community Forest a thinning project is planned to reduce an outbreak of bark beetles near the Turner Lane trailhead.'
+		},
+		{
+			date: '2023-02-08',
+			title: 'Final Hurdle Cleared to Permanently Protect East Moraine Community Forest.',
+			outlet: 'Wallowa Land Trust',
+			url: '/news/press/releases/easement',
+			blurb:
+				'After more than a decade of work, the final step to ban all future commercial and residential development on the East Moraine Community Forest was put to rest in a matter of ten minutes. On Thursday, January 26th 2023, Wallowa County Commissioners John Hillock, Todd Nash and Susan Roberts joined Wallowa Land Trust board chair Benjamin Curry at the Wallowa Title Company to sign the East Moraine Community Forest conservation easement.'
+		},
+		{
+			date: '2019-02-05',
+			title: 'Iconic East Moraine on its way to becoming community-owned forest',
+			outlet: 'Wallowa Land Trust',
+			url: '/news/press/releases/moraine',
+			blurb:
+				'Wallowa Lake Moraines Partnership announces agreement to purchase 1,800 acres of East Moraine from Yanke Family Trust, transforming it into a community-owned forest that will preserve the iconic landscape while supporting local economy through sustainable management.'
+		},
+		{
+			date: '2019-09-25',
+			title: 'Perry Farm Conservation Easement',
+			outlet: 'Wallowa Land Trust',
+			url: '/news/press/releases/perry',
+			blurb: "Wallowa Land Trust secures conservation easement on 482-acre Perry Farm on Wallowa Lake's East Moraine, protecting working farmland and wildlife habitat while maintaining the possibility for future public trail access."
+		},
+		{
+			date: '2020-01-21',
+			title: '1,791 acres of Wallowa Lake\'s East Moraine acquired for Wallowa County',
+			outlet: 'Wallowa Land Trust',
+			url: '/news/press/releases/moraine2',
+			blurb: "Historic conservation victory achieved as Wallowa County acquires 1,791 acres of the East Moraine, permanently protecting this iconic landscape from development while ensuring sustainable management for wildlife habitat, cultural resources, recreation, and working lands."
 		}
 	];
 
-	// Group press items by year
-	const itemsByYear = pressItems.reduce(
-		(acc, item) => {
-			const year = new Date(item.date).getFullYear();
-			if (!acc[year]) acc[year] = [];
-			acc[year].push(item);
-			return acc;
-		},
-		{} as Record<number, typeof pressItems>
-	);
+	function organizePressItems(items: PressItem[]) {
+		// Group items by year
+		const itemsByYear = items.reduce(
+			(acc, item) => {
+				const year = new Date(item.date + 'T00:00:00Z').getFullYear();
+				if (!acc[year]) {
+					acc[year] = [];
+				}
+				acc[year].push(item);
+				return acc;
+			},
+			{} as Record<number, PressItem[]>
+		);
+
+		// Sort items within each year by date (most recent first)
+		Object.keys(itemsByYear).forEach((year) => {
+			itemsByYear[Number(year)].sort(
+				(a, b) =>
+					new Date(b.date + 'T00:00:00Z').getTime() - new Date(a.date + 'T00:00:00Z').getTime()
+			);
+		});
+
+		return itemsByYear;
+	}
 
 	// Sort years in descending order
-	const years = Object.keys(itemsByYear).sort((a, b) => Number(b) - Number(a));
+	const grouped = organizePressItems(pressItems);
+	const years = Object.keys(grouped)
+		.map(Number)
+		.sort((a, b) => b - a);
 </script>
 
 <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
@@ -170,7 +224,7 @@
 				</h2>
 
 				<div class="space-y-4">
-					{#each itemsByYear[year] as item}
+					{#each grouped[year] as item}
 						<div class="rounded-lg border border-slate-200 p-4 dark:border-slate-700">
 							<div
 								class="mb-2 flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-400"
