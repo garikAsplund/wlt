@@ -149,7 +149,7 @@
 				<!-- Links -->
 				<div class="order-3 space-y-4">
 					<h3 class="text-lg font-medium text-neutral-900 dark:text-neutral-300">Navigation</h3>
-					<div class="grid grid-cols-2 gap-x-12">
+					<div class="grid grid-cols-2 gap-x-12 text-sm">
 						<!-- Column 1: About & Core -->
 						<div class="flex flex-col space-y-1">
 							<a

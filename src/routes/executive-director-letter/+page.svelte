@@ -5,9 +5,11 @@
 	const letterContent = {
 		title: 'Head to Heart Conservation',
 		openingQuote: {
-            text: ["When the Wallowa people left the valley, we were told to look back, because we may not ever see it again.",
-                  "Today we are finally coming back and it feels like we are at home...seeing these mountains is strong medicine for the heart."],
-            author: 'Allen Pinkham Sr., Nez Perce elder, historian and tribal storyteller'
+			text: [
+				'When the Wallowa people left the valley, we were told to look back, because we may not ever see it again.',
+				'Today we are finally coming back and it feels like we are at home...seeing these mountains is strong medicine for the heart.'
+			],
+			author: 'Allen Pinkham Sr., Nez Perce elder, historian and tribal storyteller'
 		},
 		images: [
 			{
@@ -44,59 +46,62 @@
 	};
 </script>
 
-<div class="bg-white dark:bg-gray-900">
-	<div class="mx-auto max-w-3xl px-4 py-12 sm:py-16 md:py-20">
-		<h1
-			class="mb-8 text-center font-['Georgia'] text-3xl text-gray-900 sm:text-4xl md:text-5xl dark:text-gray-100"
-		>
-			{letterContent.title}
-		</h1>
+<div class="mx-auto max-w-3xl px-4 py-12 sm:py-16 md:py-20">
+	<h1
+		class="mb-8 text-center font-['Georgia'] text-3xl text-gray-900 sm:text-4xl md:text-5xl dark:text-gray-100"
+	>
+		{letterContent.title}
+	</h1>
 
-		<blockquote class="border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 my-8 text-lg sm:text-xl italic text-gray-700 dark:text-gray-300">
-            <p>{letterContent.openingQuote.text[0]}</p>
-            <p class="mt-4">{letterContent.openingQuote.text[1]}</p>            <footer class="mt-2 text-base not-italic">
-                <div class="text-lg font-medium text-gray-800 dark:text-gray-200">Allen Pinkham Sr.</div>
-                <div class="text-gray-600 dark:text-gray-400">Nez Perce elder, historian and tribal storyteller</div>
-            </footer>
-        </blockquote>
+	<blockquote
+		class="my-8 border-l-4 border-gray-300 py-2 pl-4 text-lg text-gray-700 italic sm:text-xl dark:border-gray-600 dark:text-gray-300"
+	>
+		<p>{letterContent.openingQuote.text[0]}</p>
+		<p class="mt-4">{letterContent.openingQuote.text[1]}</p>
+		<footer class="mt-2 text-base not-italic">
+			<div class="text-lg font-medium text-gray-800 dark:text-gray-200">Allen Pinkham Sr.</div>
+			<div class="text-gray-600 dark:text-gray-400">
+				Nez Perce elder, historian and tribal storyteller
+			</div>
+		</footer>
+	</blockquote>
+
+	{#each letterContent.images as image}
+		{#if image.position === 'top'}
+			<div class="relative aspect-[3/2]">
+				<enhanced:img src={image.src} alt={image.alt} class="h-full w-full object-cover" />
+			</div>
+		{/if}
+	{/each}
+
+	<div class="space-y-6 pt-8 text-lg leading-relaxed text-gray-800 dark:text-gray-200">
+		{#each letterContent.paragraphs as paragraph}
+			<p>{paragraph}</p>
+		{/each}
 
 		{#each letterContent.images as image}
-			{#if image.position === 'top'}
-				<div class="relative aspect-[3/2]">
-					<enhanced:img src={image.src} alt={image.alt} class="h-full w-full object-cover" />
+			{#if image.position === 'middle'}
+				<div class="relative my-12 h-80 w-full overflow-hidden rounded-lg">
+					<enhanced:img
+						src={image.src}
+						alt={image.alt}
+						class="absolute inset-0 h-full w-full object-cover"
+					/>
 				</div>
 			{/if}
 		{/each}
 
-		<div class="space-y-6 text-lg leading-relaxed text-gray-800 dark:text-gray-200 pt-8">
-			{#each letterContent.paragraphs as paragraph}
-				<p>{paragraph}</p>
-			{/each}
-
-			{#each letterContent.images as image}
-				{#if image.position === 'middle'}
-					<div class="relative my-12 h-80 w-full overflow-hidden rounded-lg">
-						<enhanced:img
-							src={image.src}
-							alt={image.alt}
-							class="absolute inset-0 h-full w-full object-cover"
-						/>
-					</div>
-				{/if}
-			{/each}
-
-			<div class="mt-12 border-t border-gray-200 pt-8 dark:border-gray-700">
-				<p>{letterContent.signature.closing}</p>
-				<div class="mt-4">
-					<enhanced:img
-						src={letterContent.signature.imagePath}
-						alt="Kathleen Ackley signature"
-						class="h-12 w-auto"
-					/>
-					<p class="mt-2 font-['Georgia'] text-xl">{letterContent.signature.name}</p>
-					<p class="text-gray-600 dark:text-gray-400">{letterContent.signature.title}</p>
-					<p class="text-gray-600 dark:text-gray-400">{letterContent.signature.organization}</p>
-				</div>
+		<div class="mt-12 border-t border-gray-200 pt-8 dark:border-gray-700">
+			<p>{letterContent.signature.closing}</p>
+			<div class="mt-4">
+				<enhanced:img
+					src={letterContent.signature.imagePath}
+					alt="Kathleen Ackley signature"
+					class="h-12 w-auto dark:invert"
+				/>
+				<p class="mt-2 font-['Georgia'] text-xl">{letterContent.signature.name}</p>
+				<p class="text-gray-600 dark:text-gray-400">{letterContent.signature.title}</p>
+				<p class="text-gray-600 dark:text-gray-400">{letterContent.signature.organization}</p>
 			</div>
 		</div>
 	</div>
