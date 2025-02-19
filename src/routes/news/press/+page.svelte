@@ -80,48 +80,65 @@
 			title: 'Family donates conservation easement to Wallowa trust',
 			outlet: 'La Grande Observer',
 			url: 'https://www.lagrandeobserver.com/archive/family-donates-conservation-easement-to-wallowa-trust/article_4e402b52-a618-5fa9-8e6a-38e0da930d30.html',
-			blurb: 'More than 50 acres of Wallowa Lake’s East Moraine was protected from development this spring, leaving more open space for wildlife and threatened plants. Kathleen Ackley, Wallowa Land Trust executive director, said the Ham Family LLC donated a conservation easement to the Trust, extinguishing development and subdivision rights on the majority of the 70-acre property.'
+			blurb:
+				'More than 50 acres of Wallowa Lake’s East Moraine was protected from development this spring, leaving more open space for wildlife and threatened plants. Kathleen Ackley, Wallowa Land Trust executive director, said the Ham Family LLC donated a conservation easement to the Trust, extinguishing development and subdivision rights on the majority of the 70-acre property.'
 		},
-		// {
-		// 	date: '2020-01-22',
-		// 	title: 'Land Purchase Protects Wallowa Lake’s East Moraine From Development',
-		// 	outlet: 'Oregon Public Broadcasting',
-		// 	url: 'https://www.opb.org/news/article/oregon-wallowa-lake-east-moraine-land-purchase-protection/',
-		// 	blurb:
-		// 		'A large portion of the moraine that frames Eastern Oregon’s iconic Wallowa Lake has been purchased and protected from development. A public-private partnership that includes Wallowa County, two nonprofit organizations and the Oregon Parks and Recreation Department spent more than a decade arranging the purchase.'
-		// },
-		// {
-		// 	date: '2020-01-22',
-		// 	title: 'Land Purchase Protects Wallowa Lake’s East Moraine From Development',
-		// 	outlet: 'Oregon Public Broadcasting',
-		// 	url: 'https://www.opb.org/news/article/oregon-wallowa-lake-east-moraine-land-purchase-protection/',
-		// 	blurb:
-		// 		'A large portion of the moraine that frames Eastern Oregon’s iconic Wallowa Lake has been purchased and protected from development. A public-private partnership that includes Wallowa County, two nonprofit organizations and the Oregon Parks and Recreation Department spent more than a decade arranging the purchase.'
-		// },
-		// {
-		// 	date: '2020-01-22',
-		// 	title: 'Land Purchase Protects Wallowa Lake’s East Moraine From Development',
-		// 	outlet: 'Oregon Public Broadcasting',
-		// 	url: 'https://www.opb.org/news/article/oregon-wallowa-lake-east-moraine-land-purchase-protection/',
-		// 	blurb:
-		// 		'A large portion of the moraine that frames Eastern Oregon’s iconic Wallowa Lake has been purchased and protected from development. A public-private partnership that includes Wallowa County, two nonprofit organizations and the Oregon Parks and Recreation Department spent more than a decade arranging the purchase.'
-		// },
-		// {
-		// 	date: '2020-01-22',
-		// 	title: 'Land Purchase Protects Wallowa Lake’s East Moraine From Development',
-		// 	outlet: 'Oregon Public Broadcasting',
-		// 	url: 'https://www.opb.org/news/article/oregon-wallowa-lake-east-moraine-land-purchase-protection/',
-		// 	blurb:
-		// 		'A large portion of the moraine that frames Eastern Oregon’s iconic Wallowa Lake has been purchased and protected from development. A public-private partnership that includes Wallowa County, two nonprofit organizations and the Oregon Parks and Recreation Department spent more than a decade arranging the purchase.'
-		// },
-		// {
-		// 	date: '2020-01-22',
-		// 	title: 'Land Purchase Protects Wallowa Lake’s East Moraine From Development',
-		// 	outlet: 'Oregon Public Broadcasting',
-		// 	url: 'https://www.opb.org/news/article/oregon-wallowa-lake-east-moraine-land-purchase-protection/',
-		// 	blurb:
-		// 		'A large portion of the moraine that frames Eastern Oregon’s iconic Wallowa Lake has been purchased and protected from development. A public-private partnership that includes Wallowa County, two nonprofit organizations and the Oregon Parks and Recreation Department spent more than a decade arranging the purchase.'
-		// }
+		{
+			date: '2020-06-18',
+			title: 'East Moraine Management Plan Q&A',
+			outlet: 'Wallowa Land Trust',
+			url: '/news/press/releases/moraineQA',
+			blurb:
+				"Learn more about how Wallowa County and partners are developing a comprehensive plan to manage the East Moraine's working landscape, balancing forestry, grazing, cultural resources, and public access while protecting this iconic natural treasure."
+		},
+		{
+			date: '2020-06-03',
+			title: 'We Have A lot of Work to Do: Land Trusts and Inclusive Spaces',
+			outlet: 'Wallowa Land Trust',
+			url: '/news/press/releases/inclusivity',
+			blurb:
+				"Read Wallowa Land Trust's statement on racial equity in conservation, acknowledging our responsibility to create inclusive spaces and recognizing the Nez Perce people's deep connection to these lands. Includes resources for further learning about environmental justice."
+		},
+		{
+			date: '2016-07-12',
+			title: 'Land Trust outing shows importance of foods to Native culture',
+			outlet: 'Wallowa County Chieftain',
+			url: 'http://www.wallowa.com/local_news/20160712/land-trust-outing-shows-importance-of-foods-to-native-culture',
+			blurb:
+				'Several dozen people ignored rain-threatening skies Saturday morning to journey to the Homeland Project in Wallowa for an Into the Wallowas outing focused on Native American foods. The outing, part of Wallowa Land Trust’s summer series, focused on common plants in the area that Native Americans utilized for sustenance and how their culture integrated foods and resource care into the daily fabric of their lives.'
+		},
+		{
+			date: '2016-02-22',
+			title: 'Moraine preservation grant high on national list',
+			outlet: 'Wallowa County Chieftain',
+			url: 'http://www.wallowa.com/local_news/20160222/moraine-preservation-grant-high-on-national-list',
+			blurb:
+				'Wallowa Land Trust is a step closer to achieving its goal of East Moraine of Wallowa Lake preservation with the possibility of a $900,000 Forest Legacy Grant through the Land and Water Conservation Fund. The WLT application ranked third nationwide on the U.S. Forest Service list of 34 priority LWCF projects submitted in the president’s 2017 budget released to Congress on Feb. 9. It is the only Oregon project that received funding.'
+		},
+		{
+			date: '2015-12-16',
+			title: 'Congress gives Land and Water Conservation Fund three more years',
+			outlet: 'East Oregonian',
+			url: 'http://www.eastoregonian.com/eo/local-news/20151216/congress-gives-land-and-water-conservation-fund-three-more-years',
+			blurb:
+				'A local land trust is in line to receive $3 million to protect the East Moraine of Wallowa Lake after Congress agreed to renew the Land and Water Conservation Fund for three more years.'
+		},
+		{
+			date: '2015-12-08',
+			title: 'Washington family donates lake property to local land trust',
+			outlet: 'Wallowa County Chieftain',
+			url: 'http://www.wallowa.com/local_news/20151208/washington-family-donates-lake-property-to-local-land-trust',
+			blurb:
+				'Wallowa Land Trust just took another step in protecting the moraines of Wallowa Lake from development with a recent donation of 9 acres of prime lakefront property that includes 1,500 feet of shoreline. Brothers Fred, Frank and Steve Kimball of Washington donated the property, and the land trust took possession of the land Nov. 23. The Kimball brothers inherited the property from their parents and didn’t want to see the land divided up or developed.'
+		},
+		{
+			date: '2023-01-06',
+			title: 'Forest Health project scheduled for East Moraine Community Forest this winter',
+			outlet: 'Wallowa Land Trust',
+			url: '/news/press/releases/thinning',
+			blurb:
+				'To protect forest health on the East Moraine Community Forest a thinning project is planned to reduce an outbreak of bark beetles near the Turner Lane trailhead.'
+		}
 	];
 
 	// Group press items by year

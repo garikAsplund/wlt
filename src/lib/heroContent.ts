@@ -49,7 +49,8 @@ export const heroContent = {
 '/conservation/easements': {
     title: 'Conservation Easements',
     image: imageModules['/static/images/backgrounds/easements.jpg']?.default,
-    alt: 'Protected Wallowa landscape'
+    alt: 'Protected Wallowa landscape',
+    position: 'center 55%',
 },
 '/conservation/plan': {
     title: 'Conservation Plan',
@@ -71,11 +72,11 @@ export const heroContent = {
     image: imageModules['/static/images/backgrounds/give.jpg']?.default,
     alt: 'Support Wallowa conservation'
 },
-'/news': {
-    title: 'News & Updates',
-    image: imageModules['/static/images/backgrounds/news.jpg']?.default,
-    alt: 'Wallowa Land Trust news'
-},
+// '/news': {
+//     title: 'News & Updates',
+//     image: imageModules['/static/images/backgrounds/news.jpg']?.default,
+//     alt: 'Wallowa Land Trust news'
+// },
 '/news/events': {
     title: 'Events',
     image: imageModules['/static/images/backgrounds/events.png']?.default,
@@ -89,15 +90,15 @@ export const heroContent = {
     position: 'center 30%',
 },
 '/news/press': {
-    title: 'Press & Media',
+    title: 'Press',
     image: imageModules['/static/images/backgrounds/press.jpg']?.default,
     alt: 'Wallowa Land Trust in the news',
     position: 'center 35%',
     },
-'/store': {
-    title: 'Store',
-    image: imageModules['/static/images/backgrounds/store.jpg']?.default,
-    alt: 'Wallowa Land Trust store',
-    position: 'center 85%',
-}
+// '/store': {
+//     title: 'Store',
+//     image: imageModules['/static/images/backgrounds/store.jpg']?.default,
+//     alt: 'Wallowa Land Trust store',
+//     position: 'center 85%',
+// }
 };
