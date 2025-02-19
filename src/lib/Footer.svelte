@@ -12,7 +12,7 @@
 
 	let currentPath = $derived(page.url.pathname);
 </script>
-
+<div class="relative z-70">
 <div class="relative w-full pt-24 lg:pt-36 dark:text-gray-500">
 	<div class="absolute top-12 left-1/2 w-full -translate-x-1/2 transform text-center lg:top-24">
 		<h2
@@ -194,3 +194,4 @@
 		</div>
 	</div>
 </footer>
+</div>

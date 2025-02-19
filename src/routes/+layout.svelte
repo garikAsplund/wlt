@@ -102,9 +102,9 @@
 	class="flex h-full min-h-screen w-full flex-col selection:bg-black selection:text-slate-200 dark:selection:bg-yellow-400 dark:selection:text-black"
 >
 	<Nav />
-	<div class="relative inset-0 z-50 w-full flex-grow overflow-hidden overflow-x-hidden">
+	<div class="relative inset-0 z-50 w-full flex-grow">
 		<!-- Wrapper for children to ensure they stay within viewport on mobile -->
-		<div class="h-full w-full overflow-hidden">
+		<div class="h-full w-full">
 			{#if heroContent[page.url.pathname]}
 				<div class="relative">
 					<enhanced:img

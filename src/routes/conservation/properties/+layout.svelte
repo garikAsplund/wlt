@@ -31,21 +31,20 @@
 
 <svelte:window onscroll={handleScroll} />
 
-<!-- Main wrapper - establish a stacking context -->
-<div class="relative isolate flex min-h-screen ">
+<!-- Main wrapper -->
+<div class="relative flex min-h-screen">
 	<!-- Sidebar -->
 	<aside
 		class="
-			fixed inset-y-0 left-0 z-60 transform
-			lg:static lg:z-auto lg:transform-none
-			{isSidebarOpen ? 'translate-x-0 overflow-y-auto' : '-translate-x-full lg:translate-x-0'}
-			lg:w-1/4 border-r
-			border-slate-200 bg-slate-50 p-6
-			transition-transform duration-200 ease-in-out
-			dark:border-slate-700
-			dark:bg-[#121212]
-			{isSidebarVisible ? 'top-24' : 'top-0'}
-		"
+                fixed z-60 flex
+                h-[100dvh] w-full flex-col overflow-y-auto border-r border-slate-200
+                bg-slate-50 p-6
+                transition-transform duration-200 ease-in-out
+                md:w-2/5 lg:sticky lg:w-1/4
+                dark:border-slate-700 dark:bg-[#121212]
+                {isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+                {isSidebarVisible ? 'top-24' : 'top-0 md:top-24'}
+            "
 		role="navigation"
 		aria-label="Properties navigation"
 	>
@@ -90,8 +89,8 @@
 					class="
 						block rounded px-3 py-2 transition-colors
 						{page.url.pathname === `/conservation/properties/${property.slug}`
-							? 'bg-slate-200 text-slate-900 dark:bg-slate-800 dark:text-slate-100'
-							: 'text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800/50'}
+						? 'bg-slate-200 text-slate-900 dark:bg-slate-800 dark:text-slate-100'
+						: 'text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800/50'}
 					"
 				>
 					<div class="flex items-center justify-between">
@@ -105,16 +104,14 @@
 	</aside>
 
 	<!-- Main Content Area -->
-	<main class="flex-1 z-40 ">
+	<main class="z-40 flex-1">
 		<!-- Properties Menu Button in Content Area -->
-		<div
-			class="sticky top-0 z-40 border-b border-slate-200 p-4 lg:hidden dark:border-slate-700 "
-		>
+		<div class="top-0 border-b border-slate-200 p-4 lg:hidden dark:border-slate-700">
 			<button
 				type="button"
-				class="flex items-center space-x-2 rounded-lg bg-slate-100 px-4 py-2 text-slate-700 
-					hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700
-					transition-colors duration-200"
+				class="flex items-center space-x-2 rounded-lg bg-slate-100 px-4 py-2 text-slate-700
+					transition-colors duration-200 hover:bg-slate-200 dark:bg-slate-800
+					dark:text-slate-200 dark:hover:bg-slate-700"
 				onclick={() => (isSidebarOpen = true)}
 				onkeydown={(e) => e.key === 'Enter' && (isSidebarOpen = true)}
 				aria-label="Open properties menu"
@@ -138,14 +135,12 @@
 				{@render children()}
 			</div>
 		</div>
-        <div
-			class="sticky top-0 z-40 border-b border-slate-200 p-4 lg:hidden dark:border-slate-700"
-		>
+		<div class="top-0 z-40 border-b border-slate-200 p-4 lg:hidden dark:border-slate-700">
 			<button
 				type="button"
-				class="flex items-center space-x-2 rounded-lg bg-slate-100 px-4 py-2 text-slate-700 
-					hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700
-					transition-colors duration-200"
+				class="flex items-center space-x-2 rounded-lg bg-slate-100 px-4 py-2 text-slate-700
+					transition-colors duration-200 hover:bg-slate-200 dark:bg-slate-800
+					dark:text-slate-200 dark:hover:bg-slate-700"
 				onclick={() => (isSidebarOpen = true)}
 				onkeydown={(e) => e.key === 'Enter' && (isSidebarOpen = true)}
 				aria-label="Open properties menu"
