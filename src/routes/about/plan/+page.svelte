@@ -71,7 +71,7 @@
 	<div class="space-y-12 rounded-lg bg-slate-50 p-6 sm:p-8 dark:bg-slate-800/50">
 		<!-- Mission & Vision Section -->
 		<section class="space-y-6 border-b border-slate-200 pb-12 dark:border-slate-700">
-			<h2 class="font-serif text-3xl text-slate-800 dark:text-slate-100">Mission & Vision</h2>
+			<h2 class="font-serif text-3xl text-slate-800 dark:text-slate-100">Mission and Vision</h2>
 
 			<div class="space-y-4">
 				<h3 class="font-serif text-2xl text-slate-700 dark:text-slate-200">Our Mission</h3>
