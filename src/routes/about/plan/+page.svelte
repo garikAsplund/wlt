@@ -112,7 +112,7 @@
 				{#each guidingPrinciples as principle}
 					<div class="space-y-2">
 						<h3 class="font-serif text-xl text-slate-700 dark:text-slate-200">{principle.title}</h3>
-						<p class="text-slate-600 dark:text-slate-400 ml-4">{principle.description}</p>
+						<p class="ml-4 text-slate-600 dark:text-slate-400">{principle.description}</p>
 					</div>
 				{/each}
 			</div>
@@ -167,47 +167,52 @@
 				</p>
 				<ul class="ml-6 space-y-3">
 					{#each futureQuestions as question}
-						<li class="text-slate-700 dark:text-slate-300 list-disc">{question}</li>
+						<li class="list-disc text-slate-700 dark:text-slate-300">{question}</li>
 					{/each}
 				</ul>
 			</div>
 		</section>
 
 		<!-- Strategic Goals Section -->
-		
-        <section class="space-y-6">
-            <h2 class="font-serif text-3xl text-slate-800 dark:text-slate-100">
-                Strategic Goals
-            </h2>
-            
-            <div class="space-y-6">
-                {#each goals as goal}
-                    <div class="rounded-lg border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800">
-                        <h3 class="mb-3 font-serif text-2xl text-slate-800 dark:text-slate-100">
-                            {goal.title}
-                        </h3>
-                        <p class="mb-6 text-slate-600 dark:text-slate-300">
-                            {goal.description}
-                        </p>
-                        
-                        <div>
-                            <h4 class="font-serif text-lg text-slate-600">Strategies:</h4>
-                            <div class="mt-4 space-y-0">
-                                {#each goal.strategies as strategy, i}
-                                    <div class="space-y-0">
-                                        <div class="flex items-center">
-                                            <div class="flex h-8 w-8 ml-4 items-center justify-center rounded-full bg-slate-700 text-sm font-bold text-slate-100 dark:bg-slate-600">
-                                                {i + 1}
-                                            </div>
-                                            <div class="-ml-1 h-0.5 w-48 bg-slate-700 dark:bg-slate-600"></div>
-                                        </div>
-                                        <p class="ml-14 text-slate-600 dark:text-slate-300 -translate-y-2.5">{strategy}</p>
-                                    </div>
-                                {/each}
-                            </div>
-                        </div>
-                    </div>
-                {/each}
-            </div>
-        </section>	</div>
+
+		<section class="space-y-6">
+			<h2 class="font-serif text-3xl text-slate-800 dark:text-slate-100">Strategic Goals</h2>
+
+			<div class="space-y-6">
+				{#each goals as goal}
+					<div
+						class="rounded-lg border border-slate-200 bg-white p-6 dark:border-slate-700 dark:bg-slate-800"
+					>
+						<h3 class="mb-3 font-serif text-2xl text-slate-800 dark:text-slate-100">
+							{goal.title}
+						</h3>
+						<p class="mb-6 text-slate-600 dark:text-slate-300">
+							{goal.description}
+						</p>
+
+						<div>
+							<h4 class="font-serif text-lg text-slate-600">Strategies:</h4>
+							<div class="mt-4 space-y-0">
+								{#each goal.strategies as strategy, i}
+									<div class="space-y-0">
+										<div class="flex items-center">
+											<div
+												class="ml-4 flex h-8 w-8 items-center justify-center rounded-full bg-slate-700 text-sm font-bold text-slate-100 dark:bg-slate-600"
+											>
+												{i + 1}
+											</div>
+											<div class="-ml-1 h-0.5 w-48 bg-slate-700 dark:bg-slate-600"></div>
+										</div>
+										<p class="ml-14 -translate-y-2.5 text-slate-600 dark:text-slate-300">
+											{strategy}
+										</p>
+									</div>
+								{/each}
+							</div>
+						</div>
+					</div>
+				{/each}
+			</div>
+		</section>
+	</div>
 </div>

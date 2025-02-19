@@ -36,10 +36,10 @@
 	<!-- Sidebar -->
 	<aside
 		class="
-			fixed inset-y-0 left-0 z-[100] transform
+			fixed inset-y-0 left-0 z-60 transform
 			lg:static lg:z-auto lg:transform-none
 			{isSidebarOpen ? 'translate-x-0 overflow-y-auto' : '-translate-x-full lg:translate-x-0'}
-			w-64 border-r
+			lg:w-1/4 border-r
 			border-slate-200 bg-slate-50 p-6
 			transition-transform duration-200 ease-in-out
 			dark:border-slate-700

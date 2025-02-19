@@ -16,7 +16,7 @@
             image: benjaminImg,
             bio: [
                 "Benjamin grew up on his family's farm in Wallowa County's isolated North End. The last student to attend the Flora school, he graduated from Enterprise in 1980, and then lived out of the county for 20 years.",
-                "Since returning in 2001, he has been on the board of Fishtrap, Inc., a local literary non-profit, and a member of the Wallowa County Planning Commission. A poet and writer, he finds inspiration in the open spaces that Wallowa County provides, from mountain to canyon and everything in between.",
+                "Since returning in 2001, he has been on the board of Fishtrap, a local literary non-profit, and a member of the Wallowa County Planning Commission. A poet and writer, he finds inspiration in the open spaces that Wallowa County provides, from mountain to canyon and everything in between.",
                 "He lives in Joseph with his wife Lynne and two young daughters, both of whom are 5th generation Wallowa County natives."
             ]
         },
@@ -27,7 +27,7 @@
             bio: [
                 "Yun was born in South Korea where she spent her childhood years before immigrating to the United States at 16 years of age. She attended the University of North Carolina at Chapel Hill and graduated with a degree in pharmacy.",
                 "After working as a pharmacist in North Carolina for 7 years, Yun moved to Seattle where she worked as the pharmacy director at the Fairfax Psychiatric Hospital. In 1990, she took a position as a Clinical Specialist at the VA Puget Sound Health Care System where she provided direct patient care and educated residents.",
-                "She moved to Joseph in 2015 where she lives with her husband Miles and their two cats. After growing up in the dense urban environment of Seoul, Korea, Yun has a special appreciation of the tranquility and splendor of the open prairie grass land of Eastern Oregon.",
+                "She moved to Joseph in 2015 where she lives with her husband Miles and their two cats. After growing up in the dense urban environment of Seoul, Yun has a special appreciation of the tranquility and splendor of the open prairie grass land of Eastern Oregon.",
                 "This appreciation has given rise to Yun's heart felt desire to help preserve the beauty of rural Wallowa county. Yun enjoys cooking, hiking, quilting, and entertaining at her home in support of community organizations."
             ]
         },
@@ -56,7 +56,7 @@
             title: 'Board Member',
             image: paulImg,
             bio: [
-                "The oldest of six children Paul spent a large portion of his childhood in Irvine, California. He left for Modesto Junior College on an agriculture scholarship, and spent six years in the San Joaquin valley of California.",
+                "The oldest of six children Paul spent a large portion of his childhood in Irvine, California. He left for Modesto Junior College on an agriculture scholarship, and spent six years in the San Joaquin Valley of California.",
                 "Paul arrived in Oregon in 1987 where he met his wife Sharon. They moved to Wallowa County in 1993 when Paul accepted a position with the Wallowa County Mental Health Clinic.",
                 "Paul is concerned about the threat of development and the decline of the working family farm and is dedicated to making a difference.",
         ]
@@ -77,8 +77,8 @@
             image: angelaImg,
             bio: [
                 "Angela became involved with the Land Trust after returning to her hometown of Lostine in 2017. After 15 years in the crowded San Francisco Bay Area, her desire to conserve the open spaces and working lands of Wallowa County was stronger than ever before.",
-                "While in California, Angela worked in hiring and talent development for Apple, Inc. after earning her MBA in Sustainable Enterprise. Finally having made it back home, she has turned her focus to work that strengthens ties between neighbors and inspires collaboration — for the love of the land, and the lifestyle.",
-                "For her part, Angela makes the most of her new & improved country life by getting outside with her son Cosmo every day, inspiring a new generation of stewardship for rural Wallowa County."
+                "While in California, Angela worked in hiring and talent development for Apple after earning her MBA in Sustainable Enterprise. Finally having made it back home, she has turned her focus to work that strengthens ties between neighbors and inspires collaboration — for the love of the land, and the lifestyle.",
+                "For her part, Angela makes the most of her new and improved country life by getting outside with her son Cosmo every day, inspiring a new generation of stewardship for rural Wallowa County."
             ]
         },
         {
@@ -87,7 +87,7 @@
             image: nickImg,
             bio: [
                 "Born and raised in Corvallis, Oregon, Nick grew up adjacent to the outskirts of town and spent much of his free time exploring the fields, creeks and forests within bicycle range.",
-                "His love of the outdoors led him to pursue a career in Forestry where he spent time working for the Lake Wenatchee Ranger Station and the Siuslaw National Forest. In 1989 Nick accepted the job of Timber Management Officer for the Wallowa Valley Ranger District.",
+                "His love of the outdoors led him to pursue a career in forestry where he spent time working for the Lake Wenatchee Ranger Station and the Siuslaw National Forest. In 1989 Nick accepted the job of Timber Management Officer for the Wallowa Valley Ranger District.",
                 "In 2000 he became the Fire Management Officer for the Wallowa Fire Zone until his retirement in 2007. Nick and his wife Angie live in Joseph and are deeply invested in preserving the livability of this special place."
             ]
         },
@@ -96,7 +96,7 @@
             title: 'Board Member',
             image: davidImg,
             bio: [
-                "David grew up exploring farms, forests and wetlands in what used to be a rural area near Portland, Oregon, where his family has deep roots thanks to his Grandfather who came to Oregon and got started working in the woods.",
+                "David grew up exploring farms, forests and wetlands in what used to be a rural area near Portland, Oregon, where his family has deep roots thanks to his grandfather who came to Oregon and got started working in the woods.",
                 "After making a go at a professional tennis career, David found a new passion in the natural sciences and conservation. Field work in tropical forests led to a Masters Degree in Forest Science from the University of Montana.",
                 "Finding a small cabin in the woods in Wallowa County in 2005 was a dream come true. He now holds a PhD in Forest Ecosystems and Society from OSU's College of Forestry. David and his wife Andrea were thrilled to return to Wallowa County in 2017 with their two children. He now works as Systems Ecologist for Wallowology."
             ]

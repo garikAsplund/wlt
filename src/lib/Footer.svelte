@@ -92,7 +92,7 @@
 						class="hidden cursor-default items-center gap-2 transition-colors md:flex"
 					>
 						<Phone size={18} />
-						<span>(541) 426-2042</span>
+						<span class="select-all">(541) 426-2042</span>
 					</div>
 
 					<!-- Address link for navigation -->

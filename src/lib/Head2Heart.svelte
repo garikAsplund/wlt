@@ -9,7 +9,7 @@
 		<enhanced:img
 			src="/static/images/backgrounds/nez_perce.jpg"
 			alt="Nez Perce Tribe land return celebration in Joseph, Oregon"
-			class="h-full w-full object-cover object-center brightness-110 saturate-[1.2]"
+			class="h-full w-full object-cover object-center brightness-110 saturate-[1.2] dark:brightness-85"
 		/>
 	</div>
 	<div class="w-full py-8 text-center sm:py-12 md:py-16">
