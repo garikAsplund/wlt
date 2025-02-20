@@ -6,6 +6,7 @@
 	import Moraine from '$lib/Moraine.svelte';
 	import NewsletterForm from '$lib/NewsletterForm.svelte';
 	import Stats from '$lib/Stats.svelte';
+	import WhereWeWork from '$lib/WhereWeWork.svelte';
 
 	let { data } = $props();
 </script>
@@ -13,6 +14,7 @@
 <div class="w-full">
 	<Hero />
 	<Stats />
+	<!-- <WhereWeWork /> -->
 	<Intro />
 	<Moraine />
 	<div class="h-[35vh] flex flex-col justify-center">
