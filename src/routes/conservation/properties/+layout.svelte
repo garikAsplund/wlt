@@ -51,6 +51,7 @@
 		<div class="mb-6 flex items-center justify-between">
 			<a
 				href="/conservation/properties"
+				onclick={() => (isSidebarOpen = false)}
 				class="font-serif text-xl text-slate-800 transition-colors hover:text-slate-600 dark:text-slate-100 dark:hover:text-slate-300"
 			>
 				Our Properties
