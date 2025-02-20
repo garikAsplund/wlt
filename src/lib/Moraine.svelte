@@ -29,7 +29,7 @@
                 </h4>
                 <p class="text-base sm:text-lg leading-relaxed text-gray-200">
                     The breathtaking beauty of Wallowa Lake's East Moraine forest and open space was
-                    permanently protected in January 2020 when almost 1,800 acres—or 80% of the moraine—were transferred into
+                    permanently protected in January 2020 when almost 1,800 acres were transferred into
                     Wallowa County ownership.
                 </p>
                 <a 
