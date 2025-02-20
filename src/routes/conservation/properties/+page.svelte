@@ -1,5 +1,6 @@
 <script lang="ts">
     import { properties } from "$lib/properties";
+	import WhereWeWork from "$lib/WhereWeWork.svelte";
     const propertyStats = {
         totalAcres: properties.reduce((sum, property) => sum + (property.acres || 0), 0).toLocaleString(),
         numberofProperties: properties.length,
@@ -13,11 +14,12 @@
     </h1>
     
     <div class="mb-6 lg:mb-12">
-        <enhanced:img 
+        <!-- <enhanced:img 
             src="$lib/images/properties/protected_properties.png" 
             alt="Wallowa County Landscape" 
             class="w-full h-auto scale-90"
-        />
+        /> -->
+        <WhereWeWork />
     </div>
 
     <div class="bg-slate-50 dark:bg-slate-800 p-4 lg:p-6 rounded-lg mb-6 lg:mb-8">
