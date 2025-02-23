@@ -27,6 +27,13 @@
 			isSidebarOpen = false;
 		}
 	}
+
+	$effect(() => {
+		if (typeof window !== 'undefined') {
+			document.body.style.overflow = isSidebarOpen ? 'hidden' : '';
+		}
+	});
+
 </script>
 
 <svelte:window onscroll={handleScroll} />
