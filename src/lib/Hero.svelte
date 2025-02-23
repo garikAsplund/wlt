@@ -5,8 +5,17 @@
 
     let showImageInfo = $state(false);
     let mounted = $state(false);
-    let modalNode: HTMLDivElement = $state();
-    let buttonNode: HTMLButtonElement;
+    let scrollY = $state(0);
+    let modalNode: HTMLDivElement | undefined = $state();
+    let buttonNode: HTMLButtonElement | undefined = $state();
+    let imageNode: HTMLImageElement | undefined = $state();
+
+    $effect(() => {
+        if (imageNode) {
+            const yPos = scrollY * 0.5; // Adjust speed - lower = slower
+            imageNode.style.transform = `translateY(${yPos}px)`;
+        }
+    });
 
     onMount(() => {
         setTimeout(() => {
@@ -33,6 +42,8 @@
         };
     });
 </script>
+
+<svelte:window bind:scrollY />
 
 <div class="relative">
     <div class="absolute z-10 h-[64vh] w-full"></div>
@@ -101,10 +112,11 @@
     {/if}
     <div class="relative h-[64vh] w-full overflow-hidden">
         <enhanced:img
+            bind:this={imageNode}
             src="/static/images/hero.jpg"
             alt="View above the protected moraines of Wallowa Lake"
-            class="h-full w-full object-cover object-left"
-            style="object-position: center 40%"
+            class="h-full w-full object-cover object-left will-change-transform"
+            style="object-position: center 40%; transform: translateY(0)"
         />
     </div>
 </div>
