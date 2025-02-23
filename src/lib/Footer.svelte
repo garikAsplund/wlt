@@ -77,7 +77,7 @@
 				</div>
 				<!-- Contact with integrated socials -->
 				<div class="order-2 space-y-4">
-					<h3 class="text-lg font-medium text-neutral-900 dark:text-neutral-300 md:text-center md:border-b-1 md:border-slate-400">Contact</h3>
+					<h3 class="text-lg font-medium text-neutral-900 dark:text-neutral-300 md:text-center md:border-b-1 md:border-slate-400 md:dark:border-slate-400/80">Contact</h3>
 					<div class="space-y-4">
 						<!-- Phone number for mobile -->
 						<a
@@ -148,7 +148,7 @@
 
 				<!-- Links -->
 				<div class="order-3 space-y-4">
-					<h3 class="text-lg font-medium text-neutral-900 dark:text-neutral-300 md:text-center md:border-b-1 md:border-slate-400">Navigation</h3>
+					<h3 class="text-lg font-medium text-neutral-900 dark:text-neutral-300 md:text-center md:border-b-1 md:border-slate-400 md:dark:border-slate-400/80">Navigation</h3>
 					<div class="grid grid-cols-2 gap-x-12 text-sm">
 						<!-- Column 1: About & Core -->
 						<div class="flex flex-col space-y-1">
@@ -228,7 +228,7 @@
 
 				<!-- Mission -->
 				<div class="order-4 space-y-4">
-					<h3 class="text-lg font-medium text-neutral-900 dark:text-neutral-300 md:text-center md:border-b-1 md:border-slate-400">Our Mission</h3>
+					<h3 class="text-lg font-medium text-neutral-900 dark:text-neutral-300 md:text-center md:border-b-1 md:border-slate-400 md:dark:border-slate-400/80">Our Mission</h3>
 					<div class="flex flex-col items-start">
 						<p class="text-neutral-600 dark:text-neutral-400">
 							Wallowa Land Trust's mission is to protect the rural nature of Wallowa County by
