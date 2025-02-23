@@ -24,7 +24,7 @@
 	class="flex h-full min-h-screen w-full flex-col selection:bg-black selection:text-slate-200 dark:selection:bg-yellow-400 dark:selection:text-black"
 >
 	<Nav />
-	<div class="relative inset-0 z-50 w-full flex-grow">
+	<div class="relative inset-0 w-full flex-grow">
 		<div class="h-full w-full">
 			{#if heroContent[page.url.pathname]}
 				<div class="relative overflow-hidden">
