@@ -167,15 +167,56 @@
 			title: 'Perry Farm Conservation Easement',
 			outlet: 'Wallowa Land Trust',
 			url: '/news/press/releases/perry',
-			blurb: "Wallowa Land Trust secures conservation easement on 482-acre Perry Farm on Wallowa Lake's East Moraine, protecting working farmland and wildlife habitat while maintaining the possibility for future public trail access."
+			blurb:
+				"Wallowa Land Trust secures conservation easement on 482-acre Perry Farm on Wallowa Lake's East Moraine, protecting working farmland and wildlife habitat while maintaining the possibility for future public trail access."
 		},
 		{
 			date: '2020-01-21',
-			title: '1,791 acres of Wallowa Lake\'s East Moraine acquired for Wallowa County',
+			title: "1,791 acres of Wallowa Lake's East Moraine acquired for Wallowa County",
 			outlet: 'Wallowa Land Trust',
 			url: '/news/press/releases/moraine2',
-			blurb: "Historic conservation victory achieved as Wallowa County acquires 1,791 acres of the East Moraine, permanently protecting this iconic landscape from development while ensuring sustainable management for wildlife habitat, cultural resources, recreation, and working lands."
-		}
+			blurb:
+				'Historic conservation victory achieved as Wallowa County acquires 1,791 acres of the East Moraine, permanently protecting this iconic landscape from development while ensuring sustainable management for wildlife habitat, cultural resources, recreation, and working lands.'
+		},
+		{
+			date: '2023-04-27',
+			title: 'West Moraine Property in Wallowa County Returned to Nez Perce Tribe',
+			outlet: 'Big Country News',
+			url: 'https://www.bigcountrynewsconnection.com/idaho/west-moraine-property-in-wallowa-county-returned-to-nez-perce-tribe/article_32dedc76-e530-11ed-99c3-6ff58f5668da.html',
+			blurb:
+				'Thirty (30) acres of land on the West Moraine property located on the west side of Wallowa Lake has been returned to the Nez Perce Tribe. The property, which was acquired by local conservation organization Wallowa Land Trust in 2014 when it was up for auction by the County, has native grasslands and forest, making it a magnet for wildlife increasingly impacted by wildlife. \nAs of March 24, 2023, the property is now back in tribal ownership.'
+		},
+		{
+			date: '2008-10-06',
+			title: 'Protecting, preserving moraines focus of forum',
+			outlet: 'La Grande Observer',
+			url: 'https://www.lagrandeobserver.com/archive/protecting-preserving-moraines-focus-of-forum/article_e55b53a6-8f6d-512e-8d6e-ace0f3c5aabb.html',
+			blurb:
+				"Everyone who visits Wallowa Lake, the jewel of Northeast Oregon, knows what a beautiful sight it is, sparkling in the sun of late summer as it rests between the protecting arms of the glacial lateral moraines on its east and west sides and the terminal moraine at its foot on the northern end. What most people don't realize is that this iconic landscape curving around the lake is almost all privately owned."
+		},
+		{
+			date: '2023-05-17',
+			title: '30 Acres of Land Transferred Back to the Nez Perce in Wallowa County',
+			outlet: 'Elkhorn Media Group',
+			url: 'https://elkhornmediagroup.com/30-acres-of-land-transferred-back-to-the-nez-perce-in-wallowa-county/',
+			blurb:
+				'Wallowa County is part of a long and storied history of the Nez Perce Tribe. Though much of the land today is organized like any other county in the Pacific Northwest, with a smattering of private and public owners, this isn’t the case for all of it. On March 24, 2023, The Wallowa Land Trust, a local nonprofit and conservation organization, signed 30 acres of land from the West Moraine area of Wallowa Lake back to the Nez Perce.'
+		},
+		{
+			date: '2011-03-18',
+			title: 'New conservation easement will protect historic Wallowa County ranch property',
+			outlet: 'The Oregonian',
+			url: 'https://www.oregonlive.com/pacific-northwest-news/2011/03/new_conservation_pact_will_protect_historic_wallowa_county_ranch_property.html',
+			blurb:
+				"A homespun nonprofit in northeastern Oregon's picturesque Wallowa County is trying a new technique for keeping developers from buying up ranches and farms for homes, subdivisions and condominiums. The Wallowa Land Trust paid $200,000 for a 'conservation easement' on 197 acres of the historic Wolfe Ranch between Lostine and Wallowa. The goal: to keep the acreage as undeveloped and hauntingly beautiful as it's always been."
+		},
+		{
+			date: '2011-02-16',
+			title: "First conservation easement signed",
+			outlet: 'Wallowa County Chieftain',
+			url: 'https://www.wallowa.com/news/first-conservation-easement-signed/article_0dbc1887-9174-5487-9fdd-01cafc120811.html',
+			blurb:
+"The first working lands conservation easement in Wallowa County has been negotiated between Wallowa Land Trust and Wolfe Century Farm owners Woody and Megan Wolfe. The money we can generate renting the land for grazing isnt enough to cover the debt-load on the property, Woody Wolfe said. He sees the conservation easement as a way to get value out of his marshland and riverfront property without subdividing it and turning the land over to houses and concrete."		}
 	];
 
 	function organizePressItems(items: PressItem[]) {

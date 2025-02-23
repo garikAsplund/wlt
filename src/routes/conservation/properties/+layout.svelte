@@ -36,7 +36,7 @@
 	<!-- Sidebar -->
 	<aside
 		class="
-                fixed z-60 flex
+                fixed z-100 flex
                 h-[100dvh] w-full flex-col overflow-y-auto border-r border-slate-200
                 bg-slate-50 p-6
                 transition-transform duration-200 ease-in-out
