@@ -11,7 +11,7 @@
 			alt="Nez Perce Tribe land return celebration in Joseph, Oregon"
 			class="h-full w-full object-cover object-center brightness-110 saturate-[1.2] dark:brightness-85"
 			fetchpriority="high"
-			sizes="min(1280px, 100vw)"
+			sizes="(max-width: 640px) 640px, 1280px"
 		/>
 	</div>
 	<div class="w-full py-8 text-center sm:py-12 md:py-16">
@@ -26,7 +26,7 @@
 		</p>
 		<a
 			href="/executive-director-letter"
-			class="mt-6 inline-flex items-center gap-2 border-b border-current text-slate-900 hover:text-slate-600 hover:dark:text-slate-400 dark:text-slate-100"
+			class="mt-6 inline-flex items-center gap-2 border-b border-current text-slate-900 hover:text-slate-600 dark:text-slate-100 hover:dark:text-slate-400"
 		>
 			Read our Executive Director's letter
 			<ArrowUpRight class="h-4 w-4" />

@@ -1,5 +1,5 @@
 <script>
-	import DonateButton from "./DonateButton.svelte";
+	import DonateButton from './DonateButton.svelte';
 </script>
 
 <div class="pt-12 sm:pt-24">
@@ -10,7 +10,7 @@
 			class="absolute inset-0 h-full w-full object-cover object-top"
 			alt="Sunset on the forest"
 			fetchpriority="high"
-			sizes="min(1280px, 100vw)"
+			sizes="(max-width: 640px) 640px, 1280px"
 		/>
 
 		<!-- Overlay -->

@@ -118,7 +118,7 @@
             class="h-full w-full object-cover object-left will-change-transform"
             style="object-position: center 40%; transform: translateY(0)"
 			fetchpriority="high"
-			sizes="min(1280px, 100vw)"
-        />
+			sizes="(max-width: 640px) 640px, 1280px"
+			/>
     </div>
 </div>
