@@ -68,7 +68,7 @@
 				<div class="relative overflow-hidden">
 					<enhanced:img
 						bind:this={imageNode}
-						src={`${heroContent[page.url.pathname].image}?w=1280;640;320`}
+						src={heroContent[page.url.pathname].image}
 						alt={heroContent[page.url.pathname].alt}
 						class="h-36 w-full scale-110 object-cover will-change-transform sm:h-64"
 						style="object-position: {heroContent[page.url.pathname].position ||
