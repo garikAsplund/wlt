@@ -112,7 +112,7 @@
 <div class="fixed top-0 right-0 left-0 -z-20 h-fit bg-white dark:bg-[#121212]"></div>
 
 <nav
-	class="sticky top-0 z-60 w-full bg-white py-0 font-serif font-light text-gray-800 dark:bg-[#121212] dark:text-gray-200
+	class="sticky top-0 z-120 w-full bg-white py-0 font-serif font-light text-gray-800 dark:bg-[#121212] dark:text-gray-200
 	{isNavbarVisible
 		? 'transition-transform duration-800 ease-out'
 		: 'transition-transform duration-1000 ease-in'}    
@@ -254,22 +254,22 @@
 					onmouseenter={() => (isDesktopNewsDropdownOpen = true)}
 					onmouseleave={() => (isDesktopNewsDropdownOpen = false)}
 				>
-					<button
-						role="menuitem"
-						tabindex="0"
-						aria-haspopup="true"
-						aria-expanded={isDesktopNewsDropdownOpen}
-						class="relative flex items-center p-4 text-center hover:opacity-75
-					{page.url.pathname.startsWith('/news')
-							? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
-							: ''}"
-					>
-						News and Events
-						<ChevronDown
-							class="ml-2"
-							size={20}
-						/>
-					</button>
+				<button
+  role="menuitem"
+  tabindex="0"
+  aria-haspopup="true"
+  aria-expanded={isDesktopNewsDropdownOpen}
+  class="relative flex flex-nowrap items-center p-4 text-center hover:opacity-75
+  {page.url.pathname.startsWith('/news')
+    ? 'after:absolute after:bottom-0 after:left-0 after:h-1.5 after:w-full after:bg-slate-600'
+    : ''}"
+>
+  News and Events
+  <ChevronDown
+    class="ml-2 shrink-0"
+    size={20}
+  />
+</button>
 
 					{#if isDesktopNewsDropdownOpen}
 						<div

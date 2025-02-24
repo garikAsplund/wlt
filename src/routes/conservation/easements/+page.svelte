@@ -79,7 +79,7 @@
 			</div>
 		{/each}
 	</div>
-	<div class="mt-8 flex justify-center sm:mt-12">
+	<!-- <div class="mt-8 flex justify-center sm:mt-12">
 		<a
 			href="/contact/easements"
 			class="
@@ -95,7 +95,7 @@
 			<ExternalLink class="h-5 w-5" />
 			<span>Start a Conservation Easement</span>
 		</a>
-	</div>
+	</div> -->
 </div>
 
 <style>

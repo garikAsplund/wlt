@@ -5,20 +5,28 @@
 	import { page } from '$app/state';
 	import { heroContent } from '$lib/heroContent';
 
-    let scrollY = $state(0);
-    let imageNode: HTMLImageElement = $state();
+	let pageTitle = $derived(
+		page.url.pathname === '/'
+			? `Wallowa Land Trust`
+			: `${page.url.pathname.split('/')[page.url.pathname.split('/').length - 1].charAt(0).toUpperCase() + page.url.pathname.split('/')[page.url.pathname.split('/').length - 1].slice(1).replace(/-/g, ' ')} | Wallowa Land Trust`
+	);
 
-    $effect(() => {
-        if (imageNode) {
-            const yPos = scrollY * 0.2; // Adjust speed here
-            imageNode.style.transform = `translateY(${yPos}px)`;
-        }
-    });
+	let scrollY = $state(0);
+	let imageNode: HTMLImageElement = $state();
+
+	$effect(() => {
+		if (imageNode) {
+			const yPos = scrollY * 0.2; // Adjust speed here
+			imageNode.style.transform = `translateY(${yPos}px)`;
+		}
+	});
 
 	let { children, data } = $props();
 </script>
 
 <svelte:window bind:scrollY />
+
+<svelte:head><title>{pageTitle}</title></svelte:head>
 
 <div
 	class="flex h-full min-h-screen w-full flex-col selection:bg-black selection:text-slate-200 dark:selection:bg-yellow-400 dark:selection:text-black"
@@ -32,8 +40,9 @@
 						bind:this={imageNode}
 						src={heroContent[page.url.pathname].image}
 						alt={heroContent[page.url.pathname].alt}
-						class="h-36 w-full object-cover sm:h-64 will-change-transform scale-110"
-						style="object-position: {heroContent[page.url.pathname].position}; transform: translateY(0)"
+						class="h-36 w-full scale-110 object-cover will-change-transform sm:h-64"
+						style="object-position: {heroContent[page.url.pathname]
+							.position}; transform: translateY(0)"
 					/>
 					<div
 						class="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/50 to-transparent p-6"
