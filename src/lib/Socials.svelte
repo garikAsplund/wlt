@@ -15,7 +15,7 @@
 	</div>
 </div>
 <div class="flex flex-1 justify-end -translate-y-4">
-	<a href="#top" class="scale-125 hover:opacity-65">
+	<a href="#top" class="scale-125 hover:opacity-65" aria-label="To the top of the page">
 		<CircleArrowUp />
 	</a>
 </div>

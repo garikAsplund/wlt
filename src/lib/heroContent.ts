@@ -28,7 +28,7 @@ export const heroContent = {
 	'/about/plan': {
 		title: 'Our Plan',
 		image: imageModules['/static/images/backgrounds/plan.jpg']?.default,
-		alt: 'Chief Joseph Mountain as seen from the West Moraine',
+		alt: 'Chief Joseph Mountain as seen from the west moraine',
 		position: 'center 65%',
 		credit: {
 			photographer: 'Garik Asplund',
