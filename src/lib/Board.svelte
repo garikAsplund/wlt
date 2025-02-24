@@ -113,7 +113,6 @@
                         src={member.image}
                         alt={member.name}
                         class="aspect-[4/5] w-full rounded-lg bg-slate-100 object-cover object-top dark:bg-slate-800"
-                        sizes="(max-width: 768px) 200px, 400px"
                     />
                     <div class="mt-4 text-center md:text-left">
                         <h2 class="text-lg font-medium text-slate-900 dark:text-slate-100">{member.name}</h2>
