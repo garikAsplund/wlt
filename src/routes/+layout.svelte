@@ -4,15 +4,21 @@
 	import '../app.css';
 	import { page } from '$app/state';
 	import { heroContent } from '$lib/heroContent';
+	import { Camera, ExternalLink } from 'lucide-svelte';
+	import { fade } from 'svelte/transition';
+	import { onMount } from 'svelte';
 
 	let pageTitle = $derived(
 		page.url.pathname === '/'
 			? `Wallowa Land Trust`
 			: `${page.url.pathname.split('/')[page.url.pathname.split('/').length - 1].charAt(0).toUpperCase() + page.url.pathname.split('/')[page.url.pathname.split('/').length - 1].slice(1).replace(/-/g, ' ')} | Wallowa Land Trust`
 	);
-
 	let scrollY = $state(0);
 	let imageNode: HTMLImageElement = $state();
+	let showImageInfo = $state(false);
+	let mounted = $state(false);
+	let modalNode: HTMLDivElement | undefined = $state();
+	let buttonNode: HTMLButtonElement | undefined = $state();
 
 	$effect(() => {
 		if (imageNode) {
@@ -21,11 +27,35 @@
 		}
 	});
 
+	onMount(() => {
+		setTimeout(() => {
+			mounted = true;
+		}, 0);
+
+		// Add click outside handler
+		const handleClickOutside = (event: MouseEvent) => {
+			if (
+				showImageInfo && 
+				modalNode && 
+				buttonNode && 
+				!modalNode.contains(event.target as Node) && 
+				!buttonNode.contains(event.target as Node)
+			) {
+				showImageInfo = false;
+			}
+		};
+
+		document.addEventListener('mousedown', handleClickOutside);
+
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+		};
+	});
+
 	let { children, data } = $props();
 </script>
 
 <svelte:window bind:scrollY />
-
 <svelte:head><title>{pageTitle}</title></svelte:head>
 
 <div
@@ -42,7 +72,7 @@
 						alt={heroContent[page.url.pathname].alt}
 						class="h-36 w-full scale-110 object-cover will-change-transform sm:h-64"
 						style="object-position: {heroContent[page.url.pathname]
-							.position}; transform: translateY(0)"
+							.position || 'center'}; transform: translateY(0)"
 					/>
 					<div
 						class="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/50 to-transparent p-6"
@@ -51,6 +81,44 @@
 							{heroContent[page.url.pathname].title}
 						</h1>
 					</div>
+					
+					{#if heroContent[page.url.pathname]?.credit}
+						<button
+							bind:this={buttonNode}
+							class="absolute right-3 sm:right-4 bottom-3 sm:bottom-4 z-20 cursor-pointer rounded-full bg-black/30 p-2 transition-colors hover:bg-black/40"
+							onclick={() => (showImageInfo = !showImageInfo)}
+							aria-label="Show image information"
+						>
+							<Camera class="h-5 w-5 text-white" />
+						</button>
+						
+						{#if showImageInfo && mounted}
+							<div
+								bind:this={modalNode}
+								class="absolute right-3 sm:right-4 bottom-14 sm:bottom-16 z-20 mx-3 sm:mx-4 bg-black md:bg-black/50 px-4 py-2 text-sm text-white max-w-[calc(100%-24px)] sm:max-w-md"
+								transition:fade
+							>
+								<p class="mb-2">
+									{heroContent[page.url.pathname].alt}
+								</p>
+								{#if heroContent[page.url.pathname].credit.url}
+									<a
+										href={heroContent[page.url.pathname].credit.url}
+										target="_blank"
+										rel="noopener noreferrer"
+										class="inline-flex items-center gap-2 border-b border-current hover:text-gray-200"
+									>
+										Photo by {heroContent[page.url.pathname].credit.photographer}
+										<ExternalLink class="h-4 w-4" />
+									</a>
+								{:else}
+									<p class="inline-flex items-center gap-2">
+										Photo by {heroContent[page.url.pathname].credit.photographer}
+									</p>
+								{/if}
+							</div>
+						{/if}
+					{/if}
 				</div>
 			{/if}
 			{@render children()}
