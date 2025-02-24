@@ -6,12 +6,11 @@
 	<div class="relative min-h-96 w-full">
 		<!-- Background Image -->
 		<enhanced:img
-			src="/static/images/backgrounds/forest.jpg?w=1280;640;400"
+			src="/static/images/backgrounds/forest.jpg?w=1280;640;320"
 			class="absolute inset-0 h-full w-full object-cover object-top"
 			alt="Sunset on the forest"
 			fetchpriority="high"
-			sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
-		/>
+			sizes="(max-width: 640px) 320px, (max-width: 1280px) 640px, 1280px"		/>
 
 		<!-- Overlay -->
 		<div class="absolute inset-0 dark:bg-black/30"></div>

@@ -68,14 +68,13 @@
 				<div class="relative overflow-hidden">
 					<enhanced:img
 						bind:this={imageNode}
-						src={heroContent[page.url.pathname].image}
+						src={`${heroContent[page.url.pathname].image}?w=1280;640;320`}
 						alt={heroContent[page.url.pathname].alt}
 						class="h-36 w-full scale-110 object-cover will-change-transform sm:h-64"
 						style="object-position: {heroContent[page.url.pathname].position ||
 							'center'}; transform: translateY(0)"
 						fetchpriority="high"
-						sizes="min(1280px, 100vw)"
-					/>
+						sizes="(max-width: 640px) 320px, (max-width: 1280px) 640px, 1280px"					/>
 					<div
 						class="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/50 to-transparent p-6"
 					>
