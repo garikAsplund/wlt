@@ -24,9 +24,9 @@
                 <h2 class="mb-2 text-2xl font-bold text-white sm:text-3xl">
                     The East Moraine Community Forest 
                 </h2>
-                <h4 class="mb-4 sm:mb-6 text-lg sm:text-xl text-gray-300">
+                <h3 class="mb-4 sm:mb-6 text-lg sm:text-xl text-gray-300">
                     Securing one of North America's most iconic landscapes
-                </h4>
+                </h3>
                 <p class="text-base sm:text-lg leading-relaxed text-gray-200">
                     The breathtaking beauty of Wallowa Lake's East Moraine forest and open space was
                     permanently protected in January 2020 when almost 1,800 acres were transferred into

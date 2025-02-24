@@ -41,6 +41,8 @@
             src="/static/images/backgrounds/map.png"
             alt="Topographical map of Wallowa County"
             class="absolute inset-0 h-full w-full object-cover object-center brightness-105 saturate-[1.1]"
+            fetchpriority="high"
+			sizes="min(1280px, 100vw)"
         />
         
         <div class="relative bg-white/80 dark:bg-black/70">
@@ -57,9 +59,9 @@
                                     <svelte:component this={benefit.icon} class="w-5 h-5 lg:w-6 lg:h-6" />
                                 </div>
                                 <div>
-                                    <h3 class="text-lg lg:text-xl font-medium text-gray-900 dark:text-gray-100">
+                                    <h2 class="text-lg lg:text-xl font-medium text-gray-900 dark:text-gray-100">
                                         {benefit.text}
-                                    </h3>
+                                    </h2>
                                     <p class="text-base lg:text-lg text-gray-600 dark:text-gray-300">
                                         {benefit.description}
                                     </p>

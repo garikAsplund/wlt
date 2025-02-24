@@ -64,12 +64,13 @@
 						href="https://www.landtrustaccreditation.org/about/about-the-seal"
 						target="_blank"
 						rel="noopener noreferrer"
+						aria-label="Read more about land trust accreditation"
 					>
 						<div class="h-32 w-32 transition-all duration-500 hover:opacity-75">
 							<AccreditedSvg />
 						</div>
 					</a>
-					<a href="https://oregonlandtrusts.org/" target="_blank" rel="noopener noreferrer">
+					<a href="https://oregonlandtrusts.org/" target="_blank" rel="noopener noreferrer" aria-label="Read more about the Coalition of Oregon Land Trusts">
 						<div class="h-32 w-32 transition-all duration-500 hover:opacity-75">
 							<COLTSVG />
 						</div>

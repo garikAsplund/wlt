@@ -8,6 +8,9 @@
 		<enhanced:img
 			src="/static/images/backgrounds/forest.jpg"
 			class="absolute inset-0 h-full w-full object-cover object-top"
+			alt="Sunset on the forest"
+			fetchpriority="high"
+			sizes="min(1280px, 100vw)"
 		/>
 
 		<!-- Overlay -->
