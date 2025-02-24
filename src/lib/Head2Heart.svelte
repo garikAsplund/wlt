@@ -7,11 +7,11 @@
 
 	<div class="relative h-[300px] w-full overflow-hidden md:h-[40vh]">
 		<enhanced:img
-			src="/static/images/backgrounds/nez_perce.jpg?w=1280;640;400"
+			src="/static/images/backgrounds/nez_perce.jpg?w=1280;640;320"
 			alt="Nez Perce Tribe land return celebration in Joseph, Oregon"
 			class="h-full w-full object-cover object-center brightness-110 saturate-[1.2] dark:brightness-85"
 			fetchpriority="high"
-			sizes="(min-width:1920px) 1280px, (min-width:1080px) 640px, (min-width:768px) 400px"
+			sizes="(max-width: 640px) 320px, (max-width: 1280px) 640px, 1280px"
 		/>
 	</div>
 	<div class="w-full py-8 text-center sm:py-12 md:py-16">
