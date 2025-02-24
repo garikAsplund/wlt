@@ -1,13 +1,13 @@
 <script lang="ts">
-    import angelaImg from '$lib/images/board/angela.jpg?enhanced?w=400;200';
-    import benjaminImg from '$lib/images/board/benjamin.jpg?enhanced?w=400;200';
-    import davidImg from '$lib/images/board/david.jpg?enhanced?w=400;200';
-    import dougImg from '$lib/images/board/doug.jpg?enhanced?w=400;200';
-    import jeanImg from '$lib/images/board/jean.jpg?enhanced?w=400;200';
-    import jewieImg from '$lib/images/board/jewie.jpg?enhanced?w=400;200';
-    import nickImg from '$lib/images/board/nick.png?enhanced?w=400;200';
-    import paulImg from '$lib/images/board/paul.png?enhanced?w=400;200';
-    import yunImg from '$lib/images/board/yun.jpg?enhanced?w=400;200';
+    import angelaImg from '$lib/images/board/angela.jpg?enhanced';
+    import benjaminImg from '$lib/images/board/benjamin.jpg?enhanced';
+    import davidImg from '$lib/images/board/david.jpg?enhanced';
+    import dougImg from '$lib/images/board/doug.jpg?enhanced';
+    import jeanImg from '$lib/images/board/jean.jpg?enhanced';
+    import jewieImg from '$lib/images/board/jewie.jpg?enhanced';
+    import nickImg from '$lib/images/board/nick.png?enhanced';
+    import paulImg from '$lib/images/board/paul.png?enhanced';
+    import yunImg from '$lib/images/board/yun.jpg?enhanced';
 
     const boardMembers = [
         {
