@@ -117,6 +117,8 @@
             alt="View above the protected moraines of Wallowa Lake"
             class="h-full w-full object-cover object-left will-change-transform"
             style="object-position: center 40%; transform: translateY(0)"
+			fetchpriority="high"
+			sizes="min(1280px, 100vw)"
         />
     </div>
 </div>

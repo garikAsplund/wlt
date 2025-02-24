@@ -35,10 +35,10 @@
 		// Add click outside handler
 		const handleClickOutside = (event: MouseEvent) => {
 			if (
-				showImageInfo && 
-				modalNode && 
-				buttonNode && 
-				!modalNode.contains(event.target as Node) && 
+				showImageInfo &&
+				modalNode &&
+				buttonNode &&
+				!modalNode.contains(event.target as Node) &&
 				!buttonNode.contains(event.target as Node)
 			) {
 				showImageInfo = false;
@@ -71,8 +71,10 @@
 						src={heroContent[page.url.pathname].image}
 						alt={heroContent[page.url.pathname].alt}
 						class="h-36 w-full scale-110 object-cover will-change-transform sm:h-64"
-						style="object-position: {heroContent[page.url.pathname]
-							.position || 'center'}; transform: translateY(0)"
+						style="object-position: {heroContent[page.url.pathname].position ||
+							'center'}; transform: translateY(0)"
+						fetchpriority="high"
+						sizes="min(1280px, 100vw)"
 					/>
 					<div
 						class="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/50 to-transparent p-6"
@@ -81,21 +83,21 @@
 							{heroContent[page.url.pathname].title}
 						</h1>
 					</div>
-					
+
 					{#if heroContent[page.url.pathname]?.credit}
 						<button
 							bind:this={buttonNode}
-							class="absolute right-3 sm:right-4 bottom-3 sm:bottom-4 z-20 cursor-pointer rounded-full bg-black/30 p-2 transition-colors hover:bg-black/40"
+							class="absolute right-3 bottom-3 z-20 cursor-pointer rounded-full bg-black/30 p-2 transition-colors hover:bg-black/40 sm:right-4 sm:bottom-4"
 							onclick={() => (showImageInfo = !showImageInfo)}
 							aria-label="Show image information"
 						>
 							<Camera class="h-5 w-5 text-white" />
 						</button>
-						
+
 						{#if showImageInfo && mounted}
 							<div
 								bind:this={modalNode}
-								class="absolute right-3 sm:right-4 bottom-14 sm:bottom-16 z-20 mx-3 sm:mx-4 bg-black md:bg-black/50 px-4 py-2 text-sm text-white max-w-[calc(100%-24px)] sm:max-w-md"
+								class="absolute right-3 bottom-14 z-20 mx-3 max-w-[calc(100%-24px)] bg-black px-4 py-2 text-sm text-white sm:right-4 sm:bottom-16 sm:mx-4 sm:max-w-md md:bg-black/50"
 								transition:fade
 							>
 								<p class="mb-2">
