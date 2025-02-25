@@ -2,7 +2,7 @@ export const imageModules = import.meta.glob('/static/images/backgrounds/*.{png,
 	eager: true,
 	query: {
         enhanced: true,
-        w: '1280;640;320', // Add width variations
+        w: 'original;640;320',
 	}
 });
 
