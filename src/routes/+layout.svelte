@@ -74,7 +74,7 @@
 						style="object-position: {heroContent[page.url.pathname].position ||
 							'center'}; transform: translateY(0)"
 						fetchpriority="high"
-						sizes="min(1280px, 100vw)"					/>
+											/>
 					<div
 						class="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-black/50 to-transparent p-6"
 					>
