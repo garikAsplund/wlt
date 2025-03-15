@@ -6,7 +6,7 @@
 	<div class="relative min-h-96 w-full">
 		<!-- Background Image -->
 		<enhanced:img
-			src="/static/images/backgrounds/forest.jpg?w=1280;640;320"
+			src="/static/images/backgrounds/forest.jpg?w=original;1280;640;320"
 			class="absolute inset-0 h-full w-full object-cover object-top"
 			alt="Sunset on the forest"
 			fetchpriority="high"

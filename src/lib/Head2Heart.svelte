@@ -7,7 +7,7 @@
 
 	<div class="relative h-[300px] w-full overflow-hidden md:h-[40vh]">
 		<enhanced:img
-			src="/static/images/backgrounds/nez_perce.jpg?w=1280;640;320"
+			src="/static/images/backgrounds/nez_perce.jpg?w=original;1280;640;320"
 			alt="Nez Perce Tribe land return celebration in Joseph, Oregon"
 			class="h-full w-full object-cover object-center brightness-110 saturate-[1.2] dark:brightness-85"
 			fetchpriority="high"
@@ -26,10 +26,10 @@
 		</p>
 		<a
 			href="/executive-director-letter"
-			class="mt-6 inline-flex items-center gap-2 border-b border-current text-slate-900 hover:text-slate-600 dark:text-slate-100 hover:dark:text-slate-400"
+			class="group mt-6 inline-flex items-center gap-2 border-b border-current text-slate-900 hover:text-slate-600 dark:text-slate-100 hover:dark:text-slate-400"
 		>
 			Read our Executive Director's letter
-			<ArrowUpRight class="h-4 w-4" />
+			<ArrowUpRight class="h-4 w-4 group-hover:rotate-45 transition-all duration-300 " />
 		</a>
 	</div>
 </div>

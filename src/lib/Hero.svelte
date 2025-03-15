@@ -113,7 +113,7 @@
 	<div class="relative h-[64vh] w-full overflow-hidden">
 		<enhanced:img
 			bind:this={imageNode}
-			src="/static/images/hero.jpg?w=1280;640;320"
+			src="/static/images/hero.jpg?w=original;1280;640;320"
 			alt="View above the protected moraines of Wallowa Lake"
 			class="h-full w-full object-cover object-left will-change-transform"
 			style="object-position: center 40%; transform: translateY(0)"

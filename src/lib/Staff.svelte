@@ -1,8 +1,8 @@
 <script lang="ts">
 
-import jonathanImg from '$lib/images/staff/jonathan.jpg?enhanced';
-import kelImg from '$lib/images/staff/kel.png?enhanced';
-import kathleenImg from '$lib/images/staff/kathleen.jpg?enhanced';
+import jonathanImg from '$lib/images/staff/jonathan.jpg?enhanced&w=original;400;200';
+import kelImg from '$lib/images/staff/kel.png?enhanced&w=original;400;200';
+import kathleenImg from '$lib/images/staff/kathleen.jpg?enhanced&w=original;400;200';
 
     const staffMembers = [
         {
