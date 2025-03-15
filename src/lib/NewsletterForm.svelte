@@ -24,14 +24,13 @@
 		}
 	});
 </script>
-
-<section class="flex flex-col items-center justify-center rounded-md dark:invert h-auto dark:opacity-80">
+<section class="flex flex-col items-center justify-center rounded-md  h-auto">
 	<div class="my-8 w-full max-w-xl px-4">
-		<h2 class="text-center text-lg font-semibold mb-4">
+		<h2 class="text-center text-lg font-semibold mb-4 text-gray-900 dark:text-gray-100">
 			Sign up for our newsletter!
 		</h2>
 		{#if $message && isSubmitted}
-			<p class="rounded px-4 py-2 text-center text-sm">
+			<p class="rounded px-4 py-2 text-center text-sm text-gray-800 dark:text-gray-200">
 				{$message}
 			</p>
 		{:else}
@@ -47,12 +46,12 @@
 					<div class="space-y-2">
 						<label 
 							for="email" 
-							class="block text-sm font-medium text-left"
+							class="block text-sm font-medium text-left text-gray-900 dark:text-gray-100"
 						>
 							Email address
 						</label>
 						{#if $errors.email}
-							<p class="text-red-500 dark:invert text-sm" id="email-error" role="alert">
+							<p class="text-red-500 dark:text-red-400 text-sm" id="email-error" role="alert">
 								{$errors.email}
 							</p>
 						{/if}
@@ -72,12 +71,12 @@
 									aria-describedby={$errors.email ? 'email-error' : undefined}
 									aria-invalid={$errors.email ? 'true' : undefined}
 									class:opacity-50={isLoading}
-									class="w-full rounded-md border border-gray-300 bg-white/90 py-2 pl-10 pr-4 text-gray-900 placeholder-gray-500 focus:border-blue-500  focus:outline-none"
+									class="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/90 dark:bg-gray-800 py-2 pl-10 pr-4 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:border-blue-500 focus:outline-none"
 								/>
 							</div>
 							<button
 								type="submit"
-								class="w-full sm:w-auto shrink-0 rounded-md border border-black  bg-transparent px-4 py-2 font-medium shadow-lg transition-all hover:border-black/50 hover:bg-black/10"
+								class="w-full sm:w-auto shrink-0 rounded-md border border-black dark:border-gray-300 bg-transparent px-4 py-2 font-medium shadow-lg transition-all hover:border-black/50 dark:hover:border-gray-400 hover:bg-black/10 dark:hover:bg-white/10 text-gray-900 dark:text-gray-100"
 								class:opacity-50={isLoading}
 								disabled={isLoading}
 							>
@@ -89,7 +88,7 @@
 							</button>
 						</div>
 						{#if $message && !isSubmitted}
-							<p class="rounded bg-black/50 px-4 py-2 text-sm text-gray-100">{$message}</p>
+							<p class="rounded bg-black/50 dark:bg-white/20 px-4 py-2 text-sm text-gray-100 dark:text-gray-200">{$message}</p>
 						{/if}
 					</div>
 				</form>
@@ -97,8 +96,7 @@
 		{/if}
 	</div>
 </section>
-
-<!-- <style>
+<style>
 	@media (prefers-color-scheme: dark) {
 		input:-webkit-autofill {
 			-webkit-box-shadow: 0 0 0px 1000px #1a1a1a inset;
@@ -109,4 +107,4 @@
 			-webkit-text-fill-color: #f1f1f1;
 		}
 	}
-</style> -->
+</style>
