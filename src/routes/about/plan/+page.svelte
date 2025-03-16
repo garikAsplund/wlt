@@ -192,20 +192,19 @@
 
 						<div>
 							<h4 class="font-serif text-lg text-slate-600">Strategies:</h4>
-							<div class="mt-4 space-y-0">
+							<div class="mt-4 space-y-4">
 								{#each goal.strategies as strategy, i}
-									<div class="space-y-0">
+									<div class="space-y-4">
 										<div class="flex items-center">
 											<div
-												class="ml-4 flex h-8 w-8 items-center justify-center rounded-full bg-slate-700 text-sm font-bold text-slate-100 dark:bg-slate-600"
+												class="ml-2 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-slate-700 text-sm font-bold text-slate-100 dark:bg-slate-600"
 											>
 												{i + 1}
 											</div>
-											<div class="-ml-1 h-0.5 w-48 bg-slate-700 dark:bg-slate-600"></div>
+											<p class="ml-2 -translate-y-1 pt-1.5 text-slate-600 dark:text-slate-300">
+												{strategy}
+											</p>
 										</div>
-										<p class="ml-14 -translate-y-2.5 text-slate-600 dark:text-slate-300">
-											{strategy}
-										</p>
 									</div>
 								{/each}
 							</div>
