@@ -3,6 +3,7 @@
 	import { ChevronDown, X, AlignJustify } from 'lucide-svelte';
 	import Logo from '$lib/Logo.svelte';
 	import DonateButton from './DonateButton.svelte';
+	import { onMount } from 'svelte';
 
 	const aboutLinks = [
 		{ href: '/about/plan', label: 'Strategic Plan' },
@@ -69,6 +70,7 @@
 	let isNavbarVisible = $state(true);
 	let hasScrolled = $state(false);
 	let isNavigating = $state(false);
+	let menuNode: HTMLDivElement | undefined = $state();
 
 	$effect(() => {
 		page.url.pathname;
@@ -105,6 +107,20 @@
 
 		lastScrollY = currentScrollY;
 	}
+
+	onMount(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			if (isMenuOpen && menuNode && !menuNode.contains(event.target as Node)) {
+				isMenuOpen = false;
+			}
+		};
+
+		document.addEventListener('mousedown', handleClickOutside);
+
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+		};
+	});
 </script>
 
 <svelte:window on:scroll={handleScroll} />
@@ -346,6 +362,7 @@ hover:bg-gray-50 dark:hover:bg-gray-800/60
 			id="mobile-menu"
 			role="navigation"
 			aria-label="Mobile menu"
+			bind:this={menuNode}
 		>
 			<!-- About Us Section -->
 			<div class="w-full lg:hidden">
