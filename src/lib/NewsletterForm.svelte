@@ -38,7 +38,7 @@
 			<div class="flex justify-center">
 				<form
 					method="POST"
-					action="/api/send-email"
+					action="/api/subscribe"
 					use:enhance
 					class="flex flex-col w-full max-w-md"
 					novalidate

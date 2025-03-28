@@ -6,8 +6,8 @@ export const imageModules = import.meta.glob('/static/images/backgrounds/*.{png,
 	}
 });
 
-console.log({ imageModules });
-console.log( imageModules['/static/images/backgrounds/board.jpg'].default );
+// console.log({ imageModules });
+// console.log( imageModules['/static/images/backgrounds/board.jpg'].default );
 
 export const heroContent = {
 	'/about/board': {
