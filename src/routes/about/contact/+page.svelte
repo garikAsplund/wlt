@@ -28,7 +28,7 @@
 					tabindex="0"
 					role="button"
 					aria-label="Phone number: (541) 426-2042"
-					class="flex items-center gap-2 transition-colors hover:text-neutral-900 md:hidden dark:hover:text-neutral-300 text-slate-700 dark:text-slate-300"
+					class="flex items-center gap-2 text-slate-700 transition-colors hover:text-neutral-900 md:hidden dark:text-slate-300 dark:hover:text-neutral-300"
 				>
 					<Phone size={18} />
 					<span class="select-all">(541) 426-2042</span>
@@ -39,7 +39,7 @@
 					tabindex="0"
 					role="button"
 					aria-label="Phone number: (541) 426-2042"
-					class="hidden cursor-default items-center gap-2 transition-colors md:flex text-slate-700 dark:text-slate-300"
+					class="hidden cursor-default items-center gap-2 text-slate-700 transition-colors md:flex dark:text-slate-300"
 				>
 					<Phone size={18} />
 					<span>(541) 426-2042</span>
@@ -61,16 +61,22 @@
 
 				<div class="flex items-center space-x-3 text-slate-700 dark:text-slate-300">
 					<Clock class="h-5 w-5" />
-					<div>
-						<p>Monday - Friday</p>
-						<p>9:00 AM - 5:00 PM Pacific</p>
+					<div class="flex flex-col gap-2">
+						<div>
+							<p class="font-semibold">Monday - Thursday</p>
+							<p>9:00 AM - 5:00 PM</p>
+						</div>
+						<div>
+							<p class="font-semibold">Friday</p>
+							<p>9:00 AM - 12:00 PM</p>
+						</div>
 					</div>
 				</div>
 
 				<div class="flex items-center space-x-3 text-slate-700 dark:text-slate-300">
 					<FileCheck class="h-5 w-5" />
 					<div>
-						<p>Federal Tax ID:</p>
+						<p class="font-semibold">Federal Tax ID:</p>
 						<p class="select-all">20-1037078</p>
 					</div>
 				</div>
@@ -80,8 +86,8 @@
 				<h3 class="mb-4 font-serif text-xl text-slate-800 dark:text-slate-100">Media Inquiries</h3>
 				<p class="text-slate-700 dark:text-slate-300">
 					For media inquiries, please contact
-					<span class="text-slate-600 dark:text-slate-400 select-all">
-						john@wallowalandtrust.org
+					<span class="text-slate-600 select-all dark:text-slate-400">
+						jonathan@wallowalandtrust.org
 					</span>
 				</p>
 			</div>

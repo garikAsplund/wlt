@@ -50,7 +50,7 @@
 					Wallowa County ownership.
 				</p>
 				<a
-					href="https://morainecampaign.org/index.php"
+					href="https://www.co.wallowa.or.us/east-moraine-community-forest"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="mt-6 inline-flex items-center gap-2 border-b border-current text-gray-100 hover:text-gray-300"
