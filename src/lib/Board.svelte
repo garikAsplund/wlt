@@ -129,5 +129,10 @@
                 <hr class="opacity-25 my-12 sm:my-16 dark:border-slate-700"/>
             {/if}
         {/each}
+        <div class="flex w-full justify-center">
+			<a href="/about/staff" class="text-xl font-medium text-slate-900 dark:text-slate-100"
+				>See our staff</a
+			>
+		</div>
     </div>
 </div>
