@@ -143,7 +143,8 @@
 			<a href="/" aria-label="Return to homepage" class="hover:opacity-80" onclick={closeMenu}>
 				<div class="flex items-center">
 					<div class="h-24 w-24 p-2 text-[#1a3d65] dark:text-gray-200">
-						<Logo />
+						<!-- <Logo /> -->
+						 <enhanced:img src="/static/images/logo.png" />
 					</div>
 					<div class="flex flex-col justify-center text-xl">
 						<p>Wallowa</p>
