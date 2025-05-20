@@ -3,7 +3,7 @@
 	import potluckPoster from '$lib/images/events/potluck_poster.jpg';
 </script>
 
-<div class="flex w-full justify-center bg-[#e9ad91]/40 py-12">
+<div class="flex w-full justify-center bg-[#e9ad91]/40 py-12 px-4">
 	<article
 		class="flex w-full max-w-3xl flex-col overflow-hidden rounded-lg
            bg-white transition-shadow
