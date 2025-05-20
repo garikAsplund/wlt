@@ -6,12 +6,14 @@
 	import Moraine from '$lib/Moraine.svelte';
 	import NewsletterForm from '$lib/NewsletterForm.svelte';
 	import Stats from '$lib/Stats.svelte';
+	import Events from '$lib/Events.svelte'
 
 	let { data } = $props();
 </script>
 
 <div class="w-full">
 	<Hero />
+	<Events />
 	<Stats />
 	<Intro />
 	<Moraine />
