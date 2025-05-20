@@ -11,7 +11,9 @@
 			alt="Nez Perce Tribe land return celebration in Joseph, Oregon"
 			class="h-full w-full object-cover object-center brightness-110 saturate-[1.2] dark:brightness-85"
 			fetchpriority="high"
-			sizes="(max-width: 640px) 320px, (max-width: 1280px) 640px, 1280px"
+			sizes="(max-width: 640px)  320px,
+         (max-width: 1280px) 640px,
+         100vw"
 		/>
 	</div>
 	<div class="w-full py-8 text-center sm:py-12 md:py-16">

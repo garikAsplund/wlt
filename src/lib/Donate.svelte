@@ -10,7 +10,10 @@
 			class="absolute inset-0 h-full w-full object-cover object-top"
 			alt="Sunset on the forest"
 			fetchpriority="high"
-			sizes="(max-width: 640px) 320px, (max-width: 1280px) 640px, 1280px"		/>
+			sizes="(max-width: 640px)  320px,
+         (max-width: 1280px) 640px,
+         100vw"
+		/>
 
 		<!-- Overlay -->
 		<div class="absolute inset-0 dark:bg-black/30"></div>

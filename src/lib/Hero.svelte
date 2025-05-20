@@ -115,11 +115,13 @@
 			bind:this={imageNode}
 			src="/static/images/hero.jpg?w=original;1280;640;320"
 			alt="View above the protected moraines of Wallowa Lake"
-			class="h-full w-full object-cover object-left will-change-transform brightness-110"
+			class="h-full w-full object-cover object-left brightness-110 will-change-transform"
 			style="object-position: center 40%; transform: translateY(0)"
 			fetchpriority="high"
 			loading="eager"
-			sizes="(max-width: 640px) 320px, (max-width: 1280px) 640px, 1280px"
+			sizes="(max-width: 640px)  320px,
+         (max-width: 1280px) 640px,
+         100vw"
 		/>
 	</div>
 </div>
