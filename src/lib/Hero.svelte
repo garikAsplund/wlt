@@ -62,22 +62,44 @@
 				>
 					<a
 						href="/about/staff"
-						class="w-full bg-black/40 px-6 py-3 text-center text-base font-light tracking-wide text-white backdrop-blur-sm transition-all hover:bg-black/50 sm:w-auto sm:bg-white/20 sm:px-8 sm:text-lg sm:hover:bg-white/30"
+						class="w-full bg-black/40 px-6 py-3 text-center text-base font-light tracking-wide text-white backdrop-blur-sm transition-all duration-350 hover:bg-black/50 sm:w-auto sm:bg-white/20 sm:px-8 sm:text-lg sm:hover:bg-white/30"
 					>
 						Who We Are
 					</a>
 					<a
 						href="/about/plan"
-						class="w-full bg-black/40 px-6 py-3 text-center text-base font-light tracking-wide text-white backdrop-blur-sm transition-all hover:bg-black/50 sm:w-auto sm:bg-white/20 sm:px-8 sm:text-lg sm:hover:bg-white/30"
+						class="w-full bg-black/40 px-6 py-3 text-center text-base font-light tracking-wide text-white backdrop-blur-sm transition-all duration-350 hover:bg-black/50 sm:w-auto sm:bg-white/20 sm:px-8 sm:text-lg sm:hover:bg-white/30"
 					>
 						What We Believe
 					</a>
 					<a
 						href="/conservation/properties"
-						class="w-full bg-black/40 px-6 py-3 text-center text-base font-light tracking-wide text-white backdrop-blur-sm transition-all hover:bg-black/50 sm:w-auto sm:bg-white/20 sm:px-8 sm:text-lg sm:hover:bg-white/30"
+						class="w-full bg-black/40 px-6 py-3 text-center text-base font-light tracking-wide text-white backdrop-blur-sm transition-all duration-350 hover:bg-black/50 sm:w-auto sm:bg-white/20 sm:px-8 sm:text-lg sm:hover:bg-white/30"
 					>
 						Where We Work
 					</a>
+					<div class="flex flex-col items-center space-y-4 pt-12 text-lg text-gray-200 sm:hidden">
+						<p class="text-xl font-bold tracking-wide">We're hiring!</p>
+						<p>
+							Please click <a
+								href="/PDFs/job-posting.pdf"
+								target="_blank"
+								class="font-bold underline underline-offset-4 transition-all duration-350 hover:opacity-75"
+								>here</a
+							> to read about the role.
+						</p>
+					</div>
+				</div>
+				<div class="sm:flex flex-col items-center space-y-4 pt-12 text-lg text-gray-200 hidden">
+					<p class="text-xl font-bold tracking-wide">We're hiring!</p>
+					<p>
+						Please click <a
+							href="/PDFs/job-posting.pdf"
+							target="_blank"
+							class="font-bold underline underline-offset-4 transition-all duration-350 hover:opacity-75"
+							>here</a
+						> to read about the role.
+					</p>
 				</div>
 			</div>
 		</div>

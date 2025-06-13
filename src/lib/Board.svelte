@@ -130,7 +130,7 @@
             {/if}
         {/each}
         <div class="flex w-full justify-center">
-			<a href="/about/staff" class="text-xl font-medium text-slate-900 dark:text-slate-100"
+			<a href="/about/staff" class="text-xl font-medium text-slate-900 dark:text-slate-100 underline underline-offset-4 transition-all duration-350 hover:opacity-75"
 				>See our staff</a
 			>
 		</div>
