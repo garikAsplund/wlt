@@ -7,6 +7,7 @@
 	import AccreditedSvg from './AccreditedSVG.svelte';
 	import DonateButton from './DonateButton.svelte';
 	import NewsletterForm from './NewsletterForm.svelte';
+	import DarkModeButton from './DarkModeButton.svelte';
 
 	let { data } = $props();
 

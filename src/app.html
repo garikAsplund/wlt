@@ -9,6 +9,16 @@
 			name="description"
 			content="Wallowa Land Trust works to protect the rural nature of Wallowa County."
 		/>
+		<script>
+			if (
+				localStorage.theme === 'dark' || 
+				(!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.remove('dark');
+			}
+			</script>
 
 		<script type="application/ld+json">
 			{
