@@ -1,8 +1,9 @@
 <script lang="ts">
 	import jonathanImg from '$lib/images/staff/jonathan.jpg?enhanced&w=original;400;200';
-	import kelImg from '$lib/images/staff/kel.png?enhanced&w=original;400;200';
+	// import kelImg from '$lib/images/staff/kel.png?enhanced&w=original;400;200';
 	import kathleenImg from '$lib/images/staff/kathleen.jpg?enhanced&w=original;400;200';
-	import finnImg from '$lib/images/staff/finn.png?enhanced&w=original;400;200';
+	// import finnImg from '$lib/images/staff/finn.png?enhanced&w=original;400;200';
+	import brianImg from '$lib/images/staff/brian.jpg?enhanced&w=original;400;200';
 
 	const staffMembers = [
 		{
@@ -16,28 +17,28 @@
 				'She has worked with many charitable organizations over the years and brings her extensive knowledge of nonprofit administration and successful land conservation to northeast Oregon. She is the past president of the Coalition of Oregon Land Trusts and is a member of the Rotary Club of Wallowa County.'
 			]
 		},
-		{
-			name: 'Kel Hoffman, PhD',
-			title: 'Conservation Program Manager',
-			email: 'kel@wallowalandtrust.org',
-			image: kelImg,
-			bio: [
-				'Kel grew up in Texas where he spent much of his childhood outdoors, whether in a tree fort or on a sports field. He was drawn to conservation during his undergraduate experience at Texas A&M, where he majored in Ecological Restoration.',
-				'After several years spent working as an environmental consultant, Kel returned to A&M to pursue two of his passions: landscape-scale conservation work and nonprofit endeavors. During this time he obtained a doctorate in Ecosystem Management along with a certificate in Nonprofit Management.',
-				"He is interested in the social/humanistic aspects of landownership, specifically the processes landowners use to make conservation decisions for their properties. Kel is an avid backpacker and kayaker, and can't wait to explore Wallowa County with his pup, Finn."
-			]
-		},
-		{
-			name: 'Finn',
-			title: 'Field Agent',
-			email: '',
-			image: finnImg,
-			bio: [
-				'Finn grew up in Central Texas where he showed an aptitude for bug-hunting even as a young pup. He followed this passion to Austin, where he earned his undergraduate and began a Masters in Bug-Hunting in 2015.',
-				'Several years later he met Kel at a city park and they decided to make a go of it. Eight years on and they are still together and happier than ever. Finn currently serves as the Wallowa Land Trust Field Agent, protecting Kel in the field and generally being painfully cute.',
-				'He also likes to bark at deer and chase his husky brothers, Shadow and Storm, in his free time.'
-			]
-		},
+		// {
+		// 	name: 'Kel Hoffman, PhD',
+		// 	title: 'Conservation Program Manager',
+		// 	email: 'kel@wallowalandtrust.org',
+		// 	image: kelImg,
+		// 	bio: [
+		// 		'Kel grew up in Texas where he spent much of his childhood outdoors, whether in a tree fort or on a sports field. He was drawn to conservation during his undergraduate experience at Texas A&M, where he majored in Ecological Restoration.',
+		// 		'After several years spent working as an environmental consultant, Kel returned to A&M to pursue two of his passions: landscape-scale conservation work and nonprofit endeavors. During this time he obtained a doctorate in Ecosystem Management along with a certificate in Nonprofit Management.',
+		// 		"He is interested in the social/humanistic aspects of landownership, specifically the processes landowners use to make conservation decisions for their properties. Kel is an avid backpacker and kayaker, and can't wait to explore Wallowa County with his pup, Finn."
+		// 	]
+		// },
+		// {
+		// 	name: 'Finn',
+		// 	title: 'Field Agent',
+		// 	email: '',
+		// 	image: finnImg,
+		// 	bio: [
+		// 		'Finn grew up in Central Texas where he showed an aptitude for bug-hunting even as a young pup. He followed this passion to Austin, where he earned his undergraduate and began a Masters in Bug-Hunting in 2015.',
+		// 		'Several years later he met Kel at a city park and they decided to make a go of it. Eight years on and they are still together and happier than ever. Finn currently serves as the Wallowa Land Trust Field Agent, protecting Kel in the field and generally being painfully cute.',
+		// 		'He also likes to bark at deer and chase his husky brothers, Shadow and Storm, in his free time.'
+		// 	]
+		// },
 		{
 			name: 'Jonathan Plummer',
 			title: 'Office Administrator',
@@ -47,6 +48,17 @@
 				'After growing up in Texas and Colorado, Jonathan earned an undergraduate degree in English from the University of Montana and a masters degree from the University of Oregon.',
 				'Following a short career as an environmental consultant, Jonathan spent the next two decades working as a cabinetmaker and furniture maker. Having moved around the American west for 30 years, Jonathan followed his wife, Jean, to Wallowa County in 2017.',
 				"When not in the office, he's either out walking, reading, or watching baseball."
+			]
+		},
+		{
+			name: 'Brian Tibbetts',
+			title: 'Grant Writer',
+			email: '',
+			image: brianImg,
+			bio: [
+				'Brian works to guide nonprofits through transition and help them to grow their capacity. Over the last couple of decades, Brian has partnered with organizations at every stage of growth to help them refine their voice and leverage their mission and vision toward successful funding of their long-term strategy and programming objectives.',
+				'He has worked with a variety of nonprofit organizations affecting change by providing housing, protecting the environment, providing instruction and performance opportunities in the arts, and working to ensure that everyone has enough to eat. Brian understands how important and effective it is to tell the story of an organization in language that speaks to a variety of communities and audiences.',
+				'Brian stepped away from a successful career in marketing and communications to devote his energy to work that has the highest potential to make a positive impact in the world. He holds a master’s degree in writing and specializes in all aspects of communications-driven fundraising.'
 			]
 		}
 	];
