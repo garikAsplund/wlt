@@ -78,7 +78,7 @@
 					>
 						Where We Work
 					</a>
-					<div class="flex flex-col items-center space-y-4 pt-12 text-lg text-gray-200 sm:hidden">
+					<!-- <div class="flex flex-col items-center space-y-4 pt-12 text-lg text-gray-200 sm:hidden">
 						<p class="text-xl font-bold tracking-wide">We're hiring!</p>
 						<p>
 							Please click <a
@@ -88,9 +88,9 @@
 								>here</a
 							> to read about the role.
 						</p>
-					</div>
+					</div> -->
 				</div>
-				<div class="sm:flex flex-col items-center space-y-4 pt-12 text-lg text-gray-200 hidden">
+				<!-- <div class="sm:flex flex-col items-center space-y-4 pt-12 text-lg text-gray-200 hidden">
 					<p class="text-xl font-bold tracking-wide">We're hiring!</p>
 					<p>
 						Please click <a
@@ -100,7 +100,7 @@
 							>here</a
 						> to read about the role.
 					</p>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	{/if}

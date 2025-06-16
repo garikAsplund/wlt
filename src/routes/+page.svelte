@@ -7,6 +7,7 @@
 	import NewsletterForm from '$lib/NewsletterForm.svelte';
 	import Stats from '$lib/Stats.svelte';
 	import Events from '$lib/Events.svelte'
+	import Hiring from '$lib/Hiring.svelte';
 
 	let { data } = $props();
 </script>
@@ -14,6 +15,7 @@
 <div class="w-full">
 	<Hero />
 	<!-- <Events /> -->
+	 <Hiring />
 	<Stats />
 	<Intro />
 	<Moraine />

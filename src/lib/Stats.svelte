@@ -70,7 +70,7 @@
 		};
 	});
 </script>
-<div class="w-full bg-white pt-12 pb-16 lg:pt-16 lg:pb-20 dark:bg-[#121212]">
+<div class="w-full bg-white pt-12 pb-8 lg:pt-16 dark:bg-[#121212]">
 	<div class="mx-auto max-w-7xl px-4">
 		<h2
 			class="mb-4 text-center font-['Georgia'] text-2xl text-slate-900 sm:text-3xl dark:text-slate-100"
@@ -124,7 +124,7 @@
 				</div>
 			{/each}
 		</div>
-		<div class="mt-16 flex items-center justify-center opacity-25 scale-75 text-gray-700 dark:text-gray-300">
+		<div class=" flex items-center justify-center opacity-25 scale-75 text-gray-700 dark:text-gray-300">
 			<Oregon />
 		</div>
 	</div>
