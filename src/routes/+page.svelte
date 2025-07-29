@@ -6,7 +6,7 @@
 	import Moraine from '$lib/Moraine.svelte';
 	import NewsletterForm from '$lib/NewsletterForm.svelte';
 	import Stats from '$lib/Stats.svelte';
-	import Events from '$lib/Events.svelte'
+	import Events from '$lib/Events.svelte';
 	import Hiring from '$lib/Hiring.svelte';
 
 	let { data } = $props();
@@ -15,11 +15,11 @@
 <div class="w-full">
 	<Hero />
 	<!-- <Events /> -->
-	 <Hiring />
+	<!-- <Hiring /> -->
 	<Stats />
 	<Intro />
 	<Moraine />
-	<div class="h-[35vh] flex flex-col justify-center">
+	<div class="flex h-[35vh] flex-col justify-center">
 		<NewsletterForm {data} />
 	</div>
 	<Head2Heart />
