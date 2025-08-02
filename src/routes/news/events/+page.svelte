@@ -6,7 +6,7 @@
 </script>
 
 <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
-	<!-- <Events /> -->
+	<Events />
 	<div class="space-y-6 rounded-lg bg-slate-50 p-6 sm:p-8 dark:bg-slate-800/50">
 		<p class="leading-relaxed text-slate-700 dark:text-slate-300">
 			Join us for upcoming events, including volunteer opportunities, educational programs, and
