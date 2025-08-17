@@ -14,7 +14,7 @@
 
 <div class="w-full">
 	<Hero />
-	<Events />
+	<!-- <Events /> -->
 	<!-- <Hiring /> -->
 	<Stats />
 	<Intro />
