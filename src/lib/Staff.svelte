@@ -4,6 +4,7 @@
 	import kathleenImg from '$lib/images/staff/kathleen.jpg?enhanced&w=original;400;200';
 	// import finnImg from '$lib/images/staff/finn.png?enhanced&w=original;400;200';
 	import brianImg from '$lib/images/staff/brian.jpg?enhanced&w=original;400;200';
+	import caitlinImg from '$lib/images/staff/caitlin.jpg?enhanced&w=original;400;200';
 
 	const staffMembers = [
 		{
@@ -15,6 +16,17 @@
 				"Kathleen is Wallowa Land Trust's first Executive Director. She joined the Trust in the fall of 2013 after almost a decade at Capitol Land Trust in Olympia, Washington.",
 				"Raised in Eugene, Oregon, Kathleen graduated from the University of Hawaii with a degree in Asian Studies, before receiving a master's degree in Environmental Studies from The Evergreen State College.",
 				'She has worked with many charitable organizations over the years and brings her extensive knowledge of nonprofit administration and successful land conservation to northeast Oregon. She is the past president of the Coalition of Oregon Land Trusts and is a member of the Rotary Club of Wallowa County.'
+			]
+		},
+		{
+			name: 'Caitlin Rushlow, PhD',
+			title: 'Conservation Program Manager',
+			email: 'caitlin@wallowalandtrust.org',
+			image: caitlinImg,
+			bio: [
+				'Caitlin joined Wallowa Land Trust as Conservation Program Manager in August 2025. After growing up in southwest Michigan, she lived and worked in North Carolina, Idaho, and Arctic Alaska while earning her master’s and doctoral degrees in Geological Sciences.',
+				'Caitlin moved to Wallowa County in 2017 and has worked in a myriad of fields, both literally and figuratively. She farmed at Backyard Gardens for Beth Gibans, coordinated a forest monitoring program at Wallowa Resources, and surveyed rangelands for noxious weeds and rare plants as an independent contractor. She continues to work occasionally as a consultant and serves as the Treasurer for the Wallowa Avalanche Center in addition to her time at WLT.',
+				'When not working, Caitlin enjoys spending time with friends and exploring the diverse ecosystems of Wallowa County on foot, skis, or a raft with her dog Jasper, stepdog Toots, and partner Ryan. She is currently focused on learning to golf and developing her skills as a fly fisherwoman.'
 			]
 		},
 		// {
@@ -93,7 +105,9 @@
 			{/if}
 		{/each}
 		<div class="flex w-full justify-center">
-			<a href="/about/board" class="text-xl font-medium text-slate-900 dark:text-slate-100 underline underline-offset-4 transition-all duration-350 hover:opacity-75"
+			<a
+				href="/about/board"
+				class="text-xl font-medium text-slate-900 underline underline-offset-4 transition-all duration-350 hover:opacity-75 dark:text-slate-100"
 				>See our board</a
 			>
 		</div>
