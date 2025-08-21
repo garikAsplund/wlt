@@ -19,7 +19,7 @@
 			]
 		},
 		{
-			name: 'Caitlin Rushlow, PhD',
+			name: 'Caitlin Rushlow',
 			title: 'Conservation Program Manager',
 			email: 'caitlin@wallowalandtrust.org',
 			image: caitlinImg,
