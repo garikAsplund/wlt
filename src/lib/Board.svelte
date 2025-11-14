@@ -9,6 +9,7 @@
 	import paulImg from '$lib/images/board/paul.png?enhanced&w=400;200';
 	import yunImg from '$lib/images/board/yun.jpg?enhanced&w=400;200';
 	import delraeImg from '$lib/images/board/delrae.png?enhanced&w=400;200';
+	import aaronImg from '$lib/images/board/aaron.png?enhanced&w=400;200';
 
 	const boardMembers = [
 		{
@@ -114,6 +115,16 @@
 				'DelRae has worked for the Nez Perce Tribe Prosecutor’s Office as a Legal Assistant for 38 years.',
 
 				'She enjoys spending time with her family, traveling, and supporting cultural and family events. She continues to be a source of strength and encouragement to those around her, embodying the values of generosity, resilience, and love.'
+			]
+		},
+		{
+			name: 'Aaron Miles, Sr.',
+			title: 'Board Member',
+			image: aaronImg,
+			bio: [
+				'Aaron is a member of the Nez Perce Tribe. He started his career as a forestry technician and wildland firefighter in 1988. He is a graduate of the University of Idaho, College of Natural Resources with a Bachelor of Science in forest resource management in 1995.',
+				'Shortly after graduating from UI, he worked for the Tribe’s Fisheries Department at Lower Granite Dam to monitor salmonids migrating through the dam. After a season with Fisheries, he worked for Washington State University in the Office of Multicultural Student Services, recruiting Native American/Tribal students from high school and two-year colleges.',
+				'In 1999 he was hired as the Natural Resource Manager to oversee and direct the Tribe’s Department of Natural Resources. The department employs roughly 120 employees to manage land owned by the Tribe within the boundaries of the 1863 Reservation and also land acquired off the reservation. There are 6 major components of the department which include forestry and fire, agricultural management, wildlife, water resources, cultural resources, and monitoring the cleanup efforts at the Hanford Nuclear Reservation.'
 			]
 		}
 	];
