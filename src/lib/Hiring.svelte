@@ -2,10 +2,17 @@
 	<p class="text-xl font-bold tracking-wide">We're hiring!</p>
 	<p>
 		Please click <a
-			href="/PDFs/job-posting.pdf"
+			href="/PDFs/Development-Director.pdf"
 			target="_blank"
 			class="font-bold underline underline-offset-4 transition-all duration-350 hover:opacity-75"
 			>here</a
-		> to read about the role.
+		> to read about the <b>Development Director</b> position. 
+		</p>
+		<p>And click <a
+			href="/PDFs/Indigenous-Community-Liaison.pdf"
+			target="_blank"
+			class="font-bold underline underline-offset-4 transition-all duration-350 hover:opacity-75"
+			>here</a
+		> to learn more about our <b>Indigenous Community Liaison</b> role.
 	</p>
 </div>
