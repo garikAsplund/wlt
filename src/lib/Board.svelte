@@ -98,9 +98,8 @@
 			title: 'Board Member',
 			image: davidImg,
 			bio: [
-				'David grew up exploring farms, forests and wetlands in what used to be a rural area near Portland, Oregon, where his family has deep roots thanks to his grandfather who came to Oregon and got started working in the woods.',
-				'After making a go at a professional tennis career, David found a new passion in the natural sciences and conservation. Field work in tropical forests led to a Masters Degree in Forest Science from the University of Montana.',
-				"Finding a small cabin in the woods in Wallowa County in 2005 was a dream come true. He now holds a PhD in Forest Ecosystems and Society from OSU's College of Forestry. David and his wife Andrea were thrilled to return to Wallowa County in 2017 with their two children. He now works as Systems Ecologist for Wallowology."
+'David is an ecologist with over 20 years of experience in applied ecological research and efforts to advance science-based policies in U.S. Public Lands management. His research interests include ecosystem climate interactions, particularly forest carbon and water cycles; climate change resilience, intact forest landscapes, and large-scale conservation efforts.', 
+'David works with a diverse group of scientific, conservation, Land Trust, Tribal, and Agency partners. He is a 2015 Wilburforce Fellow in Conservation Science and a 2022 AGU Voices for Science advocate. He holds an M.S. in Forest Science from The University of Montana, and a PhD in Forest Ecosystems and Society from Oregon State University.',	
 			]
 		},
 		{
