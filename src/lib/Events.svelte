@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Calendar, MapPin, ArrowUpRight } from 'lucide-svelte';
-	import picnicPic from '$lib/images/events/picnic.jpg';
+	// import picnicPic from '$lib/images/events/gathering_.png';
 </script>
 
 <div class="flex w-full justify-center bg-[#e9ad91]/40 px-4 py-12">
@@ -14,7 +14,7 @@
 			<div class="mb-4 flex flex-wrap gap-4 text-gray-700">
 				<div class="flex items-center">
 					<Calendar class="mr-2 h-5 w-5" />
-					<time>Saturday, August 16 • 4:00 PM</time>
+					<time>May 7-10</time>
 				</div>
 				<div class="flex items-center">
 					<MapPin class="mr-2 h-5 w-5" />
@@ -23,29 +23,29 @@
 						target="_blank"
 						class="hover:underline"
 					>
-						601 S Main St, Joseph, OR
+						Enterprise, OR
 					</a>
 				</div>
 			</div>
 
-			<h3 class="mb-4 text-xl font-semibold text-gray-900">Annual Picnic</h3>
+			<h3 class="mb-4 text-xl font-semibold text-gray-900">Wallowa Gathering</h3>
 
-			<p class="mb-4 text-gray-600">
+			<!-- <p class="mb-4 text-gray-600">
 				Enjoy live music by the Backyard Rangers, local beef burgers, and drinks.
 			</p>
 			<p class="mb-4 text-gray-600">
 				Please bring a side dish to share as well as your own plates and utensils to help make this
 				a zero-waste event.
-			</p>
-			<p class="mb-4 text-gray-600">RSVP <span class="select-all">info@wallowalandtrust.org</span></p>
+			</p> -->
+			<!-- <p class="mb-4 text-gray-600">RSVP <span class="select-all">info@wallowalandtrust.org</span></p> -->
 
 			<a
-				href={picnicPic}
+				href="https://form.jotform.com/261047351923050"
 				target="_blank"
 				rel="noopener noreferrer"
 				class="group inline-flex w-fit items-center gap-2 border-b border-current text-slate-900 hover:text-slate-600"
 			>
-				See the invite
+				Sign up to volunteer here!
 				<ArrowUpRight class="h-4 w-4 transition-all duration-300 group-hover:rotate-45 " />
 			</a>
 		</div>
@@ -53,9 +53,9 @@
 		<!-- right: thumbnail -->
 		<div class="md:w-1/3">
 			<enhanced:img
-				src="/static/images/events/picnic_cover.jpg"
+				src="/static/images/events/gathering.png"
 				alt="Potluck invite"
-				class="h-48 w-full object-cover md:h-full"
+				class="h-48 w-full object-cover md:h-48"
 				loading="lazy"
 			/>
 		</div>
