@@ -113,6 +113,17 @@
 					</a>
 				</div>
 			</div>
+
+			<p class="font-serif text-base leading-relaxed text-gray-500">
+    Each spring, Native gatherers return to the Wallowa Valley to dig roots and reconnect with
+    their ancestral Homeland, and we gather as a community to welcome them. Please join us for a
+    shared meal — a time to connect, visit, and be part of the Wallowa Gathering. Everyone is
+    welcome.
+</p>
+<p class="font-serif text-base leading-relaxed text-gray-500">
+    We'll provide burgers and drinks. Please bring a side dish or dessert to share. Tents will
+    be set up, so we'll gather rain or shine.
+</p>
 		</div>
 	</article>
 </div>
