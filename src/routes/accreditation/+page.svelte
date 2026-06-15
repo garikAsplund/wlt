@@ -23,7 +23,7 @@
 </script>
 
 <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
-   	<div class="absolute z-10 h-[300px] w-full bg-white/20 md:h-[40vh] dark:saturate-50"></div>
+   	<!-- <div class="absolute z-10 h-[300px] w-full bg-white/20 md:h-[40vh] dark:saturate-50"></div> -->
    
 	<div class="relative h-[300px] w-full overflow-hidden md:h-[40vh]">
 		<enhanced:img
