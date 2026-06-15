@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Accreditation from '$lib/Accreditation.svelte';
 	import Donate from '$lib/Donate.svelte';
 	import Head2Heart from '$lib/Head2Heart.svelte';
 	import Hero from '$lib/Hero.svelte';
@@ -16,6 +17,7 @@
 	<Hero />
 	<!-- <Events /> -->
 	<!-- <Hiring /> -->
+	<Accreditation />
 	<Stats />
 	<Intro />
 	<Moraine />
