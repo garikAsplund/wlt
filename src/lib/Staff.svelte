@@ -5,7 +5,7 @@
 	import caitlinImg from '$lib/images/staff/caitlin.jpg?enhanced&w=original;400;200';
 	import jasperImg from '$lib/images/staff/jasper.png?enhanced&w=original;400;200';
 	import altheaImg from '$lib/images/staff/althea.jpg?enhanced&w=original;400;200';
-	import susanImg from '$lib/images/staff/susan.jpg?enhanced&w=original;400;200';
+	// import susanImg from '$lib/images/staff/susan.jpg?enhanced&w=original;400;200';
 
 	const staffMembers = [
 		{
@@ -19,17 +19,17 @@
 				'She has worked with many charitable organizations over the years and brings her extensive knowledge of nonprofit administration and successful land conservation to northeast Oregon. She is the past president of the Coalition of Oregon Land Trusts and is a member of the Rotary Club of Wallowa County.'
 			]
 		},				
-		{
-			name: 'Susan Christensen',
-			title: 'Development Director',
-			email: 'susan@wallowalandtrust.org',
-			image: susanImg,
-			bio: [
-				'Susan Christensen brings more than three decades of experience in public service, nonprofit leadership, and environmental work to Wallowa Land Trust. She has spent much of her career supporting rural communities and the landscapes that sustain them by building partnerships, securing funding, and helping organizations develop strong systems for long-term success.',
-'Before joining Wallowa Land Trust, Susan served as Executive Director of the Greater Eastern Oregon Development Corporation, where she worked with local governments, tribes, and regional partners across seven counties to advance community and economic development initiatives. Earlier in her career, she spent more than 20 years with the Oregon Department of Environmental Quality managing collaborative environmental projects throughout the state.',
-'Susan holds a Master of Science in Public Administration from the University of Oregon and is deeply committed to conserving the lands, waters, and working landscapes of Northeast Oregon. She enjoys spending time outside hiking and skiing with her husband and their dog named Oliver. Their home in Enterprise is basecamp for their two children who love to come home and backcountry ski, hike and fly fish.'
-		]
-		},
+// 		{
+// 			name: 'Susan Christensen',
+// 			title: 'Development Director',
+// 			email: 'susan@wallowalandtrust.org',
+// 			image: susanImg,
+// 			bio: [
+// 				'Susan Christensen brings more than three decades of experience in public service, nonprofit leadership, and environmental work to Wallowa Land Trust. She has spent much of her career supporting rural communities and the landscapes that sustain them by building partnerships, securing funding, and helping organizations develop strong systems for long-term success.',
+// 'Before joining Wallowa Land Trust, Susan served as Executive Director of the Greater Eastern Oregon Development Corporation, where she worked with local governments, tribes, and regional partners across seven counties to advance community and economic development initiatives. Earlier in her career, she spent more than 20 years with the Oregon Department of Environmental Quality managing collaborative environmental projects throughout the state.',
+// 'Susan holds a Master of Science in Public Administration from the University of Oregon and is deeply committed to conserving the lands, waters, and working landscapes of Northeast Oregon. She enjoys spending time outside hiking and skiing with her husband and their dog named Oliver. Their home in Enterprise is basecamp for their two children who love to come home and backcountry ski, hike and fly fish.'
+// 		]
+// 		},
 		{
 			name: 'Caitlin Rushlow',
 			title: 'Conservation Program Manager',
