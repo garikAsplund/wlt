@@ -17,7 +17,7 @@
 	<Hero />
 	<!-- <Events /> -->
 	<!-- <Hiring /> -->
-	<Accreditation />
+	<!-- <Accreditation /> -->
 	<Stats />
 	<Intro />
 	<Moraine />
