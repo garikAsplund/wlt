@@ -4,11 +4,11 @@
 	<p class="text-xl font-bold tracking-wide">Come work with us!</p>
 	<p>
 		<a
-			href="/PDFs/Development-Director.pdf"
+			href="/PDFs/Development-Manager.pdf"
 			target="_blank"
 			class="font-bold underline underline-offset-4 transition-all duration-350 hover:opacity-75"
 		>
-			Read about the Development Director position (PDF)
+			Read about the Development Manager position (PDF)
 		</a>
 	</p>
 	<!-- <p>
