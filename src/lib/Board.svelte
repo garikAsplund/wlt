@@ -7,7 +7,7 @@
 	import jewieImg from '$lib/images/board/jewie.jpg?enhanced&w=400;200';
 	import nickImg from '$lib/images/board/nick.png?enhanced&w=400;200';
 	import paulImg from '$lib/images/board/paul.png?enhanced&w=400;200';
-	import yunImg from '$lib/images/board/yun.jpg?enhanced&w=400;200';
+	// import yunImg from '$lib/images/board/yun.jpg?enhanced&w=400;200';
 	import delraeImg from '$lib/images/board/delrae.png?enhanced&w=400;200';
 	import aaronImg from '$lib/images/board/aaron.png?enhanced&w=400;200';
 
@@ -23,16 +23,26 @@
 			]
 		},
 		{
-			name: 'Yun H. McFall',
+			name: 'Angela Harvey',
 			title: 'Secretary',
-			image: yunImg,
+			image: angelaImg,
 			bio: [
-				'Yun was born in South Korea where she spent her childhood years before immigrating to the United States at 16 years of age. She attended the University of North Carolina at Chapel Hill and graduated with a degree in pharmacy.',
-				'After working as a pharmacist in North Carolina for 7 years, Yun moved to Seattle where she worked as the pharmacy director at the Fairfax Psychiatric Hospital. In 1990, she took a position as a Clinical Specialist at the VA Puget Sound Health Care System where she provided direct patient care and educated residents.',
-				'She moved to Joseph in 2015 where she lives with her husband Miles and their two cats. After growing up in the dense urban environment of Seoul, Yun has a special appreciation of the tranquility and splendor of the open prairie grass land of Eastern Oregon.',
-				"This appreciation has given rise to Yun's heart felt desire to help preserve the beauty of rural Wallowa county. Yun enjoys cooking, hiking, quilting, and entertaining at her home in support of community organizations."
+				'Angela became involved with the Land Trust after returning to her hometown of Lostine in 2017. After 15 years in the crowded San Francisco Bay Area, her desire to conserve the open spaces and working lands of Wallowa County was stronger than ever before.',
+				'While in California, Angela worked in hiring and talent development for Apple after earning her MBA in Sustainable Enterprise. Finally having made it back home, she has turned her focus to work that strengthens ties between neighbors and inspires collaboration — for the love of the land, and the lifestyle.',
+				'For her part, Angela makes the most of her new and improved country life by getting outside with her son Cosmo every day, inspiring a new generation of stewardship for rural Wallowa County.'
 			]
 		},
+		// {
+		// 	name: 'Yun H. McFall',
+		// 	title: 'Secretary',
+		// 	image: yunImg,
+		// 	bio: [
+		// 		'Yun was born in South Korea where she spent her childhood years before immigrating to the United States at 16 years of age. She attended the University of North Carolina at Chapel Hill and graduated with a degree in pharmacy.',
+		// 		'After working as a pharmacist in North Carolina for 7 years, Yun moved to Seattle where she worked as the pharmacy director at the Fairfax Psychiatric Hospital. In 1990, she took a position as a Clinical Specialist at the VA Puget Sound Health Care System where she provided direct patient care and educated residents.',
+		// 		'She moved to Joseph in 2015 where she lives with her husband Miles and their two cats. After growing up in the dense urban environment of Seoul, Yun has a special appreciation of the tranquility and splendor of the open prairie grass land of Eastern Oregon.',
+		// 		"This appreciation has given rise to Yun's heart felt desire to help preserve the beauty of rural Wallowa county. Yun enjoys cooking, hiking, quilting, and entertaining at her home in support of community organizations."
+		// 	]
+		// },
 		{
 			name: 'Jean Pekarek',
 			title: 'Treasurer',
@@ -71,16 +81,6 @@
 				"Doug currently practices family medicine in Spokane, but grew up in Pittsburgh, PA smelling the sulfur fumes of US Steel's coke ovens. All the while he was laying on the living room floor studying National Geographic articles on the American West.",
 				'A long train trip in January 1981, from the \'Burgh to Pasco (to visit a college friend) with the ensuing drive thru the Wallowa River canyon, was all it took to convince him that "this must be the place." Or as John Denver put it, "coming home to a place he\'d never been before."',
 				"Since then Doug has been convinced that Wallowa County is one of our nations's last best places and that its highest use is sustainable agriculture, sustainable forestry and preservation of its natural grandeur that should constantly prod us to seek after the good, the true and the beautiful. Keep It Rural!"
-			]
-		},
-		{
-			name: 'Angela Harvey',
-			title: 'Board Member',
-			image: angelaImg,
-			bio: [
-				'Angela became involved with the Land Trust after returning to her hometown of Lostine in 2017. After 15 years in the crowded San Francisco Bay Area, her desire to conserve the open spaces and working lands of Wallowa County was stronger than ever before.',
-				'While in California, Angela worked in hiring and talent development for Apple after earning her MBA in Sustainable Enterprise. Finally having made it back home, she has turned her focus to work that strengthens ties between neighbors and inspires collaboration — for the love of the land, and the lifestyle.',
-				'For her part, Angela makes the most of her new and improved country life by getting outside with her son Cosmo every day, inspiring a new generation of stewardship for rural Wallowa County.'
 			]
 		},
 		{
